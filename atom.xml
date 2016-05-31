@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://czhzero.com/"/>
-  <updated>2016-05-31T15:36:55.000Z</updated>
+  <updated>2016-05-31T15:42:26.000Z</updated>
   <id>http://czhzero.com/</id>
   
   <author>
@@ -16,15 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Linux命令-常用命令总结</title>
+    <title>Linux命令-基本命令入门</title>
     <link href="http://czhzero.com/2016/05/31/linux-basic-commond/"/>
     <id>http://czhzero.com/2016/05/31/linux-basic-commond/</id>
     <published>2016-05-31T14:47:38.000Z</published>
-    <updated>2016-05-31T15:36:55.000Z</updated>
+    <updated>2016-05-31T15:42:26.000Z</updated>
     
     <content type="html">&lt;p&gt;Linux系统命令非常多，不会Linux的命令，在Linux系统下可以说是寸步难行。每个人使用Linux系统的目的不同，其使用的命令差异也十分巨大。本人参考网上一些博客，根据自己的需要做这么一篇文章进行总结，以便自己日后忘记了，进行查阅。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;###1.cd命令&lt;br&gt;这个一个最基本的linux目录跳转命令，用于切换当前目录。一般可与&lt;strong&gt;pwd命令&lt;/strong&gt; 结合使用。pwd命令用于显示当前目录的实际路径。&lt;/p&gt;
+&lt;h3 id=&quot;1-cd命令&quot;&gt;&lt;a href=&quot;#1-cd命令&quot; class=&quot;headerlink&quot; title=&quot;1.cd命令&quot;&gt;&lt;/a&gt;1.cd命令&lt;/h3&gt;&lt;p&gt;这个一个最基本的linux目录跳转命令，用于切换当前目录。一般可与&lt;strong&gt;pwd命令&lt;/strong&gt; 结合使用。pwd命令用于显示当前目录的实际路径。&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd /root/Docements  # 切换到目录/root/Docements  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ./path           # 切换到当前目录下的path目录中，“.”表示当前目录    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ../path          # 切换到上层目录中的path目录中，“..”表示上一层目录  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd /					# 切换到系统根目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ~                # 切换到当前用户的根目录&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
@@ -36,6 +36,8 @@
     
       <category term="Linux" scheme="http://czhzero.com/categories/Linux/"/>
     
+    
+      <category term="Linux命令" scheme="http://czhzero.com/tags/Linux%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   

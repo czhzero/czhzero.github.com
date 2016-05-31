@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title><![CDATA[Linux命令-常用命令总结]]></title>
+      <title><![CDATA[Linux命令-基本命令入门]]></title>
       <url>http://czhzero.com/2016/05/31/linux-basic-commond/</url>
       <content type="html"><![CDATA[<p>Linux系统命令非常多，不会Linux的命令，在Linux系统下可以说是寸步难行。每个人使用Linux系统的目的不同，其使用的命令差异也十分巨大。本人参考网上一些博客，根据自己的需要做这么一篇文章进行总结，以便自己日后忘记了，进行查阅。</p>
 <a id="more"></a>
-<p>###1.cd命令<br>这个一个最基本的linux目录跳转命令，用于切换当前目录。一般可与<strong>pwd命令</strong> 结合使用。pwd命令用于显示当前目录的实际路径。</p>
+<h3 id="1-cd命令"><a href="#1-cd命令" class="headerlink" title="1.cd命令"></a>1.cd命令</h3><p>这个一个最基本的linux目录跳转命令，用于切换当前目录。一般可与<strong>pwd命令</strong> 结合使用。pwd命令用于显示当前目录的实际路径。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Docements  # 切换到目录/root/Docements  </span><br><span class="line">cd ./path           # 切换到当前目录下的path目录中，“.”表示当前目录    </span><br><span class="line">cd ../path          # 切换到上层目录中的path目录中，“..”表示上一层目录  </span><br><span class="line">cd /					# 切换到系统根目录</span><br><span class="line">cd ~                # 切换到当前用户的根目录</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
