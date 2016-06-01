@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://czhzero.com/"/>
-  <updated>2016-05-31T15:42:26.000Z</updated>
+  <updated>2016-06-01T14:50:25.000Z</updated>
   <id>http://czhzero.com/</id>
   
   <author>
@@ -20,12 +20,22 @@
     <link href="http://czhzero.com/2016/05/31/linux-basic-commond/"/>
     <id>http://czhzero.com/2016/05/31/linux-basic-commond/</id>
     <published>2016-05-31T14:47:38.000Z</published>
-    <updated>2016-05-31T15:42:26.000Z</updated>
+    <updated>2016-06-01T14:50:25.000Z</updated>
     
     <content type="html">&lt;p&gt;Linux系统命令非常多，不会Linux的命令，在Linux系统下可以说是寸步难行。每个人使用Linux系统的目的不同，其使用的命令差异也十分巨大。本人参考网上一些博客，根据自己的需要做这么一篇文章进行总结，以便自己日后忘记了，进行查阅。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;1-cd命令&quot;&gt;&lt;a href=&quot;#1-cd命令&quot; class=&quot;headerlink&quot; title=&quot;1.cd命令&quot;&gt;&lt;/a&gt;1.cd命令&lt;/h3&gt;&lt;p&gt;这个一个最基本的linux目录跳转命令，用于切换当前目录。一般可与&lt;strong&gt;pwd命令&lt;/strong&gt; 结合使用。pwd命令用于显示当前目录的实际路径。&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd /root/Docements  # 切换到目录/root/Docements  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ./path           # 切换到当前目录下的path目录中，“.”表示当前目录    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ../path          # 切换到上层目录中的path目录中，“..”表示上一层目录  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd /					# 切换到系统根目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ~                # 切换到当前用户的根目录&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2-ls命令&quot;&gt;&lt;a href=&quot;#2-ls命令&quot; class=&quot;headerlink&quot; title=&quot;2.ls命令&quot;&gt;&lt;/a&gt;2.ls命令&lt;/h3&gt;&lt;p&gt;查看文件与目录属性的命令，ls后不加路径，表示查看路径，添加路径则表示查看指定目录与路径。&lt;/p&gt;
+&lt;p&gt;常用参数列表:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-l ：列出长数据串，包含文件的属性与权限数据等  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-d ：仅列出目录本身，而不是列出目录的文件数据  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-h ：将文件容量以较易读的方式（GB，kB等）列出来  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;命令参数也可以组合使用，例如&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ls -lR  #递归显示所有文件的长数据信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ls /root/download&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3-cp命令&quot;&gt;&lt;a href=&quot;#3-cp命令&quot; class=&quot;headerlink&quot; title=&quot;3.cp命令&quot;&gt;&lt;/a&gt;3.cp命令&lt;/h3&gt;&lt;p&gt;复制命令，可以单个文件或者目录，复制到指定位置。&lt;/p&gt;
+&lt;p&gt;常用参数列表:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-a ：将文件的特性一起复制  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-r ：递归持续复制，用于目录的复制行为  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-u ：目标文件与源文件有差异时才会复制&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp file1 file2 file3 dir #把文件file1、file2、file3复制到目录dir中&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">

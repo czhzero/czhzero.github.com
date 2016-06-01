@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://czhzero.com/2016/05/31/linux-basic-commond/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
 <meta property="og:description" content="Linux系统命令非常多，不会Linux的命令，在Linux系统下可以说是寸步难行。每个人使用Linux系统的目的不同，其使用的命令差异也十分巨大。本人参考网上一些博客，根据自己的需要做这么一篇文章进行总结，以便自己日后忘记了，进行查阅。">
-<meta property="og:updated_time" content="2016-05-31T15:42:26.000Z">
+<meta property="og:updated_time" content="2016-06-01T14:50:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令-基本命令入门">
 <meta name="twitter:description" content="Linux系统命令非常多，不会Linux的命令，在Linux系统下可以说是寸步难行。每个人使用Linux系统的目的不同，其使用的命令差异也十分巨大。本人参考网上一些博客，根据自己的需要做这么一篇文章进行总结，以便自己日后忘记了，进行查阅。">
@@ -355,6 +355,16 @@
 <a id="more"></a>
 <h3 id="1-cd命令"><a href="#1-cd命令" class="headerlink" title="1.cd命令"></a>1.cd命令</h3><p>这个一个最基本的linux目录跳转命令，用于切换当前目录。一般可与<strong>pwd命令</strong> 结合使用。pwd命令用于显示当前目录的实际路径。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Docements  # 切换到目录/root/Docements  </span><br><span class="line">cd ./path           # 切换到当前目录下的path目录中，“.”表示当前目录    </span><br><span class="line">cd ../path          # 切换到上层目录中的path目录中，“..”表示上一层目录  </span><br><span class="line">cd /					# 切换到系统根目录</span><br><span class="line">cd ~                # 切换到当前用户的根目录</span><br></pre></td></tr></table></figure>
+<h3 id="2-ls命令"><a href="#2-ls命令" class="headerlink" title="2.ls命令"></a>2.ls命令</h3><p>查看文件与目录属性的命令，ls后不加路径，表示查看路径，添加路径则表示查看指定目录与路径。</p>
+<p>常用参数列表:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-l ：列出长数据串，包含文件的属性与权限数据等  </span><br><span class="line">-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）  </span><br><span class="line">-d ：仅列出目录本身，而不是列出目录的文件数据  </span><br><span class="line">-h ：将文件容量以较易读的方式（GB，kB等）列出来  </span><br><span class="line">-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来</span><br></pre></td></tr></table></figure>
+<p>命令参数也可以组合使用，例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -lR  #递归显示所有文件的长数据信息</span><br><span class="line">ls /root/download</span><br></pre></td></tr></table></figure>
+<h3 id="3-cp命令"><a href="#3-cp命令" class="headerlink" title="3.cp命令"></a>3.cp命令</h3><p>复制命令，可以单个文件或者目录，复制到指定位置。</p>
+<p>常用参数列表:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制  </span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份  </span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行  </span><br><span class="line">-r ：递归持续复制，用于目录的复制行为  </span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2  </span><br><span class="line">cp file1 file2 file3 dir #把文件file1、file2、file3复制到目录dir中</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -558,7 +568,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-cd命令"><span class="nav-number">1.</span> <span class="nav-text">1.cd命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-cd命令"><span class="nav-number">1.</span> <span class="nav-text">1.cd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ls命令"><span class="nav-number">2.</span> <span class="nav-text">2.ls命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-cp命令"><span class="nav-number">3.</span> <span class="nav-text">3.cp命令</span></a></li></ol></div>
             
           </div>
         </section>
