@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
+    
+    <lastmod>2016-07-31T16:05:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
+    
+    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
     
     <lastmod>2016-07-31T07:39:27.000Z</lastmod>
@@ -16,14 +30,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
-    
-    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/07/30/how-to-be-stronger/</loc>
+    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
     
     <lastmod>2016-07-31T07:39:27.000Z</lastmod>
     
@@ -37,7 +44,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
+    <loc>http://czhzero.com/2016/07/30/how-to-be-stronger/</loc>
     
     <lastmod>2016-07-31T07:39:27.000Z</lastmod>
     
@@ -51,14 +58,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/29/checkstyle-githook/</loc>
+    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
+    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
+    <loc>http://czhzero.com/2016/06/29/checkstyle-githook/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
