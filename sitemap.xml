@@ -2,16 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://czhzero.com/2016/06/15/item2-basic-command/</loc>
+    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
     
-    <lastmod>2016-06-25T10:04:48.000Z</lastmod>
+    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/19/android-study-resource/</loc>
+    
+    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
+    
+    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/30/how-to-be-stronger/</loc>
+    
+    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
+    
+    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
+    
+    <lastmod>2016-07-31T07:39:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/04/memory-leak-possibility/</loc>
+    
+    <lastmod>2016-07-05T14:31:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/06/29/checkstyle-githook/</loc>
+    
+    <lastmod>2016-06-29T14:04:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
+    
+    <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://czhzero.com/2016/06/25/hexoblog/</loc>
     
-    <lastmod>2016-06-25T09:59:25.000Z</lastmod>
+    <lastmod>2016-06-29T14:04:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
+    
+    <lastmod>2016-06-29T14:04:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/06/15/item2-basic-command/</loc>
+    
+    <lastmod>2016-06-25T10:04:48.000Z</lastmod>
     
   </url>
   

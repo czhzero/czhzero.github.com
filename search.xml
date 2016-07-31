@@ -4,6 +4,926 @@
   
     
     <entry>
+      <title><![CDATA[技术高手如何炼成？]]></title>
+      <url>http://czhzero.com/2016/07/30/how-to-be-stronger/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>本文转载自: 知乎-郑均<br>原文地址: <a href="http://zhuanlan.zhihu.com/zhengyun/20270317" target="_blank" rel="external">http://zhuanlan.zhihu.com/zhengyun/20270317</a></p>
+</blockquote>
+<p>面试的时候，我会问面试者，你日常如何构建自己的知识体系，如何让自己更高更快更强？多数工程师并没有深入地思考过这个问题，基本上是零敲碎打，随机性大。本着不能让你白来一趟的精神，好为人师的我会娓娓道来：</p>
+<a id="more"></a>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/6/bingshanyijiao.jpg" alt="技术高手如何炼成？"></p>
+<h1 id="第一阶段-认真构建完整的知识体系"><a href="#第一阶段-认真构建完整的知识体系" class="headerlink" title="第一阶段 认真构建完整的知识体系"></a>第一阶段 认真构建完整的知识体系</h1><p>十几年前我投身软件行业的时候，光是讲解数据库原理、操作系统、TCP/IP、组网、算法等等基础知识的英文原版书摞起来就等身，认认真真看完，各种上手实践，入行后，读遍 C++ 各种经典著作，读遍各种协议原文，认认真真打基础。很多工程师都说自己平常就是在某些 IT 门户上看看推荐的博文或新闻，我说这属于典型的零敲碎打，不够刺激。</p>
+<p>聊到这时，我会举一个例子，为什么要阅读长篇小说，因为中短篇小说就像用针扎你，而长篇小说就像把你装进一个沙袋里吊起来，从四面八方用狼牙棒打你，酣畅淋漓。构建可用的知识体系，就得读书，书是有体系结构的，你关心不关心，现阶段你用到用不到，它都讲到了，从头到尾看几遍，针扎得透透的。</p>
+<p>何谓知识体系？</p>
+<p>几年前，前支付宝架构师姚建东曾经在我们公司做过技术人员如何规划自己的分享讲座，他是这么论述的：</p>
+<p>技术与技巧包括：</p>
+<ul>
+<li>计算机基础理论<ul>
+<li>计算机模型：内存/IO/时钟/CPU……</li>
+<li>算法</li>
+<li>专项技术领域：</li>
+<li>数据挖掘</li>
+<li>数据管理</li>
+<li>智能推荐</li>
+<li>搜索</li>
+<li>……</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>语言与工具<ul>
+<li>语言与相关体系</li>
+<li>开发工具，分析工具，代码管理工具</li>
+<li>HTML/CSS/JS/Ajax</li>
+<li>常用框架与第三方类库</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>调试与测试<ul>
+<li>调试方法和哲学</li>
+<li>定位问题</li>
+<li>BUG管理工具</li>
+<li>单元测试</li>
+<li>集成测试</li>
+<li>性能测试</li>
+<li>安全测试</li>
+<li>兼容性测试与方法</li>
+<li>JS/Ajax测试与方法</li>
+<li>服务层测试</li>
+<li>Web层测试</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>网络与系统<ul>
+<li>TCP/IP协议与模型，HTTP/SMTP等协议</li>
+<li>Linux系统，网络分析工具，系统分析工具</li>
+<li>容量，流量与负载均衡</li>
+<li>应用部署、规范、规划</li>
+<li>安全</li>
+<li>监控与故障分析</li>
+<li>磁盘与存储</li>
+<li>Shell</li>
+<li>DNS与域名</li>
+<li>缓存，反向代理</li>
+<li>图片服务器（海量小文件）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>需求挖掘与分析<ul>
+<li>需求文档格式</li>
+<li>需求访谈</li>
+<li>需求分析方法，需求分析工具</li>
+<li>领域知识与经验</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>系统分析与设计<ul>
+<li>UML语言与模型</li>
+<li>分析模式</li>
+<li>设计模式，领域驱动</li>
+<li>系统分析文档格式</li>
+<li>系统设计文档格式</li>
+<li>功能性需求与非功能性需求</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>数据与系统<ul>
+<li>数据库</li>
+<li>可伸缩策略，扩展策略，备份，容灾，性能，安全，高可用……</li>
+<li>数据设计与范式，SQL/NoSQL，Cache，分布式文件</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>架构设计<ul>
+<li>架构模式，典型互联网公司架构演进历史</li>
+<li>架构原则，常用策略</li>
+<li>架构设计方法</li>
+<li>非功能性理解<ul>
+<li>扩展性</li>
+<li>伸缩性</li>
+<li>稳定性</li>
+<li>一致性</li>
+<li>性能</li>
+<li>吞吐量</li>
+</ul>
+</li>
+<li>容量预测与规划</li>
+<li>架构体系与相关技术</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>过程与管理<ul>
+<li>分析过程</li>
+<li>研发过程</li>
+<li>评审过程</li>
+<li>测试过程</li>
+<li>发布过程</li>
+<li>回滚过程</li>
+<li>文档管理</li>
+<li>知识管理</li>
+<li>项目管理</li>
+</ul>
+</li>
+</ul>
+<p>以上其实就是一份从业基础知识清单，你可以按图索骥，阅读相关书籍。</p>
+<h1 id="第二阶段-顺着一个Topic钻进去，锻炼自己的预研能力"><a href="#第二阶段-顺着一个Topic钻进去，锻炼自己的预研能力" class="headerlink" title="第二阶段 顺着一个Topic钻进去，锻炼自己的预研能力"></a>第二阶段 顺着一个Topic钻进去，锻炼自己的预研能力</h1><p>无论公司业务还是自己喜欢做的事，都可以抽象出通用性课题，然后以做论文的方式杀进去。这个事情得反复操练，有意识操练。</p>
+<p>做事方式为：</p>
+<ul>
+<li>抽象出 Topic——如分布式锁，分布式并行计算引擎，防CSRF的FormToken自动生成框架，定时任务管理与调度平台，分布式跟踪，等等</li>
+<li>向功课好的学生学习——有针对性地深入了解业界其他公司是如何分析问题和解决问题的，汇总各种方案，站在巨人的肩膀上</li>
+<li>分析特定应用场景，技术选型</li>
+<li>兼顾高可用性和可伸缩，做设计评审</li>
+<li>做测试自证靠谱，梳理知识点，开技术分享会</li>
+<li>上线商用，总结经验教训，开经验分享会</li>
+</ul>
+<p>其中一个重点是汇总和分享。05年时，应电信级统一消息业务需要，我去研究了 SIP 协议，做了各种试验，分析报文，写了一系列的幻灯片，做了公开分享，一时间还颇受欢迎：</p>
+<ul>
+<li>SIP_to_Freshman_by_zhengyun.ppt</li>
+<li>SIP之穿越NAT_by_zhengyun.ppt</li>
+<li>SIP体系架构讲义及消息交互演示_by_zhengyun.ppt</li>
+<li>SIP多方会话消息之实例讲解_by_zhengyun.ppt</li>
+<li>SIP安全框架之认证[NTLM和Kerberos]_by_zhengyun.ppt</li>
+<li>SIP消息之逐项讲解_by_zhengyun.ppt</li>
+</ul>
+<p>为什么要写出来、讲出来呢？因为有一个学习金字塔理论，如下图所示：</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/6/xuexijinzita.png" alt="技术高手如何炼成？"></p>
+<p>我们读过的事情能够记住学习内容的10%，<br>我们听过的事情能够记住20%，<br>我们看过的事情能够记住30%，<br>我们听过和看过的事情能够记住50%——如看影像/看展览/看演示/现场观摩，<br>我们说过的事情能够记住70%——如参与讨论/发言，<br>我们说过和做过的事情能够记住90%——如做报告，给别人讲，亲身体验，动手做。</p>
+<p>这也就是我在<a href="http://www.cnblogs.com/zhengyun_ustc/p/rightThings.html" target="_blank" rel="external">《窝窝研发过去几年做对了哪些事》</a>中阐述的管理方法：我们从入职之后就有意识地训练大家，让大家能够公开陈述、清晰表达。所以，试用期内，新人必须做一次技术分享和一次技术评审，面对各方的 challenge；预研的中间和结尾都要有分享会；平时也要定期组织技术讲座。</p>
+<h1 id="第三阶段-疯狂回答技术问题"><a href="#第三阶段-疯狂回答技术问题" class="headerlink" title="第三阶段 疯狂回答技术问题"></a>第三阶段 疯狂回答技术问题</h1><p>知识体系慢慢构建，与业务相关的抽象 Topic 也在探索中。但这还不够。因为你亲身接触到的世界太小，可能不足以构成挑战，你可能意识不到自己缺多少知识和技能，不利于你分析问题、提出问题和解决问题的能力培养。</p>
+<p>所以，要主动出击：疯狂回答问题。</p>
+<p>我曾经在入行的头几年里几乎把我关注的垂直领域（包括语言领域和业务领域）里的所有问题都回答了一遍。我对外宣扬知无不言言无不尽，放出邮件地址和 MSN（那时候 MSN 很高大上），很多网友都会发邮件或者加我好友，问各种开发疑难问题，平均每天都有几个，然后我把解决问题的过程写成微软 KB（KnowledgeBase） 文体发表在我的博客上。</p>
+<p>你想想看，工作中的问题你平均每隔几天才能遇到一个，而这么做，每天你都会遇到几个乃至于十几个，第一让你脑力激荡，第二接触到更多新知。05年到06年期间，我因工作需要学习了 JavaME（或古老的称呼 J2ME），早年间 Symbian 手机上的客户端开发。那段时间我天天扫中文论坛的帖子，力求回答所有问题，尤其是那些 BUG 或故障。对于那些暂时没有人解决的，如流媒体实时播放，如仿 OperaMini 二级菜单界面，都上下求索，最后放出思路以及源码。</p>
+<p>同时，我经常整理常见问题，梳理成册并发布。譬如我整理过的 J2ME 疑难问题：</p>
+<ul>
+<li>[J2ME Q&amp;A]真机报告MontyThread -n的错误之解释</li>
+<li>[J2MEQ&amp;A]WTK初始化WMAClient报错XXX has no IP address的解释</li>
+<li>[J2ME Q&amp;A]untrusted domain is not configured问题回应</li>
+<li>[J2ME]“Cannot open socket for LIME events”错误解决</li>
+</ul>
+<p>几个月后，我成为 J2ME 中文论坛超级版主。通过这个历程，我想告诉大家，回答网友问题，技巧得当的话，比如别老是重复回答新手问题，试着攻克那些疑难问题，或者离奇故障，绝对不会浪费你的时间。为什么？</p>
+<p>因为你要信奉：</p>
+<blockquote>
+<p>你学过的每一样东西，你遭受的每一次苦难，都会在你一生中的某个<br>时候派上用场。<br>——佩内洛普·菲兹杰拉德 《离岸》</p>
+<p>Everything that you’ve learnt and all the<br>hardships you’ve suffered will all come in handy<br>at some point in your life.</p>
+</blockquote>
+<h1 id="第四阶段-RCA-总结"><a href="#第四阶段-RCA-总结" class="headerlink" title="第四阶段 RCA/总结"></a>第四阶段 RCA/总结</h1><p>现在是你把经验教训变为财富的时刻了。</p>
+<p>什么是好的技术 Leader？</p>
+<p>随便一个业务需求或业务场景讲出来，你立刻把它抽象为几个模块/系统/Topic，然后侃侃而谈，业界都是怎么解决的，我们以前又是怎么分析怎么解决的，现在咱们这种情况下应该如何设计，可能会遇到什么问题，我们应该做哪些预防设计，blabla。</p>
+<p>怎么做到这一点？</p>
+<p>第一，写 RCA 报告。我以前说过，『窝窝从 2011 年开始，一直坚持每错必查、错了又错就整改、每错必写，用身体力行告诉每一个新员工直面错误、公开技术细节、分享给所有人，长此以往，每一次事故和线上漏测都会变为我们的财富。这就是我们的 RCA（Root Cause Analysis）制度，截止到目前已经收集整理了近两百个详尽的 RCA 报告。』</p>
+<p>RCA 报告格式为：</p>
+<ul>
+<li>背景知识（Optional）</li>
+<li>问题现象</li>
+<li>影响范围</li>
+<li>问题原因</li>
+<li>问题分析过程（Optional）</li>
+<li>解决办法</li>
+<li>后续处理措施：如线上脏数据如何修复，如对用户造成的影响如何弥补等（Optional）</li>
+<li>经验教训</li>
+<li>RCA类型：如代码问题、实施问题、配置问题、设计问题、测试问题</li>
+</ul>
+<p>这样，作为一名合格的老兵，你见过了足够多的血，并且把它们变成了你的人生财富。</p>
+<p>第二，写总结。话说，要经常拉清单。侃侃而谈得有资料，这些都得是你自己写才能印象深刻，关键时刻想得起来。</p>
+<p>好了，这就是我告诉面试者的高手炼成四个阶段。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android Studio提升编译速度方法总结]]></title>
+      <url>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</url>
+      <content type="html"><![CDATA[<p>编译会占用你的时间，加快编译会影响你的开发效率，让你的项目工作更加顺畅。本文会定期更新一些提高编译效率的方法。加速gradle编译。</p>
+<a id="more"></a>
+<h3 id="方法一-开启gradle守护线程，并行编译"><a href="#方法一-开启gradle守护线程，并行编译" class="headerlink" title="方法一:开启gradle守护线程，并行编译"></a>方法一:开启gradle守护线程，并行编译</h3><p>在下面的目录下面创建gradle.properties文件：</p>
+<ul>
+<li>/Users/<username>/.gradle/ (Mac)</username></li>
+<li>/home/<username>/.gradle/ (Linux)</username></li>
+<li>C:\Users\<username>.gradle (Windows)</username></li>
+</ul>
+<p>在文件中增加:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.daemon=true  //就是让你让你编译时使用守护进程。</span><br><span class="line"></span><br><span class="line">org.gradle.parallel=true //使用并行编译</span><br><span class="line"></span><br><span class="line">org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m //JVM最大允许分配的堆内存，按需分配</span><br></pre></td></tr></table></figure>
+<p><strong><em>网上关于提速的方法，这类介绍最多，不知道怎么回事，我亲测后，发现没什么效果。</em></strong></p>
+<h3 id="方法二-设置离线状态"><a href="#方法二-设置离线状态" class="headerlink" title="方法二:设置离线状态"></a>方法二:设置离线状态</h3><p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/5/lALOYktUms0CEM0FeQ_1401_528.png" alt="离线状态"></p>
+<p><strong><em>设置离线，Vpn用上后，似乎对整个编译也没有什么直观的改善。</em></strong></p>
+<h3 id="方法三-更新gradle版本"><a href="#方法三-更新gradle版本" class="headerlink" title="方法三:更新gradle版本"></a>方法三:更新gradle版本</h3><p>gradle是一个比较复杂的‘怪物’，大多数的项目随着每个release版本越来越快，所以用最新的版本有很大意义。<a href="https://gradle.org/gradle-download/" target="_blank" rel="external">下载地址</a></p>
+<p>Tips:<br>如果发现IDE下载gradle较慢,则可改为自定义下载，下载好的zip包放到如下目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.gradle/wrapper/dists/gradle-2.10-all/5b6kqrscumh9p4evkkemdk57ad/</span><br></pre></td></tr></table></figure>
+<p><strong><em>我升级到gradle-2.14.1之后，也没发现有多大的改变。编译还是要1分多钟。</em></strong></p>
+<p>dev包中设置minSdkVersion为21</p>
+<h3 id="方法四-优化项目"><a href="#方法四-优化项目" class="headerlink" title="方法四:优化项目"></a>方法四:优化项目</h3><ul>
+<li>删除无用的module, 多module相互依赖会降低编译速度</li>
+<li>删除无用的文件资源, 如单元测试代码，废弃图片等等</li>
+<li>减少方法数目，不使用multidex。<a href="http://blog.csdn.net/t12x3456/article/details/40837287" target="_blank" rel="external">multidex</a></li>
+</ul>
+<p><strong><em>这类方法，肯定是会提高编译速度，本文不再详述。</em></strong></p>
+<p><strong><em>这个方法肯定有用。</em></strong></p>
+<h3 id="方法五-使用aar依赖"><a href="#方法五-使用aar依赖" class="headerlink" title="方法五:使用aar依赖"></a>方法五:使用aar依赖</h3><p>我们都知道我们或多或少使用第三方的开源库或者工具，还有自己封装的类库，但是一次编译的时候在Library Module 目录下， 打开build/outputs/aar，就有生成的aar 文件。把他放在libs 目录下，在build.gradle 添加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">   repositories &#123;</span><br><span class="line">      jcenter()</span><br><span class="line">      flatDir &#123;</span><br><span class="line">        dirs &apos;libs&apos;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    compile(name:&apos;test&apos;, ext:&apos;aar&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然也可以这样添加</p>
+<p>我们可以新建一个jar/aar Module，选择aar 文件，然后新建的Module 目录下，就会多了个build.gradle 和xxx.aar。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">configurations.maybeCreate(&quot;default&quot;)</span><br><span class="line">artifacts.add(&quot;default&quot;, file(&apos;mylibrary-debug.aar&apos;))</span><br></pre></td></tr></table></figure>
+<p>然后在我们的Module 中这样引用即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile project(&apos;:mylibrary-debug&apos;)</span><br></pre></td></tr></table></figure>
+<p><strong><em>如果大量的module都被置换成aar文件，确实会使得整个项目编译速度加快。但是若aar中代码需要改变，就会比较麻烦。所以这种方法，需要酌情考虑。</em></strong></p>
+<h3 id="方法六-对第三方库进行优化"><a href="#方法六-对第三方库进行优化" class="headerlink" title="方法六:对第三方库进行优化"></a>方法六:对第三方库进行优化</h3><ul>
+<li>利用debugCompile来依赖debug时才用到的库</li>
+<li>利用更小的库替代现有的库</li>
+<li>利用exclude来排出某些不需要的依赖</li>
+</ul>
+<p>对于远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">compile (&apos;com.facebook.react:react-native:+&apos;)&#123;</span><br><span class="line">    exclude group: &apos;com.squareup.okhttp3&apos;, module: &apos;okhttp&apos;</span><br><span class="line">    exclude group: &apos;com.android.support&apos;, module: &apos;support-v4&apos;</span><br><span class="line">    exclude group: &apos;com.android.support&apos;, module: &apos;support-v7&apos;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>对于本地项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">compile(project(&apos;:react-native-custom-module&apos;)) &#123;</span><br><span class="line">    exclude group: &apos;com.facebook.react&apos;, module: &apos;react-native&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法七-采用增量编译"><a href="#方法七-采用增量编译" class="headerlink" title="方法七:采用增量编译"></a>方法七:采用增量编译</h3><ul>
+<li>Instant Run</li>
+<li>Jrebel</li>
+</ul>
+<p>正在研究中。</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
+<li><a href="http://kevinpelgrims.com/blog/2015/06/11/speeding-up-your-gradle-builds/" target="_blank" rel="external">Speeding up Gradle builds</a></li>
+<li><a href="http://www.jianshu.com/p/2ff3717199da" target="_blank" rel="external">6个技巧加速你的gradle编译</a></li>
+<li><a href="http://tikitoo.github.io/2016/05/26/android-studio-gradle-build-run-faster/" target="_blank" rel="external">知道Android 中Gradle 的这些技巧，提升编译构建速度</a></li>
+<li><a href="http://www.jianshu.com/p/e456a5ac8613?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">Android打包提速实践</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android Studio 需要配置的版本号整理]]></title>
+      <url>http://czhzero.com/2016/07/21/android-version-configure/</url>
+      <content type="html"><![CDATA[<p>Android Studio 使用Gradle进行项目构建，相比Eclipse方便了许多，但是也同时引入各种build.gradle，配置各种工具的版本号。<br>下面我们就来理一理那些需要配置的版本参数。</p>
+<a id="more"></a>
+<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>JDK配置比较简单，安装完JDK，配置环境变量后，<br>进入到[Project Structure]配置界面JDK路径即可。</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/4/lALOXzh4gs0Bfc0D1g_982_381.png" alt="JDK"></p>
+<h3 id="SDK-Platform"><a href="#SDK-Platform" class="headerlink" title="SDK Platform"></a>SDK Platform</h3><p>配置JDK的时候，[Project Structure]配置界面配置一下Android SDK路径。</p>
+<p>另外,在项目模块目录下的build.gradle文件内还要做如下配置:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ...</span><br><span class="line">    compileSdkVersion 23</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="SDK-Build-Tools"><a href="#SDK-Build-Tools" class="headerlink" title="SDK Build Tools"></a>SDK Build Tools</h3><p>Android SDK的bulid tools的配置方法与SDK platform的配置方法一样，进入到项目模块目录下的build.gradle文件内做如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ...</span><br><span class="line">    buildToolsVersion &quot;23.0.3&quot;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="SDK-Tools"><a href="#SDK-Tools" class="headerlink" title="SDK Tools"></a>SDK Tools</h3><p>SDK Tools的版本，在gradle文件中不需要配置，是Android SDK的工具组件，与编译关系不大。需要更新的话，可以打开Android Studio工具栏里的[sdk manager]</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/4/lALOXzh6Is0CzM0Few_1403_716.png" alt="SDK Tools"></p>
+<h3 id="Gradle-Version"><a href="#Gradle-Version" class="headerlink" title="Gradle Version"></a>Gradle Version</h3><p>Gradle是整个项目构建版本，一直在更新，具体的更新信息可以参考<a href="https://docs.gradle.org" target="_blank" rel="external">gradle官网</a></p>
+<p>修改Gradle版本，同样是进入到[Project Structure]配置界面.</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/4/lALOXyEtXczizQUC_1282_226.png" alt="Gradle Version"></p>
+<h3 id="Android-Plugin-for-Gradle"><a href="#Android-Plugin-for-Gradle" class="headerlink" title="Android Plugin for Gradle"></a>Android Plugin for Gradle</h3><p>除了配置gradle版本外，我们还需要配置与之配套的 gradle plugin版本。</p>
+<p>进入到项目根目录build.gradle，进行如下配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">  ...</span><br><span class="line">  dependencies &#123;</span><br><span class="line">    classpath &apos;com.android.tools.build:gradle:2.1.0&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
+<li><a href="https://docs.gradle.org" target="_blank" rel="external">gradle</a></li>
+<li><a href="https://developer.android.com/studio/releases" target="_blank" rel="external">android developer</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android学习资源索引]]></title>
+      <url>http://czhzero.com/2016/07/19/android-study-resource/</url>
+      <content type="html"><![CDATA[<h2 id="资源目录"><a href="#资源目录" class="headerlink" title="资源目录"></a>资源目录</h2><ul>
+<li><a href="#热门网站">热门网站</a><ul>
+<li>官方网站</li>
+<li>教学网站</li>
+<li>开发者社区 </li>
+</ul>
+</li>
+<li><a href="#个人博客">个人博客</a></li>
+<li><a href="#技术专栏">技术专栏</a><ul>
+<li>网络相关</li>
+<li>RxJava相关</li>
+<li>MVP/MVVM架构相关</li>
+<li>插件化开发</li>
+<li>单元测试系列</li>
+<li>知识点</li>
+</ul>
+</li>
+<li><a href="#开发工具">开发工具</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="热门网站"><a href="#热门网站" class="headerlink" title="热门网站"></a>热门网站</h2><h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><ul>
+<li><a href="http://developer.android.com/" target="_blank" rel="external">Android Developer</a></li>
+<li><a href="http://androiddoc.qiniudn.com/index.html" target="_blank" rel="external">Android Developer (无需梯子)</a></li>
+<li><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">Android Training 中文版</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/material-design/" target="_blank" rel="external">Material Design 中文版</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/android-weekly/" target="_blank" rel="external">Android Weekly 中文版</a></li>
+<li><a href="http://wiki.jikexueyuan.com/list/android" target="_blank" rel="external">极客学院 Wiki Android 板块</a></li>
+<li><a href="https://chaosleong.gitbooks.io/gradle-for-android/content/" target="_blank" rel="external">Gradle Android Plugin 中文版》</a></li>
+<li><a href="https://github.com/googlesamples" target="_blank" rel="external">Google samples</a> —— 看优秀代码是最好的学习方式</li>
+</ul>
+<h3 id="教学网站"><a href="#教学网站" class="headerlink" title="教学网站"></a>教学网站</h3><ul>
+<li><a href="http://chinagdg.org/google-videos/" target="_blank" rel="external">Google 官方性能优化视频</a> —— GDG中译版</li>
+<li><a href="http://www.imooc.com/" target="_blank" rel="external">慕课网</a></li>
+<li><a href="http://www.jikexueyuan.com/" target="_blank" rel="external">极客学院</a></li>
+<li><a href="http://www.maiziedu.com/" target="_blank" rel="external">麦子学院</a></li>
+<li><a href="https://www.udacity.com/courses/android" target="_blank" rel="external">Udacity Google 官方视频教程</a></li>
+</ul>
+<h3 id="开发者社区"><a href="#开发者社区" class="headerlink" title="开发者社区"></a>开发者社区</h3><ul>
+<li><a href="http://stackoverflow.com/questions/tagged/android" target="_blank" rel="external">Stackoverflow</a> —— 国外著名的问答社区</li>
+<li><a href="http://antonioleiva.com" target="_blank" rel="external">antoniolevia</a> —— 国外android技术分享网站</li>
+<li><a href="http://www.androidweekly.cn" target="_blank" rel="external">Android 开发技术周报</a> —— 长期更新最新前言资讯</li>
+<li><a href="http://www.devtf.cn/" target="_blank" rel="external">开发技术前线</a> —— 《Android源码设计模式》作者 Mr.Simple 维护的社区网站</li>
+<li><a href="http://gank.io" target="_blank" rel="external">干货集中营</a> —— 每日分享妹子图 和 技术干货，还有供大家中午休息的休闲视频</li>
+<li><a href="http://gold.xitu.io/explore/android" target="_blank" rel="external">掘金 Android</a></li>
+<li><a href="https://www.v2ex.com/go/android" target="_blank" rel="external">V2ex</a></li>
+</ul>
+<h2 id="个人博客"><a href="#个人博客" class="headerlink" title="个人博客"></a>个人博客</h2><ul>
+<li><a href="http://a.codekk.com/" target="_blank" rel="external">CodeKK</a> —— 专注于开源项目源码解析及优秀开源项目的分享</li>
+<li><a href="http://www.trinea.cn/" target="_blank" rel="external">Trinea</a> —— 性能优化、源码解析</li>
+<li><a href="http://blog.csdn.net/Luoshengyang" target="_blank" rel="external">老罗的Android之旅</a> —— Android系统源代码分析</li>
+<li><a href="http://www.devtf.cn/" target="_blank" rel="external">开发技术前线</a> —— 《Android源码设计模式》作者 Mr.Simple 维护的社区网站</li>
+<li><a href="http://blog.csdn.net/aigestudio" target="_blank" rel="external">爱哥</a> ——《Android源码设计模式》作者 关爱民 </li>
+<li><a href="http://blog.csdn.net/singwhatiwanna" target="_blank" rel="external">任玉刚</a> —— 《Android开发艺术探索》作者 CSDN博客</li>
+<li><a href="http://blog.csdn.net/guolin_blog" target="_blank" rel="external">郭霖</a> —— 《第一行代码》作者 CSDN博客</li>
+<li><a href="http://blog.csdn.net/lmj623565791" target="_blank" rel="external">鸿洋</a> —— CSDN 博客专家</li>
+<li><a href="http://hukai.me" target="_blank" rel="external">胡凯</a> —— 专注性能优化</li>
+<li><a href="http://www.jianshu.com/users/e6885381f7d4/latest_articles" target="_blank" rel="external">张明云</a> —— Android学习之路</li>
+<li><a href="http://drakeet.me" target="_blank" rel="external">Drakeet</a> —— 贝壳单词APP开发者</li>
+<li><a href="http://blog.csdn.net/eclipsexys" target="_blank" rel="external">徐宜生</a> —— 《Android群英传》作者</li>
+<li><a href="http://kymjs.com" target="_blank" rel="external">张涛</a> —— KjFrame 作者</li>
+<li><a href="http://www.inferjay.com/blog/categories/androiddevweekly/" target="_blank" rel="external">脉脉不得语</a> —— 著名博主</li>
+<li><a href="http://wangkuiwu.github.io" target="_blank" rel="external">wangkuiwu</a> —— Binder、事件分发、动画解析</li>
+<li><a href="http://www.jianshu.com/users/FK4sc4/latest_articles" target="_blank" rel="external">高建武</a> —— 专注性能优化，简书著名博主</li>
+<li><a href="http://blog.csdn.net/lzyzsd" target="_blank" rel="external">hi大头鬼hi</a> —— 对RxJava有较深的研究</li>
+<li><a href="http://blog.csdn.net/coder_pig" target="_blank" rel="external">Coder-pig</a> —— CSDN 博客专家，最佳入门专栏</li>
+<li><a href="http://keeganlee.me/" target="_blank" rel="external">Keegan小刚</a> —— 分享了多篇Android样式的文章</li>
+<li><a href="http://blog.csdn.net/NUPTboyZHB/" target="_blank" rel="external">郑海波</a> —— CSDN博主，文章大多与自定义控件相关</li>
+<li><a href="http://wuxiaolong.me/" target="_blank" rel="external">吴小龙同学</a> —— 分享了多篇关于AndroidDesignSupportLibrary的文章</li>
+<li><a href="http://blog.csdn.net/lincyang" target="_blank" rel="external">全速前行</a> —— 主讲实战技巧和平常遇到的问题</li>
+<li><a href="http://blog.csdn.net/asce1885" target="_blank" rel="external">ASCE 1985</a> —— 翻译了多篇使用Kotlin开发Android应用，平安科技移动开发二队技术周报作者</li>
+<li><a href="http://blog.mcxiaoke.com" target="_blank" rel="external">mcxiaoke</a> —— rxjava文档，EventBus博客，多渠道打包，一些开源项目</li>
+<li><a href="http://blog.csdn.net/wangjinyu501?viewmode=contents" target="_blank" rel="external">WPJY</a> —— 自定义View、开发经验</li>
+<li><a href="http://android-developers.blogspot.jp/" target="_blank" rel="external">Android Developers blog</a> —— Google’s Android 博客</li>
+<li><a href="http://blog.csdn.net/developer_jiangqq" target="_blank" rel="external">江清清的专栏</a> ——     大量实例讲解</li>
+<li><a href="http://hujiaweibujidao.github.io" target="_blank" rel="external">hujiaweibujidao</a> —— 《Android开发艺术探索》读书笔记系列</li>
+<li><a href="http://www.jianshu.com/users/b99b0edd4e77/latest_articles" target="_blank" rel="external">BlackSwift</a> —— 简书作者【Blur实时渲染，AnimeWallpaper】</li>
+<li><a href="http://blog.csdn.net/qq_23547831?viewmode=contents" target="_blank" rel="external">Android 源码解析专栏</a></li>
+</ul>
+<h2 id="技术专栏"><a href="#技术专栏" class="headerlink" title="技术专栏"></a>技术专栏</h2><h3 id="网络相关"><a href="#网络相关" class="headerlink" title="网络相关"></a>网络相关</h3><ul>
+<li><a href="http://www.cnblogs.com/starstone/p/4890409.html" target="_blank" rel="external">HTTP 必知必会</a></li>
+<li><a href="https://realm.io/news/droidcon-jake-wharton-simple-http-retrofit-2/" target="_blank" rel="external">Retrofit 2 用法解析</a></li>
+<li><a href="http://www.jianshu.com/p/aad5aacd79bf" target="_blank" rel="external">OkHttp3 源码分析</a></li>
+<li><a href="http://blog.csdn.net/nugongahou110/article/details/46829605" target="_blank" rel="external">Volley 源码分析</a></li>
+<li><a href="https://drakeet.me/retrofit-2-0-okhttp-3-0-config" target="_blank" rel="external">Retrofit 2.0 + OkHttp 3.0 配置</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2011/09/restful" target="_blank" rel="external">理解 RESTful架构</a></li>
+<li><a href="http://blog.csdn.net/efan006/article/details/50543990" target="_blank" rel="external">Retrofit + RxJava实战日志</a></li>
+<li><a href="http://www.jianshu.com/p/9c3b4ea108a7" target="_blank" rel="external">使用 Retrofit 和 Okhttp 实现网络缓存</a> —— 无网读缓存，有网根据过期时间重新请求</li>
+<li><a href="http://www.jianshu.com/p/7e28c8216c7d" target="_blank" rel="external">RxJava 处理网络连接失败</a></li>
+<li><a href="http://www.jianshu.com/p/584707554ed7" target="_blank" rel="external">Android 推送技术研究</a></li>
+<li><a href="http://www.jianshu.com/p/77d418e7b5d6" target="_blank" rel="external">OkHttp, Retrofit, Volley 应该选择哪一个？</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/java/j-lo-okhttp/" target="_blank" rel="external">OkHttp：Java 平台上的新一代 HTTP 客户端</a> —— 来自IBM的技术文章</li>
+<li><a href="http://blog.csdn.net/qq_21430549/article/details/51212977" target="_blank" rel="external">Retrofit 文件上传下载</a></li>
+<li><a href="http://blog.csdn.net/evan_man/article/details/51320408" target="_blank" rel="external">Retrofit 的使用与深入学习</a></li>
+<li><a href="http://www.jianshu.com/p/93153b34310e" target="_blank" rel="external">Android Retrofit 2.0 使用-补充篇</a></li>
+<li><a href="http://www.jianshu.com/p/90b1f20b123d" target="_blank" rel="external">Retrofit 笔记</a></li>
+</ul>
+<h3 id="RxJava相关"><a href="#RxJava相关" class="headerlink" title="RxJava相关"></a>RxJava相关</h3><ul>
+<li><a href="http://gank.io/post/560e15be2dca930e00da1083" target="_blank" rel="external">Rxjava 详解</a> —— 抛物线出品经典Rxjava详解</li>
+<li><a href="http://blog.csdn.net/lzyzsd/article/details/41833541" target="_blank" rel="external">深入浅出 Rxjava</a> —— rx教父大头鬼出品深入浅出rxjava</li>
+<li><a href="https://github.com/mcxiaoke/RxDocs" target="_blank" rel="external">RxDocs - RxJava 文档中文版</a></li>
+<li><a href="https://github.com/lzyzsd/Awesome-RxJava" target="_blank" rel="external">RxJava resources</a> —— rx教父大头鬼整理的Rxjava学习集合</li>
+<li><a href="http://wangxinghe.me/blog/2016-03-27/rxjava-basis/" target="_blank" rel="external">RxJava 学习总结</a></li>
+<li><a href="https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.9mc2oeyzo" target="_blank" rel="external">Improving UX with RxJava</a></li>
+<li><a href="https://mcxiaoke.gitbooks.io/rxdocs/content/index.html" target="_blank" rel="external">ReactiveX 文档中文翻译</a></li>
+<li><a href="https://github.com/richardradics/RxAndroidBootstrap" target="_blank" rel="external">RxJava + Dagger2 + LAMBDA 的一个 MVP demo</a></li>
+<li><a href="http://mrfu.me/2016/01/10/RxWeekend/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">RxJava 的周末狂欢</a></li>
+<li><a href="http://www.jianshu.com/p/c2c7c46e6b97" target="_blank" rel="external">使用 RxBinding 响应控件的异步事件</a></li>
+<li><a href="http://www.jianshu.com/p/6d1ef9f43cdc" target="_blank" rel="external">详细解析 RxAndroid 的使用方式</a></li>
+<li><a href="http://www.jianshu.com/p/f3f0eccbcd6f" target="_blank" rel="external">RxJava简洁封装之道</a></li>
+</ul>
+<h3 id="MVP-MVVM架构相关"><a href="#MVP-MVVM架构相关" class="headerlink" title="MVP/MVVM架构相关"></a>MVP/MVVM架构相关</h3><ul>
+<li><a href="http://www.jianshu.com/p/1f21e1d375aa" target="_blank" rel="external">不容错过，最全的 Android 架构合集</a></li>
+<li><a href="http://www.jianshu.com/p/0590f530c617" target="_blank" rel="external">Android MVP 详解</a></li>
+<li><a href="http://www.judymax.com/archives/1141?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">Google官方 MVP 案例 todoAPP 解析</a></li>
+<li><a href="http://www.jianshu.com/p/6872b699879d" target="_blank" rel="external">Android MVVM 框架</a></li>
+<li><a href="http://www.jianshu.com/p/269c3f70ec1e" target="_blank" rel="external">Dagger2 详解</a></li>
+<li><a href="http://www.jianshu.com/collection/b838b070d6de?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=collection&amp;utm_source=weibo" target="_blank" rel="external">Android Dagger2 系列</a></li>
+<li><a href="http://www.jianshu.com/p/01d3c014b0b1" target="_blank" rel="external">Google官方 MVP + Dagger2 架构详解</a></li>
+</ul>
+<h3 id="插件化开发"><a href="#插件化开发" class="headerlink" title="插件化开发"></a>插件化开发</h3><ul>
+<li><a href="http://www.androidblog.cn/index.php/Index/detail/id/16" target="_blank" rel="external">插件化开发专栏</a> —— 有关插件化的资料这里全都有</li>
+</ul>
+<h3 id="单元测试系列"><a href="#单元测试系列" class="headerlink" title="单元测试系列"></a>单元测试系列</h3><ul>
+<li><a href="http://rexstjohn.com/unit-testing-with-android-studio/" target="_blank" rel="external">unit-testing-with-android-studio</a></li>
+<li><a href="http://www.jianshu.com/p/9d988a2f8ff7" target="_blank" rel="external">Robolectric3.0 介绍</a></li>
+<li><a href="http://www.jianshu.com/p/b2717dc245da" target="_blank" rel="external">Android 单元测试: 首先，从是什么开始</a></li>
+<li><a href="http://www.jianshu.com/p/4b03123b4f81" target="_blank" rel="external">在 Android 中同时使用 unit test 和 instrument test 作为单元测试</a></li>
+<li><a href="http://www.jianshu.com/p/fa76b126a7e7" target="_blank" rel="external">Android 单元测试——辅助工具介绍</a></li>
+<li><a href="http://www.jianshu.com/p/00ab03f3d394" target="_blank" rel="external">Android 单元测试实践</a></li>
+<li><a href="http://www.jianshu.com/p/cf446be43ae8" target="_blank" rel="external">解读 Android 官方 MVP 项目单元测试</a></li>
+<li><a href="http://tech.meituan.com/Android_unit_test.html" target="_blank" rel="external">美团 Android 单元测试研究与实践</a></li>
+</ul>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li><a href="http://www.stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android 学习之路</a> —— stormzhang的Android学习之路</li>
+<li><a href="https://github.com/tangqi92/Android-Tips" target="_blank" rel="external">Android-Tips</a> —— 作者收集了大量Android开发Tip</li>
+<li><a href="https://github.com/ZhaoKaiQiang/AndroidDifficultAnalysis" target="_blank" rel="external">AndroidDifficultAnalysis</a> —— 安卓开发中遇到的重难点解析，也包括平常的读书笔记和知识点整理</li>
+<li><a href="https://will_he.gitbooks.io/android/content/" target="_blank" rel="external">Android 知识整理 GitBook</a></li>
+<li><a href="https://github.com/bboyfeiyu/android-tech-frontier/wiki" target="_blank" rel="external">Android wiki 周刊</a></li>
+<li><a href="https://github.com/bboyfeiyu/Worth-Reading-the-Android-technical-articles" target="_blank" rel="external">值得阅读的 Android 技术文章</a> </li>
+<li><a href="http://bxbxbai.github.io/2014/10/07/android-develop-resource/" target="_blank" rel="external">整理一些比较好的 Android 开发教程</a> —— 这些都是该作者在学习Android开发过程中觉得比较好的教程和博客</li>
+<li><a href="http://zhuanlan.zhihu.com/kaede/20326073" target="_blank" rel="external">Android 应用性能调优的技术点</a></li>
+<li><a href="https://segmentfault.com/a/1190000004063006" target="_blank" rel="external">Segmentfault 上回答较好的一些问题</a></li>
+<li><a href="http://www.woshipm.com/ucd/243897.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">Android 界面设计视觉规范</a></li>
+<li><a href="http://bugly.qq.com/bbs/forum.php?mod=forumdisplay&amp;fid=39" target="_blank" rel="external">腾讯 bugly 社区</a> —— 腾讯技术大牛写的博客文章</li>
+<li><a href="http://blog.zhaiyifan.cn/2016/03/14/android-new-project-from-0-p1/" target="_blank" rel="external">从零开始的 Android 新项目</a> —— 从架构搭建、到数据层之Retrofit与Realm</li>
+<li><a href="http://www.cloudchou.com/android/post-788.html" target="_blank" rel="external">深入理解 Activity 启动流程</a> </li>
+<li><a href="http://www.jianshu.com/p/f269bcda335f" target="_blank" rel="external">你需要知道的 Android 拍照适配方案</a></li>
+<li><a href="http://www.jianshu.com/p/94e0f9ab3f1d" target="_blank" rel="external">Context 都没弄明白，还怎么做 Android 开发？</a></li>
+<li><a href="http://bugly.qq.com/bbs/forum.php?mod=viewthread&amp;tid=1022&amp;extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline" target="_blank" rel="external">Android 性能优化典范之多线程篇</a></li>
+</ul>
+<h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
+<li><a href="http://www.androiddevtools.cn/" target="_blank" rel="external">Android Dev</a> —— android各种工具，资源，我不信你不知道</li>
+<li><a href="https://github.com/Trinea/android-open-project" target="_blank" rel="external">Android 开源项目分类汇总</a> —— 史上最全的Android开源项目汇总</li>
+<li><a href="http://www.oschina.net/project/tag/11/devtools" target="_blank" rel="external">2702款 开发工具开源软件</a> —— 如题</li>
+<li><a href="http://app.memect.com/doc/android.html" target="_blank" rel="external">Android 资源库列表</a> —— 一个超级棒的安卓资源库列表</li>
+<li><a href="http://www.oschina.net/question/2285044_219206?fromerr=gEGePPMG" target="_blank" rel="external">最强开发资源平台大合集</a> —— 各种UI图标库、工具集</li>
+<li><a href="http://www.materialpalette.com" target="_blank" rel="external">MD 调色板</a></li>
+<li><a href="https://icomoon.io/app/#/select" target="_blank" rel="external">icon 图标</a> —— 各种icon图标</li>
+<li><a href="http://www.flaticon.com" target="_blank" rel="external">图标下载库</a> —— 160,428 vector icons grouped in 2,409 packs</li>
+<li><a href="https://github.com/l123456789jy/Lazy" target="_blank" rel="external">一些常用的开发工具类</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android 6.0 运行时权限处理]]></title>
+      <url>http://czhzero.com/2016/07/18/android-6-0-permission/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>本文转载自: <a href="https://www.aswifter.com/" target="_blank" rel="external">阳春面的博客</a><br>原文地址: <a href="https://www.aswifter.com/2015/11/04/android-6-permission/" target="_blank" rel="external">https://www.aswifter.com/2015/11/04/android-6-permission/</a></p>
+</blockquote>
+<h3 id="运行时权限介绍"><a href="#运行时权限介绍" class="headerlink" title="运行时权限介绍"></a>运行时权限介绍</h3><p>Android 6.0在我们原有的AndroidManifest.xml声明权限的基础上，<br>又新增了运行时权限动态检测，以下权限都需要在运行时判断：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">身体传感器</span><br><span class="line">日历</span><br><span class="line">摄像头</span><br><span class="line">通讯录</span><br><span class="line">地理位置</span><br><span class="line">麦克风</span><br><span class="line">电话</span><br><span class="line">短信</span><br><span class="line">存储空间</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="运行时权限处理"><a href="#运行时权限处理" class="headerlink" title="运行时权限处理"></a>运行时权限处理</h3><p>Android6.0系统默认为targetSdkVersion小于23的应用默认授予了所申请的所有权限，<br>所以如果你以前的APP设置的targetSdkVersion低于23，在运行时也不会崩溃，<br>但这也只是一个临时的救急策略，用户还是可以在设置中取消授予的权限。</p>
+<ul>
+<li>声明目标SDK版本</li>
+</ul>
+<p>我们需要在build.gradle中声明targetSdkVersion为23</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 23</span><br><span class="line">    buildToolsVersion &quot;23.0.1&quot;</span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId &quot;com.yourcomany.app</span><br><span class="line">        minSdkVersion 18</span><br><span class="line">        targetSdkVersion 23</span><br><span class="line">        versionCode 1</span><br><span class="line">        versionName &quot;1.0&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            minifyEnabled false</span><br><span class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>检查并申请权限</li>
+</ul>
+<p>我们需要在用到权限的地方，每次都检查是否APP已经拥有权限，<br>比如我们有一个下载功能，需要写SD卡的权限，<br>我们在写入之前检查是否有WRITE_EXTERNAL_STORAGE权限，没有则申请权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)</span><br><span class="line">        != PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">    //申请WRITE_EXTERNAL_STORAGE权限</span><br><span class="line">    ActivityCompat.requestPermissions(this, new String[]&#123;Manifest.permission.WRITE_EXTERNAL_STORAGE&#125;,</span><br><span class="line">            WRITE_EXTERNAL_STORAGE_REQUEST_CODE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>请求权限后，系统会弹出请求权限的Dialog</li>
+</ul>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/3/18501-06bc037ab77c9c62.png" alt="dialog"></p>
+<ul>
+<li>用户选择允许或拒绝后，会回调onRequestPermissionsResult方法, 该方法类似于onActivityResult</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</span><br><span class="line">    super.onRequestPermissionsResult(requestCode, permissions, grantResults);</span><br><span class="line">    doNext(requestCode,grantResults);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>我们接着需要根据requestCode和grantResults(授权结果)做相应的后续处理</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">private void doNext(int requestCode, int[] grantResults) &#123;</span><br><span class="line">       if (requestCode == WRITE_EXTERNAL_STORAGE_REQUEST_CODE) &#123;</span><br><span class="line">           if (grantResults[0] == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">               // Permission Granted</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               // Permission Denied</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Fragment中运行时权限的特殊处理"><a href="#Fragment中运行时权限的特殊处理" class="headerlink" title="Fragment中运行时权限的特殊处理"></a>Fragment中运行时权限的特殊处理</h3><ul>
+<li>在Fragment中申请权限，不要使用ActivityCompat.requestPermissions, 直接使用Fragment的requestPermissions方法，否则会回调到Activity的onRequestPermissionsResult</li>
+<li>如果在Fragment中嵌套Fragment，在子Fragment中使用requestPermissions方法，onRequestPermissionsResult不会回调回来，建议使用getParentFragment().requestPermissions方法，<br>这个方法会回调到父Fragment中的onRequestPermissionsResult，加入以下代码可以把回调透传到子Fragment</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) &#123;</span><br><span class="line">    super.onRequestPermissionsResult(requestCode, permissions, grantResults);</span><br><span class="line">    List&lt;Fragment&gt; fragments = getChildFragmentManager().getFragments();</span><br><span class="line">    if (fragments != null) &#123;</span><br><span class="line">        for (Fragment fragment : fragments) &#123;</span><br><span class="line">            if (fragment != null) &#123;</span><br><span class="line">                fragment.onRequestPermissionsResult(requestCode,permissions,grantResults);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="相关开源项目"><a href="#相关开源项目" class="headerlink" title="相关开源项目"></a>相关开源项目</h3><ul>
+<li><a href="https://github.com/hotchemi/PermissionsDispatcher" target="_blank" rel="external">PermissionsDispatcher</a></li>
+</ul>
+<p>使用标注的方式，动态生成类处理运行时权限，目前还不支持嵌套Fragment。</p>
+<ul>
+<li><a href="https://github.com/tbruyelle/RxPermissions" target="_blank" rel="external">RxPermissions</a></li>
+</ul>
+<p>基于RxJava的运行时权限检测框架</p>
+<ul>
+<li><a href="https://github.com/anthonycr/Grant" target="_blank" rel="external">Grant</a></li>
+</ul>
+<p>简化运行时权限的处理，比较灵活</p>
+<ul>
+<li><a href="https://github.com/googlesamples/android-RuntimePermissions" target="_blank" rel="external">android-RuntimePermissions</a></li>
+</ul>
+<p>Google官方的例子</p>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><p>以下权限只需要在AndroidManifest.xml中声明即可使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</span><br><span class="line">android.permission.ACCESS_NETWORK_STATE</span><br><span class="line">android.permission.ACCESS_NOTIFICATION_POLICY</span><br><span class="line">android.permission.ACCESS_WIFI_STATE</span><br><span class="line">android.permission.ACCESS_WIMAX_STATE</span><br><span class="line">android.permission.BLUETOOTH</span><br><span class="line">android.permission.BLUETOOTH_ADMIN</span><br><span class="line">android.permission.BROADCAST_STICKY</span><br><span class="line">android.permission.CHANGE_NETWORK_STATE</span><br><span class="line">android.permission.CHANGE_WIFI_MULTICAST_STATE</span><br><span class="line">android.permission.CHANGE_WIFI_STATE</span><br><span class="line">android.permission.CHANGE_WIMAX_STATE</span><br><span class="line">android.permission.DISABLE_KEYGUARD</span><br><span class="line">android.permission.EXPAND_STATUS_BAR</span><br><span class="line">android.permission.FLASHLIGHT</span><br><span class="line">android.permission.GET_ACCOUNTS</span><br><span class="line">android.permission.GET_PACKAGE_SIZE</span><br><span class="line">android.permission.INTERNET</span><br><span class="line">android.permission.KILL_BACKGROUND_PROCESSES</span><br><span class="line">android.permission.MODIFY_AUDIO_SETTINGS</span><br><span class="line">android.permission.NFC</span><br><span class="line">android.permission.READ_SYNC_SETTINGS</span><br><span class="line">android.permission.READ_SYNC_STATS</span><br><span class="line">android.permission.RECEIVE_BOOT_COMPLETED</span><br><span class="line">android.permission.REORDER_TASKS</span><br><span class="line">android.permission.REQUEST_INSTALL_PACKAGES</span><br><span class="line">android.permission.SET_TIME_ZONE</span><br><span class="line">android.permission.SET_WALLPAPER</span><br><span class="line">android.permission.SET_WALLPAPER_HINTS</span><br><span class="line">android.permission.SUBSCRIBED_FEEDS_READ</span><br><span class="line">android.permission.TRANSMIT_IR</span><br><span class="line">android.permission.USE_FINGERPRINT</span><br><span class="line">android.permission.VIBRATE</span><br><span class="line">android.permission.WAKE_LOCK</span><br><span class="line">android.permission.WRITE_SYNC_SETTINGS</span><br><span class="line">com.android.alarm.permission.SET_ALARM</span><br><span class="line">com.android.launcher.permission.INSTALL_SHORTCUT</span><br><span class="line">com.android.launcher.permission.UNINSTALL_SHORTCUT</span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[LeakCanary内存泄露检测工具]]></title>
+      <url>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</url>
+      <content type="html"><![CDATA[<h3 id="LeakCanary"><a href="#LeakCanary" class="headerlink" title="LeakCanary"></a>LeakCanary</h3><p>内存泄漏(traditional memory leak)的原因是：当该对象的所有引用都已经释放了，对象仍未被释放。逻辑内存泄漏(logical memory leak)的原因是：当应用不再需要这个对象，当仍未释放该对象的所有引用。如果持有对象的强引用，垃圾回收器是无法在内存中回收这个对象。<br>常见的原因在<a href="http://www.czhzero.com/2016/07/04/memory-leak-possibility/" target="_blank" rel="external">Android内存泄漏常见场景分析</a>一文已经有了详细的介绍。</p>
+<p>LeakCanary是一个开源的检测内存泄露的java库。项目地址：<a href="https://github.com/square/leakcanary" target="_blank" rel="external">https://github.com/square/leakcanary</a><br>LeakCanary实际上就是在本机上自动做了Heap dump，对生成的hprof文件分析，展示结果。和手工分析Heap Dump的方式一样。</p>
+<a id="more"></a>
+<p>下面是一个LeakCanary的结果截图：</p>
+<p><a href=""></a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android内存泄漏常见场景分析]]></title>
+      <url>http://czhzero.com/2016/07/04/memory-leak-possibility/</url>
+      <content type="html"><![CDATA[<p>Java是垃圾回收语言的一种，其优点是开发者无需特意管理内存分配，降低了应用由于局部故障(segmentation fault)导致崩溃，同时防止未释放的内存把堆栈(heap)挤爆的可能，所以写出来的代码更为安全。</p>
+<p>不幸的是，在Java中仍存在很多容易导致内存泄漏的逻辑可能(logical leak)。如果不小心，你的Android应用很容易浪费掉未释放的内存，最终导致内存用光的错误抛出(out-of-memory，OOM)。</p>
+<a id="more"></a>
+<p>一般内存泄漏(traditional memory leak)的原因是：当该对象的所有引用都已经释放了，对象仍未被释放。逻辑内存泄漏(logical memory leak)的原因是：当应用不再需要这个对象，当仍未释放该对象的所有引用。如果持有对象的强引用，垃圾回收器是无法在内存中回收这个对象。</p>
+<p>在Android开发中，最容易引发的内存泄漏问题的是Context。比如Activity的Context，就包含大量的内存引用，例如View Hierarchies和其他资源。一旦泄漏了Context，也意味泄漏它指向的所有对象。Android机器内存有限，太多的内存泄漏容易导致OOM。</p>
+<p>一般来说, 内存泄漏的主要问题可以分为以下几种类型：</p>
+<ul>
+<li><strong>静态变量引起的内存泄漏</strong></li>
+</ul>
+<p>例如: Static Activities, Static Views , SensorManager等系统static对象</p>
+<ul>
+<li><strong>非静态内部类引起的内存泄漏</strong></li>
+</ul>
+<p>例如: Inner Classes, Anonymous Classes, Handler。</p>
+<ul>
+<li><strong>资源未关闭引起的内存泄漏</strong></li>
+</ul>
+<p>例如: BroadcastReceiver、Cursor、Bitmap</p>
+<ul>
+<li><strong>耗时线程引起的内存泄漏</strong></li>
+</ul>
+<p>例如: Thread, TimeTask, AsyncTask</p>
+<ul>
+<li><strong>频繁创建对象引起的内存泄漏</strong></li>
+</ul>
+<p>例如: 构造Adapter时，没有使用缓存的convertView</p>
+<p>下面是常见的一些内存泄漏的例子。检查一下你有没有遇到下列的情况。</p>
+<h2 id="静态变量引起的内存泄漏"><a href="#静态变量引起的内存泄漏" class="headerlink" title="静态变量引起的内存泄漏"></a>静态变量引起的内存泄漏</h2><blockquote>
+<p>解决方案: </p>
+<ol>
+<li>及时释放无用的静态变量</li>
+<li>寻找与该静态变量生命周期差不多的替代对象</li>
+<li>将强引用方式改成弱引用</li>
+</ol>
+</blockquote>
+<h3 id="Static-Object"><a href="#Static-Object" class="headerlink" title="Static Object"></a>Static Object</h3><p>在类中定义了静态Activity变量，把当前运行的Activity实例赋值于这个静态变量。<br>如果这个静态变量在Activity生命周期结束后没有清空，就导致内存泄漏。因为static变量是贯穿这个应用的生命周期的，所以被泄漏的Activity就会一直存在于应用的进程中，不会被垃圾回收器回收。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">static Activity activity;</span><br><span class="line"></span><br><span class="line">   void setStaticActivity() &#123;</span><br><span class="line">     activity = this;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   View saButton = findViewById(R.id.sa_button);</span><br><span class="line">   saButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">     @Override public void onClick(View v) &#123;</span><br><span class="line">       setStaticActivity();</span><br><span class="line">       nextActivity();</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+<p><strong><em>修正后</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">static WeakReference&lt;Activity&gt; weakActivity;</span><br><span class="line"></span><br><span class="line">    void setStaticActivity() &#123;</span><br><span class="line">        weakActivity = new WeakReference&lt;Activity&gt;(this);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    View saButton = findViewById(R.id.sa_button);</span><br><span class="line">    saButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">      @Override public void onClick(View v) &#123;</span><br><span class="line">        setStaticActivity();</span><br><span class="line">        nextActivity();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="SensorManager"><a href="#SensorManager" class="headerlink" title="SensorManager"></a>SensorManager</h3><p>最后，通过Context.getSystemService(int name)可以获取系统服务。这些服务工作在各自的进程中，帮助应用处理后台任务，处理硬件交互。如果需要使用这些服务，可以注册监听器，这会导致服务持有了Context的引用，如果在Activity销毁的时候没有注销这些监听器，会导致内存泄漏。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void registerListener() &#123;</span><br><span class="line">               SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);</span><br><span class="line">               Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ALL);</span><br><span class="line">               sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_FASTEST);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        View smButton = findViewById(R.id.sm_button);</span><br><span class="line">        smButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">            @Override public void onClick(View v) &#123;</span><br><span class="line">                registerListener();</span><br><span class="line">                nextActivity();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//增加unregist方法，即清空系统static对象对context的引用。</span><br><span class="line">sensorManager.unregisterListener(this);</span><br></pre></td></tr></table></figure>
+<h2 id="非静态内部类引起的内存泄漏"><a href="#非静态内部类引起的内存泄漏" class="headerlink" title="非静态内部类引起的内存泄漏"></a>非静态内部类引起的内存泄漏</h2><blockquote>
+<p>解决方案: 1. 将内部类变成静态内部类, 2. 如果有强引用Activity中的属性，则将该属性的引用方式改为弱引用, 3. 在业务允许的情况下，当Activity执行onDestory时，结束这些耗时任务</p>
+</blockquote>
+<h3 id="Inner-Classes"><a href="#Inner-Classes" class="headerlink" title="Inner Classes"></a>Inner Classes</h3><p>继续，假设Activity中有个内部类，这样做可以提高可读性和封装性。将如我们创建一个内部类，而且持有一个静态变量的引用，恭喜，内存泄漏就离你不远了。</p>
+<p>内部类的优势之一就是可以访问外部类，不幸的是，导致内存泄漏的原因，就是内部类持有外部类实例的强引用。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">private static Object inner;</span><br><span class="line"></span><br><span class="line">   void createInnerClass() &#123;</span><br><span class="line">       class InnerClass &#123;</span><br><span class="line">       &#125;</span><br><span class="line">       inner = new InnerClass();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   View icButton = findViewById(R.id.ic_button);</span><br><span class="line">   icButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">       @Override public void onClick(View v) &#123;</span><br><span class="line">           createInnerClass();</span><br><span class="line">           nextActivity();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">private static Object inner;</span><br><span class="line"></span><br><span class="line">   void createInnerClass() &#123;</span><br><span class="line">       class InnerClass &#123;</span><br><span class="line">       &#125;</span><br><span class="line">       inner = new InnerClass();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   View icButton = findViewById(R.id.ic_button);</span><br><span class="line">   icButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">       @Override public void onClick(View v) &#123;</span><br><span class="line">           createInnerClass();</span><br><span class="line">           nextActivity();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;);</span><br><span class="line">   </span><br><span class="line">   onDestroy() &#123;</span><br><span class="line">     </span><br><span class="line">     inner == null;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Anonymous-Classes"><a href="#Anonymous-Classes" class="headerlink" title="Anonymous Classes"></a>Anonymous Classes</h3><p>相似地，匿名类也维护了外部类的引用。所以内存泄漏很容易发生，当你在Activity中定义了匿名的AsyncTsk<br>。当异步任务在后台执行耗时任务期间，Activity不幸被销毁了，这个被AsyncTask持有的Activity实例就不会被垃圾回收器回收，直到异步任务结束。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void startAsyncTask() &#123;</span><br><span class="line">        new AsyncTask&lt;Void, Void, Void&gt;() &#123;</span><br><span class="line">            @Override protected Void doInBackground(Void... params) &#123;</span><br><span class="line">                while(true);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.execute();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    super.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">    View aicButton = findViewById(R.id.at_button);</span><br><span class="line">    aicButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">        @Override public void onClick(View v) &#123;</span><br><span class="line">            startAsyncTask();</span><br><span class="line">            nextActivity();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//增加状态位，在onDestroy时候停止AsyncTask。</span><br></pre></td></tr></table></figure>
+<h3 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h3><p>同样道理，定义匿名的Runnable，用匿名类Handler执行。Runnable内部类会持有外部类的隐式引用，被传递到Handler的消息队列MessageQueue中，在Message消息没有被处理之前，Activity实例不会被销毁了，于是导致内存泄漏。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void createHandler() &#123;</span><br><span class="line">       new Handler() &#123;</span><br><span class="line">           @Override public void handleMessage(Message message) &#123;</span><br><span class="line">               super.handleMessage(message);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;.postDelayed(new Runnable() &#123;</span><br><span class="line">           @Override public void run() &#123;</span><br><span class="line">               while(true);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;, Long.MAX_VALUE &gt;&gt; 1);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   View hButton = findViewById(R.id.h_button);</span><br><span class="line">   hButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">       @Override public void onClick(View v) &#123;</span><br><span class="line">           createHandler();</span><br><span class="line">           nextActivity();</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//handler 改为静态</span><br><span class="line">//handler 内对象改为弱引用</span><br></pre></td></tr></table></figure>
+<h2 id="耗时线程引起的内存泄漏"><a href="#耗时线程引起的内存泄漏" class="headerlink" title="耗时线程引起的内存泄漏"></a>耗时线程引起的内存泄漏</h2><blockquote>
+<p>解决方案:1.将内部类变成静态内部类 , 2.如果有强引用Activity中的属性，则将该属性的引用方式改为弱引用, 3.在业务允许的情况下，当Activity执行onDestory时，结束这些耗时任务</p>
+</blockquote>
+<h3 id="Threads"><a href="#Threads" class="headerlink" title="Threads"></a>Threads</h3><p>我们再次通过Thread和TimerTask来展现内存泄漏。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void spawnThread() &#123;</span><br><span class="line">        new Thread() &#123;</span><br><span class="line">            @Override public void run() &#123;</span><br><span class="line">                while(true);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    View tButton = findViewById(R.id.t_button);</span><br><span class="line">    tButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">      @Override public void onClick(View v) &#123;</span><br><span class="line">          spawnThread();</span><br><span class="line">          nextActivity();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//优化后的方式</span><br><span class="line">private static class BetterThread extends Thread &#123;</span><br><span class="line">    private boolean isRunning = true;</span><br><span class="line">    @Override</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        super.run();</span><br><span class="line">        while(isRunning)&#123;</span><br><span class="line">            //doing something</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    public void stopThread()&#123;</span><br><span class="line">        isRunning=false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">//停止线程</span><br><span class="line">@Override</span><br><span class="line">protected void onDestroy() &#123;</span><br><span class="line">    mBetterThread.stopThread();</span><br><span class="line">    super.onDestroy();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="TimerTask"><a href="#TimerTask" class="headerlink" title="TimerTask"></a>TimerTask</h3><p>只要是匿名类的实例，不管是不是在工作线程，都会持有Activity的引用，导致内存泄漏。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void scheduleTimer() &#123;</span><br><span class="line">        new Timer().schedule(new TimerTask() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                while(true);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, Long.MAX_VALUE &gt;&gt; 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    View ttButton = findViewById(R.id.tt_button);</span><br><span class="line">    ttButton.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">        @Override public void onClick(View v) &#123;</span><br><span class="line">            scheduleTimer();</span><br><span class="line">            nextActivity();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//解决方案与Threads解决方案相同</span><br></pre></td></tr></table></figure>
+<h2 id="资源未关闭引起的内存泄漏"><a href="#资源未关闭引起的内存泄漏" class="headerlink" title="资源未关闭引起的内存泄漏"></a>资源未关闭引起的内存泄漏</h2><blockquote>
+<p>解决方案: 在资源使用完成后，记得关闭资源。</p>
+</blockquote>
+<h3 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h3><p>资源性对象比如(Cursor，File文件等)往往都用了一些缓冲，我们在不使用的时候，应该及时关闭它们，以便它们的缓冲及时回收内存。它们的缓冲不仅存在于 java虚拟机内，还存在于java虚拟机外。如果我们仅仅是把它的引用设置为null,而不关闭它们，往往会造成内存泄漏。因为有些资源性对象，比如 SQLiteCursor(在析构函数finalize(),如果我们没有关闭它，它自己会调close()关闭)，如果我们没有关闭它，系统在回收它时也会关闭它，但是这样的效率太低了。因此对于资源性对象在不使用的时候，应该调用它的close()函数，将其关闭掉，然后才置为null.在我们的程序退出时一定要确保我们的资源性对象已经关闭。</p>
+<p>程序中经常会进行查询数据库的操作，但是经常会有使用完毕Cursor后没有关闭的情况。如果我们的查询结果集比较小，对内存的消耗不容易被发现，只有在常时间大量操作的情况下才会复现内存问题，这样就会给以后的测试和问题排查带来困难和风险。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Cursor cursor = getContentResolver().query(uri...); </span><br><span class="line"> </span><br><span class="line">if (cursor.moveToNext()) &#123; </span><br><span class="line"> </span><br><span class="line">... ... </span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Cursor cursor = null; </span><br><span class="line"> </span><br><span class="line">try &#123; </span><br><span class="line"> </span><br><span class="line">cursor = getContentResolver().query(uri...); </span><br><span class="line"> </span><br><span class="line">if (cursor != null &amp;&amp;cursor.moveToNext()) &#123; </span><br><span class="line"> </span><br><span class="line">... ... </span><br><span class="line"> </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line">&#125; finally &#123; </span><br><span class="line"> </span><br><span class="line">if (cursor != null) &#123; </span><br><span class="line"> </span><br><span class="line">try &#123; </span><br><span class="line"> </span><br><span class="line">cursor.close(); </span><br><span class="line"> </span><br><span class="line">&#125; catch (Exception e) &#123; </span><br><span class="line"> </span><br><span class="line">//ignore this </span><br><span class="line"> </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="频繁创建对象引起的内存泄漏"><a href="#频繁创建对象引起的内存泄漏" class="headerlink" title="频繁创建对象引起的内存泄漏"></a>频繁创建对象引起的内存泄漏</h2><blockquote>
+<p>解决方案: 复用对象，避免过多的重复创建</p>
+</blockquote>
+<h3 id="Adapter-View"><a href="#Adapter-View" class="headerlink" title="Adapter View"></a>Adapter View</h3><p>初始时ListView会从BaseAdapter中根据当前的屏幕布局实例化一定数量的 view对象，同时ListView会将这些view对象缓存起来。当向上滚动ListView时，原先位于最上面的list item的view对象会被回收，然后被用来构造新出现的最下面的list item。这个构造过程就是由getView()方法完成的，getView()的第二个形参View convertView就是被缓存起来的list item的view对象(初始化时缓存中没有view对象则convertView是null)。由此可以看出，如果我们不去使用 convertView，而是每次都在getView()中重新实例化一个View对象的话，即浪费资源也浪费时间，也会使得内存占用越来越大。</p>
+<p>代码示例:</p>
+<p><strong>修正前</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public View getView(int position, ViewconvertView, ViewGroup parent) &#123; </span><br><span class="line"> </span><br><span class="line">View view = new Xxx(...); </span><br><span class="line"> </span><br><span class="line">... ... </span><br><span class="line"> </span><br><span class="line">return view; </span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>修正后</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public View getView(int position, ViewconvertView, ViewGroup parent) &#123; </span><br><span class="line"> </span><br><span class="line">View view = null; </span><br><span class="line"> </span><br><span class="line">if (convertView != null) &#123; </span><br><span class="line"> </span><br><span class="line">view = convertView; </span><br><span class="line"> </span><br><span class="line">populate(view, getItem(position)); </span><br><span class="line"> </span><br><span class="line">... </span><br><span class="line"> </span><br><span class="line">&#125; else &#123; </span><br><span class="line"> </span><br><span class="line">view = new Xxx(...); </span><br><span class="line"> </span><br><span class="line">... </span><br><span class="line"> </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line">return view; </span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参考文献</li>
+</ul>
+<ol>
+<li><a href="http://www.jianshu.com/p/ac00e370f83d" target="_blank" rel="external">Android内存泄漏的八种可能</a></li>
+<li><a href="https://www.douban.com/note/542644739/" target="_blank" rel="external">Android内存泄漏终极解决篇</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java代码规范]]></title>
+      <url>http://czhzero.com/2016/06/29/java-rules/</url>
+      <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p><strong>为什么需要编码规范</strong></p>
+<ul>
+<li>一个软件的生命周期中，80%的花费在于维护 </li>
+<li>几乎没有任何一个软件，在其整个生命周期中，均由最初的开发人员来维护 </li>
+<li>编码规范可以改善软件的可读性，可以让程序员尽快而彻底地理解新的代码 </li>
+<li>如果你将源码作为产品发布，就需要确任它是否被很好的打包并且清晰无</li>
+<li>误，一如你已构建的其它任何产品</li>
+</ul>
+<a id="more"></a>
+<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><h3 id="1-Java源文件的命名"><a href="#1-Java源文件的命名" class="headerlink" title="1.Java源文件的命名"></a>1.Java源文件的命名</h3><p>JAVA源文件名必须和源文件中所定义的类的类名相同</p>
+<h3 id="2-Package的命名"><a href="#2-Package的命名" class="headerlink" title="2.Package的命名"></a>2.Package的命名</h3><p>Package名的第一部分应是小写ASCII字符，并且是顶级域名之一，通常是com、edu、gov、mil、net、org或由ISO标准3166、1981定义的国家唯一标志码。Package名的后续部分由各组织内部命名规则决定，内部命名规则指定了各组件的目录名，所属部门名、项目名等。</p>
+<p>示例:</p>
+<blockquote>
+<p>package com.apple.quicktime.v2;</p>
+</blockquote>
+<h3 id="3-Class-Interface的命名"><a href="#3-Class-Interface的命名" class="headerlink" title="3.Class/Interface的命名"></a>3.Class/Interface的命名</h3><p>Class名应是首字母大写的名词。命名时应该使其简洁而又具有描述性。异常类的命名，应以Exception结尾。Interface的命名规则与Class相同。</p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public interface Set &#123;</span><br><span class="line">        …</span><br><span class="line">&#125;;</span><br><span class="line">public class CounterSet implement Set &#123;</span><br><span class="line">        …</span><br><span class="line">&#125;;</span><br><span class="line">public class InvalidException extends Exception &#123;</span><br><span class="line">        …</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="4-常量的命名"><a href="#4-常量的命名" class="headerlink" title="4.常量的命名"></a>4.常量的命名</h3><p>常量名的字母应全部大写，不同的单词之间通过下划线进行连接，并且名字组合应该赋予含义。</p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static final int MIN_WIDTH = 4;</span><br></pre></td></tr></table></figure>
+<h3 id="5-变量的命名"><a href="#5-变量的命名" class="headerlink" title="5.变量的命名"></a>5.变量的命名</h3><p>普通变量名的首字母小写，其它每个单词的首字母大写。命名时应该使其简短而又有特定含义，简洁明了的向使用者展示其使用意图。</p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">float floatWidth = 0.0;</span><br><span class="line">float doubleWidth = 0.0;</span><br></pre></td></tr></table></figure>
+<h3 id="6-方法的命名"><a href="#6-方法的命名" class="headerlink" title="6.方法的命名"></a>6.方法的命名</h3><p>方法名的第一个单词应是动词，并且首字母小写，其它每个单词首字母大写。</p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void findPersonID(int nID);</span><br><span class="line">void isStringEmpty(String str);</span><br></pre></td></tr></table></figure>
+<h3 id="7-方法参数的命名"><a href="#7-方法参数的命名" class="headerlink" title="7.方法参数的命名"></a>7.方法参数的命名</h3><p>应该选择有意义的名称作为方法的参数名。如果可能的话，选择和需要赋值的字段一样的名字。</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void setCounter(int size) &#123;</span><br><span class="line">    this.size = size;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h2><h3 id="1-缩进与对齐"><a href="#1-缩进与对齐" class="headerlink" title="1.缩进与对齐"></a>1.缩进与对齐</h3><p>一个缩进单位为四个空格，缩进排版时以缩进一个单位为最小缩进量。不要使用制表符（Tab键），因为不同的系统对它的解释不尽相同。</p>
+<ul>
+<li>缩进</li>
+</ul>
+<p>当某行语句在逻辑上比下面的语句高一个层次时，该行下面的语句都要在该行的基础上缩进一个单位。</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public void someMethod(parameterA,parameterB) &#123;</span><br><span class="line">        int variantA=0;</span><br><span class="line"></span><br><span class="line">        Sentence1;</span><br><span class="line">        if (Conditions) &#123;</span><br><span class="line">            Sentence2;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-行宽"><a href="#2-行宽" class="headerlink" title="2.行宽"></a>2.行宽</h3><p>为了和linux,unix等字符界面的操作系统兼容，JAVA代码行应限制在100个字符之内，多余部分应换行。</p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">variantA = someMethod(longExpression1, longExpression2, longExpression3);</span><br><span class="line">    应改为：</span><br><span class="line">variantA = someMethod(longExpression1, longExpression2, </span><br><span class="line">                          longExpression3);</span><br></pre></td></tr></table></figure>
+<h3 id="3-断行规则"><a href="#3-断行规则" class="headerlink" title="3.断行规则"></a>3.断行规则</h3><p>当一句完整的语句大于100个字符时需要断行，断行时 ，应遵循下面规则。</p>
+<ul>
+<li><p>在逗号后换行</p>
+</li>
+<li><p>在操作符前换行</p>
+</li>
+<li><p>换行后，应和断行处的前一层次对齐</p>
+</li>
+<li><p>换行时尽量选择高层次的地方进行换行</p>
+</li>
+<li><p>在使用上述的规则换行后对齐时，如果次行的长度大于80个字符，应改用两个单位的缩进来代替层次对齐</p>
+</li>
+</ul>
+<h3 id="5-空白的使用"><a href="#5-空白的使用" class="headerlink" title="5.空白的使用"></a>5.空白的使用</h3><h4 id="空格的使用"><a href="#空格的使用" class="headerlink" title="空格的使用"></a>空格的使用</h4><ul>
+<li>关键字和括号()之间要用空格隔开</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">   while (condition) &#123;</span><br><span class="line">       Sentence1;</span><br><span class="line">   &#125;</span><br><span class="line">   if (condition) &#123;</span><br><span class="line">       Sentence2;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参数列表中逗号的后面应该使用空格</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    public void methodA(parameterA, parameterB, parameterC) &#123;</span><br><span class="line">        Sentence1;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>所有的二元运算符，除了”.”，应该使用空格将之与操作数分开</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    longName1 = longName2 * (longName3 + longName4) + 4 * longName5;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>强制类型转换后应该跟一个空格</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">  methodA((byte) parameterA, (Object) parameterB);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>左括号右边和右括号左边不能有空格</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    longName1 = longName2 * ( longName3 + longName4 );</span><br><span class="line">    应改为：</span><br><span class="line">    longName1 = longName2 * (longName3 + longName4);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>方法名与其参数列表的左括号之间不能有空格</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    methodA (parameter1, parameter2);</span><br><span class="line">    应改为：</span><br><span class="line">    methodA(parameter1, parameter2);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>一元操作符和操作数之间不应该加空格，比如：负号(“-“)、自增(“++”)和自减(“–”)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">variantA += variantB --;</span><br><span class="line">    应改为：</span><br><span class="line">variantA += variantB--;</span><br></pre></td></tr></table></figure>
+<h4 id="空白行的使用"><a href="#空白行的使用" class="headerlink" title="空白行的使用"></a>空白行的使用</h4><p>空白行将逻辑相关的代码段分隔开，以提高可读性，有如下几种情形</p>
+<ul>
+<li>两个类声明或接口声明之间使用两个空白行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    public class A &#123;</span><br><span class="line">        …</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private class B &#123;</span><br><span class="line">        …</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>两个方法的声明之间使用一个空白行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    public class A &#123;</span><br><span class="line">        private void methodA() &#123;</span><br><span class="line">            …</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        priavte void methodB() &#123;</span><br><span class="line">            …</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><h3 id="1-简单语句"><a href="#1-简单语句" class="headerlink" title="1.简单语句"></a>1.简单语句</h3><ul>
+<li>每行至多包含一条完整语句</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    variantA++; variantB++;</span><br><span class="line">    应改为：</span><br><span class="line">    variantA++;</span><br><span class="line">    variantB++;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在没有必要的情况下，不要在return语句中使用括号</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    return (0);</span><br><span class="line">    应改成：</span><br><span class="line">    return 0;</span><br></pre></td></tr></table></figure>
+<h3 id="2-复合语句"><a href="#2-复合语句" class="headerlink" title="2.复合语句"></a>2.复合语句</h3><p>复合语句是包含在大括号中的语句序列，形如”{ 语句 }”，其编码应有如下基本规则：</p>
+<ul>
+<li>被括其中的语句应该比复合语句缩进一个层次</li>
+<li>左大括号”{“应位于复合语句起始行的行尾，并且空一个空格，右大括号”}”应另起一行并与复合语句首行对齐</li>
+<li>复合语句即使只有一个语句，也要有大括号作为界定</li>
+<li>每行至多包含一条完整语句</li>
+</ul>
+<h4 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    if-else语句应该具有如下格式：</span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        Sentences;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        Sentences;</span><br><span class="line">    &#125; else if (condition) &#123;</span><br><span class="line">        Sentences;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        Sentences;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h4><p>在选择语句中应添加 default情况，防止不可预知的情况发生。当一个case在没有break语句的情况下，它将顺着往下执行。应在break语句的位置添加注释.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    switch (condition) &#123;</span><br><span class="line">    case ABC:</span><br><span class="line">        Sentences;</span><br><span class="line">        </span><br><span class="line">    case DEF:</span><br><span class="line">        Sentences;</span><br><span class="line">        break;</span><br><span class="line"></span><br><span class="line">    case XYZ:</span><br><span class="line">        Sentences;</span><br><span class="line">        break;</span><br><span class="line"></span><br><span class="line">    default:</span><br><span class="line">        Sentences;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h4><p>在for语句的初始化或更新子句中，如果存在多项，各项间应用逗号隔开。同时，应避免使用三个以上子句，从而导致复杂度提高；若确实需要，可以在for循环之前放置初始化子句或在for循环末尾放置更新子句。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    for (int i = 0, j = 10, k = 10, m = 50; i &lt; j + k + m; i++, j--, k--, m--) &#123;</span><br><span class="line">        Sentences;</span><br><span class="line">    &#125;</span><br><span class="line">    应改为：</span><br><span class="line">    int i = 0;</span><br><span class="line">    int j = 100;</span><br><span class="line">    int k = 1000;</span><br><span class="line">    int m = 500;</span><br><span class="line"></span><br><span class="line">    for (; i &lt; j + k + m ;) &#123;</span><br><span class="line">        Sentences;</span><br><span class="line">        i++;</span><br><span class="line">        j--;</span><br><span class="line">        k--;</span><br><span class="line">        m--;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><h3 id="1-变量的声明"><a href="#1-变量的声明" class="headerlink" title="1.变量的声明"></a>1.变量的声明</h3><ul>
+<li>一行只声明一个变量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    int variantA = 0, variantB = 0;</span><br><span class="line">    应改为：</span><br><span class="line">    int variantA = 0;</span><br><span class="line">    int variantB = 0;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>临时变量放在其作用域内声明</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    int tempA = 0;</span><br><span class="line"></span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        tempA = methodA();</span><br><span class="line">        methodB(tempA);</span><br><span class="line">    &#125;</span><br><span class="line">    应改为：</span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        int tempA = 0;</span><br><span class="line"></span><br><span class="line">        tempA = methodA();</span><br><span class="line">        methodB(tempA);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>声明应集中放在作用域的顶端</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        int tempA = 0;</span><br><span class="line"></span><br><span class="line">        tempA = methodA();</span><br><span class="line">        int tempB = 0;</span><br><span class="line"></span><br><span class="line">        tempB = methodB();</span><br><span class="line">    &#125;</span><br><span class="line">    应改为：</span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        int tempA = 0;</span><br><span class="line">        int tempB = 0;</span><br><span class="line"></span><br><span class="line">        tempA = methodA();</span><br><span class="line">        tempB = methodB();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>临时变量放在其作用域内声明</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    int tempA = 0;</span><br><span class="line"></span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        tempA = methodA();</span><br><span class="line">        methodB(tempA);</span><br><span class="line">    &#125;</span><br><span class="line">    应改为：</span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        int tempA = 0;</span><br><span class="line"></span><br><span class="line">        tempA = methodA();</span><br><span class="line">        methodB(tempA);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>避免声明的局部变量覆盖上一级声明的变量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">    int counter = 0;</span><br><span class="line"></span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        int counter = 0;</span><br><span class="line"></span><br><span class="line">        counter = methodA();</span><br><span class="line">    &#125;</span><br><span class="line">    应改为：</span><br><span class="line">    int counter = 0;</span><br><span class="line"></span><br><span class="line">    if (condition) &#123;</span><br><span class="line">        int counterTemp = 0;</span><br><span class="line"></span><br><span class="line">        counterTemp = methodA();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-类和接口的声明"><a href="#2-类和接口的声明" class="headerlink" title="2.类和接口的声明"></a>2.类和接口的声明</h3><p>当编写类和接口时，应该遵守以下规则：</p>
+<ul>
+<li>在方法名与其参数列表之前的左括号”(“间不要有空格</li>
+<li>左大括号”{“位于声明语句同行的末尾，并与末尾之间留有一个空格</li>
+<li>右大括号”}”另起一行，与相应的声明语句对齐。如果是一个空语句，”}”应紧跟在”{“之后</li>
+<li>方法与方法之间以空白行分隔</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Sample extends Object &#123;</span><br><span class="line">        private int ivar1;</span><br><span class="line">        private int ivar2;</span><br><span class="line"></span><br><span class="line">        public Sample(int i, int j) &#123;</span><br><span class="line">            ivar1 = i;</span><br><span class="line">            ivar2 = j;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public int emptyMethod() &#123;&#125;</span><br><span class="line">        …</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java代码规范之CheckStyle + Git Hook]]></title>
+      <url>http://czhzero.com/2016/06/29/checkstyle-githook/</url>
+      <content type="html"><![CDATA[<h3 id="CheckStyle简介"><a href="#CheckStyle简介" class="headerlink" title="CheckStyle简介"></a>CheckStyle简介</h3><p>CheckStyle提供了一个帮助JAVA开发人员遵守某些编码规范的工具。它能够自动化代码规范检查过程，从而使得开发人员从这项重要，但是枯燥的任务中解脱出来。</p>
+<a id="more"></a>
+<p>CheckStyle检验的主要内容如下。</p>
+<ul>
+<li>Annotations</li>
+<li>Block Checks</li>
+<li>Class Design</li>
+<li>Coding</li>
+<li>Headers</li>
+<li>Imports</li>
+<li>Javadoc Comments</li>
+<li>Metrics</li>
+<li>Miscellaneous</li>
+<li>Modifiers</li>
+<li>Naming Conventions</li>
+<li>Regexp</li>
+<li>Size Violations</li>
+<li>Whitespace</li>
+</ul>
+<p>官网给出了两个规则示例, <a href="http://checkstyle.sourceforge.net/google_style.html" target="_blank" rel="external">Google’s Style</a> 和 <a href="http://checkstyle.sourceforge.net/sun_style.html" target="_blank" rel="external">Sun’s Style
+</a> 用以参考。</p>
+<p>除了上述检验内容，CheckStyle还支持<a href="http://checkstyle.sourceforge.net/writingchecks.html" target="_blank" rel="external">自定义规则</a>,用来定义自己想要的代码风格。</p>
+<h3 id="Git-Hook简介"><a href="#Git-Hook简介" class="headerlink" title="Git Hook简介"></a>Git Hook简介</h3><p>和其它版本控制系统一样，Git 能在特定的重要动作发生时触发自定义脚本。 有两组这样的钩子：客户端的和服务器端的。 客户端钩子由诸如提交和合并这样的操作所调用，而服务器端钩子作用于诸如接收被推送的提交这样的联网操作。 你可以随心所欲地运用这些钩子。</p>
+<p>钩子都被存储在 Git 目录下的 hooks 子目录中。 也即绝大部分项目中的 .git/hooks 。 当你用 git init 初始化一个新版本库时，Git 默认会在这个目录中放置一些示例脚本。这些脚本除了本身可以被调用外，它们还透露了被触发时所传入的参数。 所有的示例都是 shell 脚本，其中一些还混杂了 Perl 代码，不过，任何正确命名的可执行脚本都可以正常使用 —— 你可以用 Ruby 或 Python，或其它语言编写它们。 这些示例的名字都是以 .sample 结尾，如果你想启用它们，得先移除这个后缀。</p>
+<p>把一个正确命名且可执行的文件放入 Git 目录下的 hooks 子目录中，即可激活该钩子脚本。 这样一来，它就能被 Git 调用。</p>
+<p>客户端钩子分为很多种。代码规范检查我们使用pre-commit钩子即可，pre-commit 钩子在键入提交信息前运行。 它用于检查即将提交的快照，例如，检查是否有所遗漏，确保测试运行，以及核查代码。 如果该钩子以非零值退出，Git 将放弃此次提交，不过你可以用 git commit –no-verify 来绕过这个环节。 你可以利用该钩子，来检查代码风格是否一致（运行类似 lint 的程序）、尾随空白字符是否存在（自带的钩子就是这么做的），或新方法的文档是否适当。</p>
+<p>更多关于Git Hook内容的请看 <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="external">这里</a>。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>GitHook的pre-commit脚本配合CheckStyle即可完成代码规范的自动检查。每次代码commit之前，若代码不符合规范，则无法commit成功。 </p>
+<p>要执行CheckStyle需要以下几个条件。</p>
+<ul>
+<li>jdk与git环境配置</li>
+<li>pre-commit脚本, 用来执行代码检测与结果分析</li>
+<li>checkstyle的jar包 , 例如 <a href="http://downloads.sourceforge.net/project/checkstyle/checkstyle/7.0/checkstyle-7.0-all.jar" target="_blank" rel="external">checkstyle-7.0-all.jar</a></li>
+<li>规则配置的xml文件, 例如 <a href="https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/sun_checks.xml" target="_blank" rel="external">sun_checks</a>。</li>
+</ul>
+<h3 id="自定义检查规则示例"><a href="#自定义检查规则示例" class="headerlink" title="自定义检查规则示例"></a>自定义检查规则示例</h3><p>官方提供的代码规范往往太过严格，在工作中使用不太现实，所以有必要根据具体情况来定制具体的代码规范，CheckStyle对代码规范的定制提供了很多大灵活性。<br>下面我们来定义一些基本的规范，后续有增加我们再修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE module PUBLIC</span><br><span class="line">    &quot;-//Puppy Crawl//DTD Check Configuration 1.3//EN&quot;</span><br><span class="line">    &quot;http://www.puppycrawl.com/dtds/configuration_1_3.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;module name = &quot;Checker&quot;&gt;</span><br><span class="line">    &lt;property name=&quot;charset&quot; value=&quot;UTF-8&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;property name=&quot;severity&quot; value=&quot;warning&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;property name=&quot;fileExtensions&quot; value=&quot;java, properties, xml&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 检查文件中是否含有tab键--&gt;</span><br><span class="line">    &lt;module name=&quot;FileTabCharacter&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!-- 代码行数最大不超过1000行 --&gt;</span><br><span class="line">    &lt;module name=&quot;FileLength&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;max&quot; value=&quot;1500&quot;/&gt;</span><br><span class="line">    &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">    &lt;module name=&quot;TreeWalker&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免.*,重复多余的和不使用的import--&gt;</span><br><span class="line">        &lt;module name=&quot;AvoidStarImport&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;RedundantImport&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;UnusedImports&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 常量全部用大写--&gt;</span><br><span class="line">        &lt;module name=&quot;ConstantName&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 方法名称 --&gt;</span><br><span class="line">        &lt;module name=&quot;MethodName&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 检查代码块:起始大括号和if等同行，不能有空的代码块，结束大括号另起一行--&gt;</span><br><span class="line">        &lt;module name=&quot;LeftCurly&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;NeedBraces&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;RightCurly&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 代码缩进格式 --&gt;</span><br><span class="line">        &lt;module name=&quot;Indentation&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;basicOffset&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;braceAdjustment&quot; value=&quot;0&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;caseIndent&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;throwsIndent&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;lineWrappingIndentation&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;arrayInitIndent&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 操作符周围要有空格 --&gt;</span><br><span class="line">        &lt;module name=&quot;WhitespaceAround&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 当有多重修饰符时,修饰符采用以下顺序:</span><br><span class="line">             (public,protected,private,abstract,static,final,</span><br><span class="line">             transient,volatile,synchronized,native,strictfp) --&gt;</span><br><span class="line">        &lt;module name=&quot;ModifierOrder&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 检查是否有多余的修饰符，例如：接口中的方法不必使用public、abstract修饰</span><br><span class="line">                   tokens: 检查的类型 --&gt;</span><br><span class="line">        &lt;module name=&quot;RedundantModifier&quot; /&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 禁止空catch快 --&gt;</span><br><span class="line">        &lt;module name=&quot;EmptyCatchBlock&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;exceptionVariableName&quot; value=&quot;expected&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 代码最长长度不能超过100 --&gt;</span><br><span class="line">        &lt;module name=&quot;LineLength&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;100&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;ignorePattern&quot; value=&quot;^package.*|^import.*|a href|href|http://|https://|ftp://&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 最多方法数不超过30 --&gt;</span><br><span class="line">        &lt;module name=&quot;MethodCount&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;maxTotal&quot; value=&quot;30&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 方法长度不超过60 --&gt;</span><br><span class="line">        &lt;module name=&quot;MethodLength&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;tokens&quot; value=&quot;METHOD_DEF&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;60&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免Equals左边为空 --&gt;</span><br><span class="line">        &lt;module name=&quot;EqualsAvoidNull&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免复杂内联函数 --&gt;</span><br><span class="line">        &lt;module name=&quot;AvoidInlineConditionals&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--</span><br><span class="line">        1. 类（静态）变量。首先应当是public类变量，然后是protected类变量，然后是package类变量（没有访问标识符），最后是private类变量。</span><br><span class="line">        2. 实例变量。首先应当是public类变量，然后是protected类变量，然后是package类变量（没有访问标识符），最后是private类变量。</span><br><span class="line">        3. 构造器</span><br><span class="line">        4. 方法</span><br><span class="line">        --&gt;</span><br><span class="line">        &lt;module name=&quot;DeclarationOrder&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免忘记break,continue等 --&gt;</span><br><span class="line">        &lt;module name=&quot;FallThrough&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- for循环深度最多为2 --&gt;</span><br><span class="line">        &lt;module name=&quot;NestedForDepth&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- if else深度最多为3 --&gt;</span><br><span class="line">        &lt;module name=&quot;NestedIfDepth&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;2&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- try catch深度最多为3--&gt;</span><br><span class="line">        &lt;module name=&quot;NestedTryDepth&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;2&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/module&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Git-Hook-脚本示例"><a href="#Git-Hook-脚本示例" class="headerlink" title="Git Hook 脚本示例"></a>Git Hook 脚本示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">#! /usr/bin/env python</span><br><span class="line"># -*- encoding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">import sys,os,re</span><br><span class="line"></span><br><span class="line">print &apos;\n.......................Code Style Checking....................\n&apos;</span><br><span class="line"></span><br><span class="line">#the count of level, like ERROR,WARN</span><br><span class="line">def get_level(content, level):</span><br><span class="line">    return len(re.compile(r&quot;\[%s\]&quot; % level).findall(content))</span><br><span class="line"></span><br><span class="line">#get the commit file name (whole path)</span><br><span class="line">def get_file_name(content, postfix=None):</span><br><span class="line">    content = content.replace(&quot;\t&quot;, &quot; &quot;)</span><br><span class="line">    line_divided = content.split(&quot;\n&quot;)</span><br><span class="line">    space_divided = [[j for j in i.split(&quot; &quot;) if j.strip()]for i in line_divided]</span><br><span class="line">    filenames = [i[5] for i in space_divided if i]</span><br><span class="line">    if not postfix:</span><br><span class="line">        return filenames</span><br><span class="line">    return [i for i in filenames if &quot;.%s&quot; % postfix in i]</span><br><span class="line"></span><br><span class="line">jarpath = os.popen(&apos;git config --get checkstyle.jar&apos;).read()</span><br><span class="line">checkfilepath = os.popen(&apos;git config --get checkstyle.checkfile&apos;).read()</span><br><span class="line"></span><br><span class="line">#check code command</span><br><span class="line">command = &apos;java -jar &apos; + jarpath[:-1] + &apos; -c &apos; + checkfilepath[:-1]</span><br><span class="line"></span><br><span class="line">#the file to check</span><br><span class="line">files = os.popen(&apos;git diff-index --cached HEAD&apos;).read()</span><br><span class="line"></span><br><span class="line">#the result of command</span><br><span class="line">content = get_file_name(files, &apos;java&apos;)</span><br><span class="line"></span><br><span class="line">resultsum = 0</span><br><span class="line"></span><br><span class="line">for i in content:</span><br><span class="line">    result = os.popen(command + &apos; &apos; + i).read()</span><br><span class="line">    print result</span><br><span class="line">    resultsum += get_level(result,&apos;ERROR&apos;)</span><br><span class="line">    resultsum += get_level(result,&apos;WARN&apos;)</span><br><span class="line"></span><br><span class="line">if resultsum &gt; 0:</span><br><span class="line">    print &apos;\n.......................You must fix the errors and warnings first, then excute commit command again...........\n&apos;</span><br><span class="line">    sys.exit(-1)</span><br><span class="line">else:</span><br><span class="line">    print &apos;\n.................................Code is very good...................\n&apos;</span><br><span class="line">    sys.exit(0)</span><br></pre></td></tr></table></figure>
+<p>以上pre-commit脚本使用的是python语言, 主要做了三件事。</p>
+<ul>
+<li>通过git diff命令找到本次提交的java文件的完整路径</li>
+<li>循环执行check命令</li>
+</ul>
+<blockquote>
+<p>java -jar checkstyle-7.0-all.jar -c /sun_checks.xml MyClass.java</p>
+</blockquote>
+<ul>
+<li>找出check命令结果中的ERROR和WARN数量, 返回0, commit成功, 否则,  commit失败</li>
+</ul>
+<h3 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h3><p>因为pre-commit脚本,是存放在.git/hooks目录下的。所以他不会被提交到远程服务器。所以只能将<br>pre-commit脚本, checkstyle-7.0-all.jar, 以及checks.xml存放到项目目录下。</p>
+<p>每个终端通过git pull拉取到文件后, 执行下列三个命令。</p>
+<ul>
+<li>git config –add checkstyle.jar ../../config/checkstyle-7.0-all.jar</li>
+<li>git config –add checkstyle.checkfile ../../config/test_checks.xml</li>
+<li>cp ../../config/pre-commit ./.git/hooks/ </li>
+</ul>
+<p>这样,再运行git commit的时候就会自动帮你检查你的代码了。</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/1/blog12.png" alt="Alt text"></p>
+<p>根据提示修改代码吧。</p>
+<p>注: 若有submodule模块,pre-commit要拷贝到.git/modules/…/hooks目录下。</p>
+<p>参考文献:</p>
+<ul>
+<li><a href="http://checkstyle.sourceforge.net/" target="_blank" rel="external">check style官网</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="external">git hook</a></li>
+<li><a href="http://blog.csdn.net/yang1982_0907/article/details/18086693" target="_blank" rel="external">详解CheckStyle的检查规则（共138条规则）</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android Studio 使用小技巧和快捷键]]></title>
+      <url>http://czhzero.com/2016/06/28/android-studio-tips/</url>
+      <content type="html"><![CDATA[<p>原文地址:<a href="http://www.open-open.com/lib/view/open1458715872710.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1458715872710.html</a></p>
+<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>本文翻译自 <a href="https://github.com/pavlospt/Android-Studio-Tips-by-Philippe-Breault/wiki" target="_blank" rel="external">Android Studio Tips by Philippe Breault</a>，一共收集了62个 Android Studio 使用小技巧和快捷键。 根据这些小技巧的使用场景，本文将这62个小技巧分为常用技巧（1 – 28）、编码技巧（29 – 49）和调试技巧（50 – 62），分成三个部分。</p>
+<a id="more"></a>
+<h3 id="1-书签"><a href="#1-书签" class="headerlink" title="1.书签"></a>1.书签</h3><ul>
+<li>描述：这是一个很有用的功能，让你可以在某处做个标记（书签），方便后面再跳转到此处。</li>
+<li>调用：Menu → Navigate → Bookmarks</li>
+<li><p>快捷键：</p>
+<ul>
+<li>添加/移除书签：F3(OS X) 、F11(Windows/Linux);</li>
+<li>添加/移除书签(带标记)：Alt + F3(OS X)、Ctrl + F11(Windows/Linux);</li>
+<li>显示全部书签：Cmd + F3(OS X) 、Shift + F11(Windows/Linux)，显示所有的书签列表，并且是可以搜索的。</li>
+<li>上一个/下一个书签：无，可以在设置中设置快捷键。</li>
+</ul>
+</li>
+<li><p>更多：当你为某个书签指定了标记，你可以使用快捷键 Ctrl + 标记 来快速跳转到标记处，比如输入Ctrl + 1，跳到标记为1的书签处。</p>
+</li>
+</ul>
+<h3 id="2-折叠-展开代码块"><a href="#2-折叠-展开代码块" class="headerlink" title="2.折叠/展开代码块"></a>2.折叠/展开代码块</h3><ul>
+<li>描述：该操作提供一种方法，让你隐藏你不关心的部分代码，以一种较为简洁的格式显示关键代码。一个有意思的用法是隐藏匿名内部类的代码，让其看起来像一个Lambda表达式。</li>
+<li>快捷键：Cmd + “+”/”-“(OS X)、Ctrl + Shift + “+”/”-“(Windows/Linux);</li>
+<li>更多：可以在Settig → Editor → General → Code Folding 中设置折叠规则。</li>
+</ul>
+<h3 id="3-与分支对比"><a href="#3-与分支对比" class="headerlink" title="3.与分支对比"></a>3.与分支对比</h3><ul>
+<li>描述：该操作提供一种方法，让你隐藏你不关心的部分代码，以一种较为简洁的格式显示关键代码。一个有意思的用法是隐藏匿名内部类的代码，让其看起来像一个Lambda表达式。</li>
+<li>快捷键：Cmd + “+”/”-“(OS X)、Ctrl + Shift + “+”/”-“(Windows/Linux);</li>
+<li>更多：可以在Settig → Editor → General → Code Folding 中设置折叠规则。</li>
+</ul>
+<h3 id="4-与剪切板比对"><a href="#4-与剪切板比对" class="headerlink" title="4.与剪切板比对"></a>4.与剪切板比对</h3><ul>
+<li>描述：将当前选中的部分与剪切板上的内容进行比对。</li>
+<li>调用：右键选中的部分，在右键菜单中选择“Compare With Clipboard”。</li>
+</ul>
+<h3 id="5-上下文信息"><a href="#5-上下文信息" class="headerlink" title="5.上下文信息"></a>5.上下文信息</h3><ul>
+<li>描述：当前作用域定义超过滚动区域，执行该操作将显示所在的上下文信息，通常它显示的是类名或者内部类类名或者当前所在的方法名。该操作在xml文件中同样适用。</li>
+<li>调用：Menu → View → Context Info</li>
+<li>快捷键：Alt + Q (Windows/Linux)<br>更多：个人认为，这个功能更好的用法是快速查看当前类继承的父类或者实现的接口。</li>
+</ul>
+<h3 id="6-查找操作"><a href="#6-查找操作" class="headerlink" title="6.查找操作"></a>6.查找操作</h3><ul>
+<li>描述：输入某个操作的名称，快速查找，对于没有快捷键的部分操作这是一个很有用的技巧。</li>
+<li>快捷键：Cmd +Shift + A(OS X)、Ctrl + Shift + A(Windows/Linux)；</li>
+<li>更多：当某个操作是有快捷键的，会显示在旁边。</li>
+</ul>
+<h3 id="7-查找补全"><a href="#7-查找补全" class="headerlink" title="7.查找补全"></a>7.查找补全</h3><ul>
+<li>描述：当你在一个文件中进行查找时，使用自动补全快捷键可以给出在当前文件中出现的建议单词；</li>
+<li>快捷键：Cmd + F(OS X),Ctrl + F(Windows/Linux),输入一些字符，然后使用自动补全；</li>
+</ul>
+<h3 id="8-隐藏所有面板"><a href="#8-隐藏所有面板" class="headerlink" title="8.隐藏所有面板"></a>8.隐藏所有面板</h3><ul>
+<li>描述：切换编辑器铺满整个程序界面，隐藏其他的面板。再次执行该操作，将会回到隐藏前的状态。</li>
+<li>调用：Menu → Window → Active Tool Window → Hide All Windows；</li>
+<li>快捷键：Cmd +Shift + F12(OS X)、Ctrl + Shift + F12(Windows/Linux)；</li>
+</ul>
+<h3 id="9-高亮一切"><a href="#9-高亮一切" class="headerlink" title="9.高亮一切"></a>9.高亮一切</h3><ul>
+<li>描述：该操作将会高亮某个字符在当前文件中所有出现的地方。这不仅仅是简单的匹配，实际上它会分析当前的作用域，只高亮相关的部分。</li>
+<li>调用：Menu → Edit → Find → Highlight Usages in File；</li>
+<li>定位到上一处/下一处：Menu → Edit → Find → Find Next/Previous；</li>
+<li>快捷键：相关快捷键请在菜单中查看；</li>
+<li><p>更多：</p>
+<ul>
+<li>如果高亮一个方法的return或throw语句，将会高亮这个方法的所有出口/结束点；</li>
+<li>如果高亮某个类定义处的extend或implements语句，将会高亮继承的或实现的方法；</li>
+<li>高亮一个import语句也会高亮使用到的地方；</li>
+<li>按下Esc可以退出高亮模式</li>
+</ul>
+<h3 id="10-回到上一个工具窗口"><a href="#10-回到上一个工具窗口" class="headerlink" title="10.回到上一个工具窗口"></a>10.回到上一个工具窗口</h3><ul>
+<li>描述：有时候你会从某个工具窗口跳到编辑器里面，然后又需要重新回到刚才操作的那个工具窗，比如你查找使用情况的时，使用该操作可以在不使用鼠标的情况下跳转到之前的工具窗口。</li>
+<li>快捷键：F12；</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[HEXO + Github 搭建自己的博客系统]]></title>
       <url>http://czhzero.com/2016/06/25/hexoblog/</url>
       <content type="html"><![CDATA[<p>Hexo 是高效的静态站点生成框架，她基于 Node.js。 通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。GitHub可以托管各种git库，同时提供了免费的域名。这两者相结合，就可以简单快速的搭建起自己的免费博客网站。</p>

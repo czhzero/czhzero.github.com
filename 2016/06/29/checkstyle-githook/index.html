@@ -1,0 +1,1012 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="checkstyle,githook," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Alvin-一座小楼" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="CheckStyle简介CheckStyle提供了一个帮助JAVA开发人员遵守某些编码规范的工具。它能够自动化代码规范检查过程，从而使得开发人员从这项重要，但是枯燥的任务中解脱出来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java代码规范之CheckStyle + Git Hook">
+<meta property="og:url" content="http://czhzero.com/2016/06/29/checkstyle-githook/index.html">
+<meta property="og:site_name" content="Alvin-一座小楼">
+<meta property="og:description" content="CheckStyle简介CheckStyle提供了一个帮助JAVA开发人员遵守某些编码规范的工具。它能够自动化代码规范检查过程，从而使得开发人员从这项重要，但是枯燥的任务中解脱出来。">
+<meta property="og:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/1/blog12.png">
+<meta property="og:updated_time" content="2016-06-29T14:04:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java代码规范之CheckStyle + Git Hook">
+<meta name="twitter:description" content="CheckStyle简介CheckStyle提供了一个帮助JAVA开发人员遵守某些编码规范的工具。它能够自动化代码规范检查过程，从而使得开发人员从这项重要，但是枯燥的任务中解脱出来。">
+<meta name="twitter:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/1/blog12.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6289947422453925000,
+      author: '一座小楼'
+    }
+  };
+</script>
+
+  <title> Java代码规范之CheckStyle + Git Hook | Alvin-一座小楼 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?70ce034e45a712ab10da0f89af899b0c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Alvin-一座小楼</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Test</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java代码规范之CheckStyle + Git Hook
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-29T11:18:37+08:00" content="2016-06-29">
+              2016-06-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/29/checkstyle-githook/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/29/checkstyle-githook/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/29/checkstyle-githook/" class="leancloud_visitors" data-flag-title="Java代码规范之CheckStyle + Git Hook">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="CheckStyle简介"><a href="#CheckStyle简介" class="headerlink" title="CheckStyle简介"></a>CheckStyle简介</h3><p>CheckStyle提供了一个帮助JAVA开发人员遵守某些编码规范的工具。它能够自动化代码规范检查过程，从而使得开发人员从这项重要，但是枯燥的任务中解脱出来。</p>
+<a id="more"></a>
+<p>CheckStyle检验的主要内容如下。</p>
+<ul>
+<li>Annotations</li>
+<li>Block Checks</li>
+<li>Class Design</li>
+<li>Coding</li>
+<li>Headers</li>
+<li>Imports</li>
+<li>Javadoc Comments</li>
+<li>Metrics</li>
+<li>Miscellaneous</li>
+<li>Modifiers</li>
+<li>Naming Conventions</li>
+<li>Regexp</li>
+<li>Size Violations</li>
+<li>Whitespace</li>
+</ul>
+<p>官网给出了两个规则示例, <a href="http://checkstyle.sourceforge.net/google_style.html" target="_blank" rel="external">Google’s Style</a> 和 <a href="http://checkstyle.sourceforge.net/sun_style.html" target="_blank" rel="external">Sun’s Style
+</a> 用以参考。</p>
+<p>除了上述检验内容，CheckStyle还支持<a href="http://checkstyle.sourceforge.net/writingchecks.html" target="_blank" rel="external">自定义规则</a>,用来定义自己想要的代码风格。</p>
+<h3 id="Git-Hook简介"><a href="#Git-Hook简介" class="headerlink" title="Git Hook简介"></a>Git Hook简介</h3><p>和其它版本控制系统一样，Git 能在特定的重要动作发生时触发自定义脚本。 有两组这样的钩子：客户端的和服务器端的。 客户端钩子由诸如提交和合并这样的操作所调用，而服务器端钩子作用于诸如接收被推送的提交这样的联网操作。 你可以随心所欲地运用这些钩子。</p>
+<p>钩子都被存储在 Git 目录下的 hooks 子目录中。 也即绝大部分项目中的 .git/hooks 。 当你用 git init 初始化一个新版本库时，Git 默认会在这个目录中放置一些示例脚本。这些脚本除了本身可以被调用外，它们还透露了被触发时所传入的参数。 所有的示例都是 shell 脚本，其中一些还混杂了 Perl 代码，不过，任何正确命名的可执行脚本都可以正常使用 —— 你可以用 Ruby 或 Python，或其它语言编写它们。 这些示例的名字都是以 .sample 结尾，如果你想启用它们，得先移除这个后缀。</p>
+<p>把一个正确命名且可执行的文件放入 Git 目录下的 hooks 子目录中，即可激活该钩子脚本。 这样一来，它就能被 Git 调用。</p>
+<p>客户端钩子分为很多种。代码规范检查我们使用pre-commit钩子即可，pre-commit 钩子在键入提交信息前运行。 它用于检查即将提交的快照，例如，检查是否有所遗漏，确保测试运行，以及核查代码。 如果该钩子以非零值退出，Git 将放弃此次提交，不过你可以用 git commit –no-verify 来绕过这个环节。 你可以利用该钩子，来检查代码风格是否一致（运行类似 lint 的程序）、尾随空白字符是否存在（自带的钩子就是这么做的），或新方法的文档是否适当。</p>
+<p>更多关于Git Hook内容的请看 <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="external">这里</a>。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>GitHook的pre-commit脚本配合CheckStyle即可完成代码规范的自动检查。每次代码commit之前，若代码不符合规范，则无法commit成功。 </p>
+<p>要执行CheckStyle需要以下几个条件。</p>
+<ul>
+<li>jdk与git环境配置</li>
+<li>pre-commit脚本, 用来执行代码检测与结果分析</li>
+<li>checkstyle的jar包 , 例如 <a href="http://downloads.sourceforge.net/project/checkstyle/checkstyle/7.0/checkstyle-7.0-all.jar" target="_blank" rel="external">checkstyle-7.0-all.jar</a></li>
+<li>规则配置的xml文件, 例如 <a href="https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/sun_checks.xml" target="_blank" rel="external">sun_checks</a>。</li>
+</ul>
+<h3 id="自定义检查规则示例"><a href="#自定义检查规则示例" class="headerlink" title="自定义检查规则示例"></a>自定义检查规则示例</h3><p>官方提供的代码规范往往太过严格，在工作中使用不太现实，所以有必要根据具体情况来定制具体的代码规范，CheckStyle对代码规范的定制提供了很多大灵活性。<br>下面我们来定义一些基本的规范，后续有增加我们再修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE module PUBLIC</span><br><span class="line">    &quot;-//Puppy Crawl//DTD Check Configuration 1.3//EN&quot;</span><br><span class="line">    &quot;http://www.puppycrawl.com/dtds/configuration_1_3.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;module name = &quot;Checker&quot;&gt;</span><br><span class="line">    &lt;property name=&quot;charset&quot; value=&quot;UTF-8&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;property name=&quot;severity&quot; value=&quot;warning&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;property name=&quot;fileExtensions&quot; value=&quot;java, properties, xml&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 检查文件中是否含有tab键--&gt;</span><br><span class="line">    &lt;module name=&quot;FileTabCharacter&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!-- 代码行数最大不超过1000行 --&gt;</span><br><span class="line">    &lt;module name=&quot;FileLength&quot;&gt;</span><br><span class="line">        &lt;property name=&quot;max&quot; value=&quot;1500&quot;/&gt;</span><br><span class="line">    &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">    &lt;module name=&quot;TreeWalker&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免.*,重复多余的和不使用的import--&gt;</span><br><span class="line">        &lt;module name=&quot;AvoidStarImport&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;RedundantImport&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;UnusedImports&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 常量全部用大写--&gt;</span><br><span class="line">        &lt;module name=&quot;ConstantName&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 方法名称 --&gt;</span><br><span class="line">        &lt;module name=&quot;MethodName&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 检查代码块:起始大括号和if等同行，不能有空的代码块，结束大括号另起一行--&gt;</span><br><span class="line">        &lt;module name=&quot;LeftCurly&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;NeedBraces&quot;/&gt;</span><br><span class="line">        &lt;module name=&quot;RightCurly&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 代码缩进格式 --&gt;</span><br><span class="line">        &lt;module name=&quot;Indentation&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;basicOffset&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;braceAdjustment&quot; value=&quot;0&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;caseIndent&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;throwsIndent&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;lineWrappingIndentation&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;arrayInitIndent&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 操作符周围要有空格 --&gt;</span><br><span class="line">        &lt;module name=&quot;WhitespaceAround&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 当有多重修饰符时,修饰符采用以下顺序:</span><br><span class="line">             (public,protected,private,abstract,static,final,</span><br><span class="line">             transient,volatile,synchronized,native,strictfp) --&gt;</span><br><span class="line">        &lt;module name=&quot;ModifierOrder&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 检查是否有多余的修饰符，例如：接口中的方法不必使用public、abstract修饰</span><br><span class="line">                   tokens: 检查的类型 --&gt;</span><br><span class="line">        &lt;module name=&quot;RedundantModifier&quot; /&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 禁止空catch快 --&gt;</span><br><span class="line">        &lt;module name=&quot;EmptyCatchBlock&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;exceptionVariableName&quot; value=&quot;expected&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 代码最长长度不能超过100 --&gt;</span><br><span class="line">        &lt;module name=&quot;LineLength&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;100&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;ignorePattern&quot; value=&quot;^package.*|^import.*|a href|href|http://|https://|ftp://&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 最多方法数不超过30 --&gt;</span><br><span class="line">        &lt;module name=&quot;MethodCount&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;maxTotal&quot; value=&quot;30&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 方法长度不超过60 --&gt;</span><br><span class="line">        &lt;module name=&quot;MethodLength&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;tokens&quot; value=&quot;METHOD_DEF&quot;/&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;60&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免Equals左边为空 --&gt;</span><br><span class="line">        &lt;module name=&quot;EqualsAvoidNull&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免复杂内联函数 --&gt;</span><br><span class="line">        &lt;module name=&quot;AvoidInlineConditionals&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--</span><br><span class="line">        1. 类（静态）变量。首先应当是public类变量，然后是protected类变量，然后是package类变量（没有访问标识符），最后是private类变量。</span><br><span class="line">        2. 实例变量。首先应当是public类变量，然后是protected类变量，然后是package类变量（没有访问标识符），最后是private类变量。</span><br><span class="line">        3. 构造器</span><br><span class="line">        4. 方法</span><br><span class="line">        --&gt;</span><br><span class="line">        &lt;module name=&quot;DeclarationOrder&quot;/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 避免忘记break,continue等 --&gt;</span><br><span class="line">        &lt;module name=&quot;FallThrough&quot;/&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- for循环深度最多为2 --&gt;</span><br><span class="line">        &lt;module name=&quot;NestedForDepth&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- if else深度最多为3 --&gt;</span><br><span class="line">        &lt;module name=&quot;NestedIfDepth&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;2&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!-- try catch深度最多为3--&gt;</span><br><span class="line">        &lt;module name=&quot;NestedTryDepth&quot;&gt;</span><br><span class="line">            &lt;property name=&quot;max&quot; value=&quot;2&quot;/&gt;</span><br><span class="line">        &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/module&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/module&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Git-Hook-脚本示例"><a href="#Git-Hook-脚本示例" class="headerlink" title="Git Hook 脚本示例"></a>Git Hook 脚本示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">#! /usr/bin/env python</span><br><span class="line"># -*- encoding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">import sys,os,re</span><br><span class="line"></span><br><span class="line">print &apos;\n.......................Code Style Checking....................\n&apos;</span><br><span class="line"></span><br><span class="line">#the count of level, like ERROR,WARN</span><br><span class="line">def get_level(content, level):</span><br><span class="line">    return len(re.compile(r&quot;\[%s\]&quot; % level).findall(content))</span><br><span class="line"></span><br><span class="line">#get the commit file name (whole path)</span><br><span class="line">def get_file_name(content, postfix=None):</span><br><span class="line">    content = content.replace(&quot;\t&quot;, &quot; &quot;)</span><br><span class="line">    line_divided = content.split(&quot;\n&quot;)</span><br><span class="line">    space_divided = [[j for j in i.split(&quot; &quot;) if j.strip()]for i in line_divided]</span><br><span class="line">    filenames = [i[5] for i in space_divided if i]</span><br><span class="line">    if not postfix:</span><br><span class="line">        return filenames</span><br><span class="line">    return [i for i in filenames if &quot;.%s&quot; % postfix in i]</span><br><span class="line"></span><br><span class="line">jarpath = os.popen(&apos;git config --get checkstyle.jar&apos;).read()</span><br><span class="line">checkfilepath = os.popen(&apos;git config --get checkstyle.checkfile&apos;).read()</span><br><span class="line"></span><br><span class="line">#check code command</span><br><span class="line">command = &apos;java -jar &apos; + jarpath[:-1] + &apos; -c &apos; + checkfilepath[:-1]</span><br><span class="line"></span><br><span class="line">#the file to check</span><br><span class="line">files = os.popen(&apos;git diff-index --cached HEAD&apos;).read()</span><br><span class="line"></span><br><span class="line">#the result of command</span><br><span class="line">content = get_file_name(files, &apos;java&apos;)</span><br><span class="line"></span><br><span class="line">resultsum = 0</span><br><span class="line"></span><br><span class="line">for i in content:</span><br><span class="line">    result = os.popen(command + &apos; &apos; + i).read()</span><br><span class="line">    print result</span><br><span class="line">    resultsum += get_level(result,&apos;ERROR&apos;)</span><br><span class="line">    resultsum += get_level(result,&apos;WARN&apos;)</span><br><span class="line"></span><br><span class="line">if resultsum &gt; 0:</span><br><span class="line">    print &apos;\n.......................You must fix the errors and warnings first, then excute commit command again...........\n&apos;</span><br><span class="line">    sys.exit(-1)</span><br><span class="line">else:</span><br><span class="line">    print &apos;\n.................................Code is very good...................\n&apos;</span><br><span class="line">    sys.exit(0)</span><br></pre></td></tr></table></figure>
+<p>以上pre-commit脚本使用的是python语言, 主要做了三件事。</p>
+<ul>
+<li>通过git diff命令找到本次提交的java文件的完整路径</li>
+<li>循环执行check命令</li>
+</ul>
+<blockquote>
+<p>java -jar checkstyle-7.0-all.jar -c /sun_checks.xml MyClass.java</p>
+</blockquote>
+<ul>
+<li>找出check命令结果中的ERROR和WARN数量, 返回0, commit成功, 否则,  commit失败</li>
+</ul>
+<h3 id="部署到项目中"><a href="#部署到项目中" class="headerlink" title="部署到项目中"></a>部署到项目中</h3><p>因为pre-commit脚本,是存放在.git/hooks目录下的。所以他不会被提交到远程服务器。所以只能将<br>pre-commit脚本, checkstyle-7.0-all.jar, 以及checks.xml存放到项目目录下。</p>
+<p>每个终端通过git pull拉取到文件后, 执行下列三个命令。</p>
+<ul>
+<li>git config –add checkstyle.jar ../../config/checkstyle-7.0-all.jar</li>
+<li>git config –add checkstyle.checkfile ../../config/test_checks.xml</li>
+<li>cp ../../config/pre-commit ./.git/hooks/ </li>
+</ul>
+<p>这样,再运行git commit的时候就会自动帮你检查你的代码了。</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/1/blog12.png" alt="Alt text"></p>
+<p>根据提示修改代码吧。</p>
+<p>注: 若有submodule模块,pre-commit要拷贝到.git/modules/…/hooks目录下。</p>
+<p>参考文献:</p>
+<ul>
+<li><a href="http://checkstyle.sourceforge.net/" target="_blank" rel="external">check style官网</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="external">git hook</a></li>
+<li><a href="http://blog.csdn.net/yang1982_0907/article/details/18086693" target="_blank" rel="external">详解CheckStyle的检查规则（共138条规则）</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/checkstyle/" rel="tag">#checkstyle</a>
+          
+            <a href="/tags/githook/" rel="tag">#githook</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/28/android-studio-tips/" rel="next" title="Android Studio 使用小技巧和快捷键">
+                <i class="fa fa-chevron-left"></i> Android Studio 使用小技巧和快捷键
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/29/java-rules/" rel="prev" title="Java代码规范">
+                Java代码规范 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/06/29/checkstyle-githook/"
+     data-title="Java代码规范之CheckStyle + Git Hook"
+     data-content=""
+     data-url="http://czhzero.com/2016/06/29/checkstyle-githook/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/29/checkstyle-githook/"
+           data-title="Java代码规范之CheckStyle + Git Hook" data-url="http://czhzero.com/2016/06/29/checkstyle-githook/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/my_head.jpeg"
+               alt="Alvin-一座小楼" />
+          <p class="site-author-name" itemprop="name">Alvin-一座小楼</p>
+          <p class="site-description motion-element" itemprop="description">大海从不拒绝走过弯路的小溪</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/czhzero" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1765185530" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CheckStyle简介"><span class="nav-number">1.</span> <span class="nav-text">CheckStyle简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Hook简介"><span class="nav-number">2.</span> <span class="nav-text">Git Hook简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">3.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义检查规则示例"><span class="nav-number">4.</span> <span class="nav-text">自定义检查规则示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Hook-脚本示例"><span class="nav-number">5.</span> <span class="nav-text">Git Hook 脚本示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到项目中"><span class="nav-number">6.</span> <span class="nav-text">部署到项目中</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alvin-一座小楼</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"czhzero"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("bWQ0bNnPvEx2cikhn5zECb2z-gzGzoHsz", "MT29shr3Wj61Uz3y31too94a");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
