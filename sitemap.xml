@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czhzero.com/2017/01/15/jvm-learning-1/</loc>
+    
+    <lastmod>2017-01-15T10:28:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2017/01/15/java-multi-thread-1/</loc>
     
     <lastmod>2017-01-15T06:11:11.000Z</lastmod>
@@ -9,14 +16,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/30/how-to-be-stronger/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/26/git-basic-kill/</loc>
+    <loc>http://czhzero.com/2017/01/09/technical-director-experience/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
+    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -44,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
+    <loc>http://czhzero.com/2016/12/26/git-basic-kill/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
+    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -65,14 +65,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
+    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/02/android-deletefile/</loc>
+    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -86,27 +86,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/11/16/hexo-js-loadingfailure/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/08/10/jrebel-for-android-guide/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -114,21 +93,21 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
+    <loc>http://czhzero.com/2016/07/30/how-to-be-stronger/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
+    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/10/18/mac-install-ohmyzsh/</loc>
+    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -142,7 +121,21 @@
   </url>
   
   <url>
+    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -156,7 +149,21 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/01/09/technical-director-experience/</loc>
+    <loc>http://czhzero.com/2016/11/16/hexo-js-loadingfailure/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/12/02/android-deletefile/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/10/18/mac-install-ohmyzsh/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
