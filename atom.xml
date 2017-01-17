@@ -292,7 +292,7 @@
     <link href="http://czhzero.com/2017/01/09/technical-director-experience/"/>
     <id>http://czhzero.com/2017/01/09/technical-director-experience/</id>
     <published>2017-01-09T03:09:03.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
+    <updated>2017-01-17T15:26:13.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://o7y1sf21i.bkt.clouddn.com/blog/018/640&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -394,8 +394,10 @@
     
     </summary>
     
-      <category term="深度文摘" scheme="http://czhzero.com/categories/%E6%B7%B1%E5%BA%A6%E6%96%87%E6%91%98/"/>
+      <category term="文摘随笔" scheme="http://czhzero.com/categories/%E6%96%87%E6%91%98%E9%9A%8F%E7%AC%94/"/>
     
+    
+      <category term="技术总监的工作" scheme="http://czhzero.com/tags/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%9B%91%E7%9A%84%E5%B7%A5%E4%BD%9C/"/>
     
   </entry>
   
@@ -404,7 +406,7 @@
     <link href="http://czhzero.com/2016/12/26/git-basic-kill/"/>
     <id>http://czhzero.com/2016/12/26/git-basic-kill/</id>
     <published>2016-12-26T12:05:34.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
+    <updated>2017-01-17T15:22:10.000Z</updated>
     
     <content type="html">&lt;p&gt;Git是一个分布式版本管理系统，是为了更好地管理Linux内核开发而创立的。Git与Svn相比，不光有远程代码库，也有本地代码库，方便多人协作。&lt;/p&gt;
 &lt;p&gt;另外，Git中分支的活用，也极大的方便了开发人员开发过程中的多版本同时开发。&lt;/p&gt;
@@ -503,7 +505,7 @@
     
     </summary>
     
-      <category term="Git" scheme="http://czhzero.com/categories/Git/"/>
+      <category term="开发工具" scheme="http://czhzero.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Git" scheme="http://czhzero.com/tags/Git/"/>
@@ -768,7 +770,7 @@
     <link href="http://czhzero.com/2016/11/16/hexo-js-loadingfailure/"/>
     <id>http://czhzero.com/2016/11/16/hexo-js-loadingfailure/</id>
     <published>2016-11-16T11:14:36.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
+    <updated>2017-01-17T15:30:29.000Z</updated>
     
     <content type="html">&lt;p&gt;今天下午用hexo框架deploy一篇文章，发布完成后，发现网页无法打开了。出现了很多404错误。&lt;/p&gt;
 &lt;p&gt;各种vender目录下的js加载都是失败的。本地部署是没有问题的，一旦上传到托管平台github或者coding后，就无法找到这些js文件。折腾了半天，网上搜资料才知道原来我的代码托管平台把vender目录禁止了。&lt;/p&gt;
@@ -793,10 +795,10 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://czhzero.com/categories/Hexo/"/>
+      <category term="Bug分析" scheme="http://czhzero.com/categories/Bug%E5%88%86%E6%9E%90/"/>
     
     
-      <category term="javascript" scheme="http://czhzero.com/tags/javascript/"/>
+      <category term="hexo" scheme="http://czhzero.com/tags/hexo/"/>
     
   </entry>
   
@@ -805,7 +807,7 @@
     <link href="http://czhzero.com/2016/11/16/AndroidStudio-KeyboardKeymap/"/>
     <id>http://czhzero.com/2016/11/16/AndroidStudio-KeyboardKeymap/</id>
     <published>2016-11-16T06:24:28.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
+    <updated>2017-01-17T15:24:00.000Z</updated>
     
     <content type="html">&lt;p&gt;Android Studio 是基于 IntelliJ IDEA 的官方 Android 应用开发集成开发环境 (IDE)。本篇总结了部分Android Studio常用的快捷键。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -972,7 +974,7 @@
     
     </summary>
     
-      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
+      <category term="开发工具" scheme="http://czhzero.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Keymaps" scheme="http://czhzero.com/tags/Keymaps/"/>
@@ -1067,7 +1069,7 @@
     <link href="http://czhzero.com/2016/10/18/mac-install-ohmyzsh/"/>
     <id>http://czhzero.com/2016/10/18/mac-install-ohmyzsh/</id>
     <published>2016-10-18T02:56:47.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
+    <updated>2017-01-17T15:25:11.000Z</updated>
     
     <content type="html">&lt;p&gt;本文链接地址为: &lt;a href=&quot;http://www.php230.com/mac-install-zsh.html，转载请注明出处！&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.php230.com/mac-install-zsh.html，转载请注明出处！&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;克隆这个项目到本地-前提是你得有装git&quot;&gt;&lt;a href=&quot;#克隆这个项目到本地-前提是你得有装git&quot; class=&quot;headerlink&quot; title=&quot;克隆这个项目到本地(前提是你得有装git)&quot;&gt;&lt;/a&gt;克隆这个项目到本地(前提是你得有装git)&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -1091,7 +1093,7 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://czhzero.com/categories/Mac/"/>
+      <category term="开发工具" scheme="http://czhzero.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="oh-my-zsh" scheme="http://czhzero.com/tags/oh-my-zsh/"/>
@@ -1612,7 +1614,7 @@
     <link href="http://czhzero.com/2016/08/10/jrebel-for-android-guide/"/>
     <id>http://czhzero.com/2016/08/10/jrebel-for-android-guide/</id>
     <published>2016-08-10T06:28:26.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
+    <updated>2017-01-17T15:25:28.000Z</updated>
     
     <content type="html">&lt;p&gt;Android开发的同学都知道，随着Android项目越来越大，编译时间也会逐步增加，项目里随便改几行代码，重新编译一下，少则几十秒，多则三四分钟，实在让人崩溃。网上很多技术博客都提出了各种提高编译速度的版本，本人也试验过&lt;a href=&quot;http://www.czhzero.com/2016/07/21/android-studio-compile-speed-up/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;很多方法&lt;/strong&gt;&lt;/a&gt;，收效甚微。&lt;/p&gt;
 &lt;p&gt;这篇文章想给大家介绍的内容就是一个让你不用再苦等的AndroidStudio插件工具。&lt;/p&gt;
@@ -1677,7 +1679,7 @@
     
     </summary>
     
-      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
+      <category term="开发工具" scheme="http://czhzero.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="JRebel" scheme="http://czhzero.com/tags/JRebel/"/>
@@ -1857,7 +1859,7 @@
     <link href="http://czhzero.com/2016/07/30/how-to-be-stronger/"/>
     <id>http://czhzero.com/2016/07/30/how-to-be-stronger/</id>
     <published>2016-07-30T08:56:56.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
+    <updated>2017-01-17T15:25:48.000Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;本文转载自: 知乎-郑均&lt;br&gt;原文地址: &lt;a href=&quot;http://zhuanlan.zhihu.com/zhengyun/20270317&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://zhuanlan.zhihu.com/zhengyun/20270317&lt;/a&gt;&lt;/p&gt;
@@ -2057,7 +2059,7 @@
     
     </summary>
     
-      <category term="深度文摘" scheme="http://czhzero.com/categories/%E6%B7%B1%E5%BA%A6%E6%96%87%E6%91%98/"/>
+      <category term="文摘随笔" scheme="http://czhzero.com/categories/%E6%96%87%E6%91%98%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="知识体系" scheme="http://czhzero.com/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
