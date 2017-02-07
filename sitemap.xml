@@ -107,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -128,6 +121,20 @@
   </url>
   
   <url>
+    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
+    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
+    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -164,13 +171,6 @@
   
   <url>
     <loc>http://czhzero.com/2016/12/07/treeview/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
