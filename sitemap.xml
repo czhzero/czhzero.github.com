@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czhzero.com/2017/02/07/performance-optimization-1/</loc>
+    
+    <lastmod>2017-02-07T13:32:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2017/01/15/jvm-learning-1/</loc>
     
     <lastmod>2017-02-05T06:52:53.000Z</lastmod>
@@ -86,7 +93,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
+    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -107,34 +114,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -149,7 +128,28 @@
   </url>
   
   <url>
+    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -184,6 +184,13 @@
   </url>
   
   <url>
+    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/07/19/android-study-resource/</loc>
     
     <lastmod>2016-07-31T07:39:27.000Z</lastmod>
@@ -198,14 +205,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
+    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
+    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
