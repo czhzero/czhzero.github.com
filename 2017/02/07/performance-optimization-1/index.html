@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://czhzero.com/2017/02/07/performance-optimization-1/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
 <meta property="og:description" content="本文为Android性能优化的第一篇——UI优化，主要介绍使用抽象布局标签(include, viewstub, merge)、去除不必要的嵌套和View节点、减少不必要的infalte及其他Layout方面可调优点，顺带提及布局调优相关工具。">
-<meta property="og:updated_time" content="2017-02-07T13:32:42.000Z">
+<meta property="og:updated_time" content="2017-02-07T14:13:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android性能优化(一)－UI优化">
 <meta name="twitter:description" content="本文为Android性能优化的第一篇——UI优化，主要介绍使用抽象布局标签(include, viewstub, merge)、去除不必要的嵌套和View节点、减少不必要的infalte及其他Layout方面可调优点，顺带提及布局调优相关工具。">
@@ -462,18 +462,20 @@
 <h3 id="4-其他建议"><a href="#4-其他建议" class="headerlink" title="4.其他建议"></a>4.其他建议</h3><p>(1) 用SurfaceView或TextureView代替普通View<br>SurfaceView或TextureView可以通过将绘图操作移动到另一个单独线程上提高性能。<br>普通View的绘制过程都是在主线程(UI线程)中完成，如果某些绘图操作影响性能就不好优化了，这时我们可以考虑使用SurfaceView和TextureView，他们的绘图操作发生在UI线程之外的另一个线程上。<br>因为SurfaceView在常规视图系统之外，所以无法像常规试图一样移动、缩放或旋转一个SurfaceView。TextureView是Android4.0引入的，除了与SurfaceView一样在单独线程绘制外，还可以像常规视图一样被改变。</p>
 <p>(2) 使用RenderJavascript<br>RenderScript是Adnroid3.0引进的用来在Android上写高性能代码的一种语言，语法给予C语言的C99标准，他的结构是独立的，所以不需要为不同的CPU或者GPU定制代码代码。</p>
 <p>(3) 使用OpenGL绘图<br>Android支持使用OpenGL API的高性能绘图，这是Android可用的最高级的绘图机制，在游戏类对性能要求较高的应用中得到广泛使用。<br>Android 4.3最大的改变，就是支持OpenGL ES 3.0。相比2.0，3.0有更多的缓冲区对象、增加了新的着色语言、增加多纹理支持等等，将为Android游戏带来更出色的视觉体验。</p>
-<p>(4) 尽量为所有分辨率创建资源<br>减少不必要的硬件缩放，这会降低UI的绘制速度。</p>
-<p>(5)背景和图片等内存分配优化；尽量减少不必要的背景设置，图片尽量压缩处理显示，尽量避免频繁内存抖动等问题出现。</p>
-<p>(6)自定义View等绘图与布局优化；尽量避免在draw、measure、layout中做过于耗时及耗内存操作，尤其是draw方法中，尽量减少draw、measure、layout等执行次数。</p>
-<p>(7)避免ANR，不要在UI线程中做耗时操作，遵守ANR规避守则，譬如多次数据库操作等。</p>
+<p>(4)尽量为所有分辨率创建资源<br>减少不必要的硬件缩放，这会降低UI的绘制速度。</p>
+<p>(5)尽量减少不必要的背景设置，图片尽量压缩处理显示，尽量避免频繁内存抖动等问题出现。</p>
+<p>(6)尽量避免在draw、measure、layout中做过于耗时及耗内存操作，尤其是draw方法中，尽量减少draw、measure、layout等执行次数。</p>
+<p>(7)将Activity中的window的背景图设置为空，默认的背景不为空getWindow().setBackgroundDrawable(null)。</p>
+<p>(8)View中设置缓存属性.setDrawingCache为true。</p>
 <h3 id="5-布局调优工具"><a href="#5-布局调优工具" class="headerlink" title="5.布局调优工具"></a>5.布局调优工具</h3><ul>
-<li>hierarchy viewer</li>
-<li>lint</li>
+<li>Hierarchy viewer</li>
+<li>Android Lint</li>
 <li>使用GPU过度绘制分析UI性能</li>
 <li>使用GPU呈现模式图及FPS</li>
 <li>使用Memory监测及GC打印与Allocation Tracker进行UI卡顿分析</li>
 <li>使用Traceview和dmtracedump进行分析优化</li>
 <li>使用Systrace进行分析优化</li>
+<li>通过Android SDK中tools目录下的layoutopt命令</li>
 </ul>
 <p>详细内容具体参考<a href="http://blog.csdn.net/christopher_411524/article/details/50582740" target="_blank" rel="external">Android性能优化总结</a></p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
@@ -521,6 +523,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/07/performance-optimization-2/" rel="prev" title="Android性能优化(二)－ 数据库性能优化">
+                Android性能优化(二)－ 数据库性能优化 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -616,7 +622,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

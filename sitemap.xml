@@ -4,7 +4,14 @@
   <url>
     <loc>http://czhzero.com/2017/02/07/performance-optimization-1/</loc>
     
-    <lastmod>2017-02-07T13:32:42.000Z</lastmod>
+    <lastmod>2017-02-07T14:13:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/02/07/performance-optimization-2/</loc>
+    
+    <lastmod>2017-02-07T14:09:20.000Z</lastmod>
     
   </url>
   
@@ -93,14 +100,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
+    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
+    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -128,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
+    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
+    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -184,7 +184,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
+    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -205,14 +212,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
+    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
+    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
