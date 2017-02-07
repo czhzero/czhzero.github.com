@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czhzero.com/2017/02/07/performance-optimization-3/</loc>
+    
+    <lastmod>2017-02-07T14:47:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2017/02/07/performance-optimization-1/</loc>
     
     <lastmod>2017-02-07T14:13:54.000Z</lastmod>
@@ -100,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
+    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -114,13 +121,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/06/25/hexoblog/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -128,14 +128,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
+    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -156,7 +149,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
+    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
+    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
+    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -192,6 +192,13 @@
   
   <url>
     <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
