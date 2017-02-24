@@ -64,18 +64,117 @@
   </entry>
   
   <entry>
-    <title>android-study-resource-3</title>
+    <title>常用Android学习资源汇总(三)-高频技术专题</title>
     <link href="http://czhzero.com/2017/02/24/android-study-resource-3/"/>
     <id>http://czhzero.com/2017/02/24/android-study-resource-3/</id>
     <published>2017-02-24T15:32:37.000Z</published>
-    <updated>2017-02-24T15:32:37.000Z</updated>
+    <updated>2017-02-24T15:40:45.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第四篇便捷开发工具。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(一)-优秀网站博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(二)-优秀开源框架&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(三)-高频技术专题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(四)-便捷开发工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;网络相关&quot;&gt;&lt;a href=&quot;#网络相关&quot; class=&quot;headerlink&quot; title=&quot;网络相关&quot;&gt;&lt;/a&gt;网络相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/starstone/p/4890409.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP 必知必会&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://realm.io/news/droidcon-jake-wharton-simple-http-retrofit-2/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrofit 2 用法解析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/aad5aacd79bf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OkHttp3 源码分析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/nugongahou110/article/details/46829605&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Volley 源码分析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://drakeet.me/retrofit-2-0-okhttp-3-0-config&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrofit 2.0 + OkHttp 3.0 配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2011/09/restful&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;理解 RESTful架构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/efan006/article/details/50543990&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrofit + RxJava实战日志&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/9c3b4ea108a7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 Retrofit 和 Okhttp 实现网络缓存&lt;/a&gt; —— 无网读缓存，有网根据过期时间重新请求&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/7e28c8216c7d&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava 处理网络连接失败&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/584707554ed7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 推送技术研究&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/77d418e7b5d6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OkHttp, Retrofit, Volley 应该选择哪一个？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ibm.com/developerworks/cn/java/j-lo-okhttp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;OkHttp：Java 平台上的新一代 HTTP 客户端&lt;/a&gt; —— 来自IBM的技术文章&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/qq_21430549/article/details/51212977&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrofit 文件上传下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/evan_man/article/details/51320408&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrofit 的使用与深入学习&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/93153b34310e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Retrofit 2.0 使用-补充篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/90b1f20b123d&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Retrofit 笔记&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;RxJava相关&quot;&gt;&lt;a href=&quot;#RxJava相关&quot; class=&quot;headerlink&quot; title=&quot;RxJava相关&quot;&gt;&lt;/a&gt;RxJava相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://gank.io/post/560e15be2dca930e00da1083&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Rxjava 详解&lt;/a&gt; —— 抛物线出品经典Rxjava详解&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/lzyzsd/article/details/41833541&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深入浅出 Rxjava&lt;/a&gt; —— rx教父大头鬼出品深入浅出rxjava&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mcxiaoke/RxDocs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxDocs - RxJava 文档中文版&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lzyzsd/Awesome-RxJava&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava resources&lt;/a&gt; —— rx教父大头鬼整理的Rxjava学习集合&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wangxinghe.me/blog/2016-03-27/rxjava-basis/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava 学习总结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.9mc2oeyzo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Improving UX with RxJava&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mcxiaoke.gitbooks.io/rxdocs/content/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ReactiveX 文档中文翻译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/richardradics/RxAndroidBootstrap&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava + Dagger2 + LAMBDA 的一个 MVP demo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mrfu.me/2016/01/10/RxWeekend/?hmsr=toutiao.io&amp;amp;utm_medium=toutiao.io&amp;amp;utm_source=toutiao.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava 的周末狂欢&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/c2c7c46e6b97&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 RxBinding 响应控件的异步事件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/6d1ef9f43cdc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详细解析 RxAndroid 的使用方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/f3f0eccbcd6f&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RxJava简洁封装之道&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;MVP-MVVM架构相关&quot;&gt;&lt;a href=&quot;#MVP-MVVM架构相关&quot; class=&quot;headerlink&quot; title=&quot;MVP/MVVM架构相关&quot;&gt;&lt;/a&gt;MVP/MVVM架构相关&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/1f21e1d375aa&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;不容错过，最全的 Android 架构合集&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/0590f530c617&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android MVP 详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.judymax.com/archives/1141?utm_source=tuicool&amp;amp;utm_medium=referral&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google官方 MVP 案例 todoAPP 解析&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/6872b699879d&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android MVVM 框架&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/269c3f70ec1e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dagger2 详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/collection/b838b070d6de?utm_campaign=hugo&amp;amp;utm_medium=reader_share&amp;amp;utm_content=collection&amp;amp;utm_source=weibo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Dagger2 系列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/01d3c014b0b1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google官方 MVP + Dagger2 架构详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;插件化开发&quot;&gt;&lt;a href=&quot;#插件化开发&quot; class=&quot;headerlink&quot; title=&quot;插件化开发&quot;&gt;&lt;/a&gt;插件化开发&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.androidblog.cn/index.php/Index/detail/id/16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;插件化开发专栏&lt;/a&gt; —— 有关插件化的资料这里全都有&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Qihoo360/DroidPlugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DroidPlugin&lt;/a&gt; —— 360手机助手插件机制&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/limpoxe/Android-Plugin-Framework&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android-Plugin-Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/wequick/Small&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Small&lt;/a&gt; —— Small，做最轻巧的跨平台插件化框架&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/singwhatiwanna/dynamic-load-apk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dynamic-load-apk&lt;/a&gt; —— Android 使用动态加载框架DL进行插件化开发&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/CtripMobile/DynamicAPK&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DynamicAPK&lt;/a&gt; —— 携程动态加载技术&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/houkx/android-pluginmgr&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android-pluginmgr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/alibaba/AndFix&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndFix&lt;/a&gt; —— 阿里动态加载&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;单元测试系列&quot;&gt;&lt;a href=&quot;#单元测试系列&quot; class=&quot;headerlink&quot; title=&quot;单元测试系列&quot;&gt;&lt;/a&gt;单元测试系列&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://rexstjohn.com/unit-testing-with-android-studio/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;unit-testing-with-android-studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/9d988a2f8ff7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Robolectric3.0 介绍&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/b2717dc245da&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 单元测试: 首先，从是什么开始&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/4b03123b4f81&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在 Android 中同时使用 unit test 和 instrument test 作为单元测试&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/fa76b126a7e7&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 单元测试——辅助工具介绍&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/00ab03f3d394&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 单元测试实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/cf446be43ae8&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;解读 Android 官方 MVP 项目单元测试&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tech.meituan.com/Android_unit_test.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;美团 Android 单元测试研究与实践&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.stormzhang.com/android/2014/07/07/learn-android-from-rookie/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 学习之路&lt;/a&gt; —— stormzhang的Android学习之路&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tangqi92/Android-Tips&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android-Tips&lt;/a&gt; —— 作者收集了大量Android开发Tip&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ZhaoKaiQiang/AndroidDifficultAnalysis&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndroidDifficultAnalysis&lt;/a&gt; —— 安卓开发中遇到的重难点解析，也包括平常的读书笔记和知识点整理&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://will_he.gitbooks.io/android/content/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 知识整理 GitBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bboyfeiyu/android-tech-frontier/wiki&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android wiki 周刊&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bboyfeiyu/Worth-Reading-the-Android-technical-articles&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;值得阅读的 Android 技术文章&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bxbxbai.github.io/2014/10/07/android-develop-resource/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;整理一些比较好的 Android 开发教程&lt;/a&gt; —— 这些都是该作者在学习Android开发过程中觉得比较好的教程和博客&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhuanlan.zhihu.com/kaede/20326073&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 应用性能调优的技术点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004063006&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Segmentfault 上回答较好的一些问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.woshipm.com/ucd/243897.html?utm_source=tuicool&amp;amp;utm_medium=referral&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 界面设计视觉规范&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bugly.qq.com/bbs/forum.php?mod=forumdisplay&amp;amp;fid=39&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;腾讯 bugly 社区&lt;/a&gt; —— 腾讯技术大牛写的博客文章&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.zhaiyifan.cn/2016/03/14/android-new-project-from-0-p1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;从零开始的 Android 新项目&lt;/a&gt; —— 从架构搭建、到数据层之Retrofit与Realm&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cloudchou.com/android/post-788.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;深入理解 Activity 启动流程&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/f269bcda335f&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你需要知道的 Android 拍照适配方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com/p/94e0f9ab3f1d&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Context 都没弄明白，还怎么做 Android 开发？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bugly.qq.com/bbs/forum.php?mod=viewthread&amp;amp;tid=1022&amp;amp;extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 性能优化典范之多线程篇&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
     
     <summary type="html">
     
+      &lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第四篇便捷开发工具。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(一)-优秀网站博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(二)-优秀开源框架&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(三)-高频技术专题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(四)-便捷开发工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
     </summary>
     
+      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
+    
+    
+      <category term="资源索引" scheme="http://czhzero.com/tags/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/"/>
     
   </entry>
   

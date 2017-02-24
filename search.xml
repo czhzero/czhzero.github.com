@@ -30,9 +30,96 @@
     </entry>
     
     <entry>
-      <title><![CDATA[android-study-resource-3]]></title>
+      <title><![CDATA[常用Android学习资源汇总(三)-高频技术专题]]></title>
       <url>http://czhzero.com/2017/02/24/android-study-resource-3/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p>常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第四篇便捷开发工具。</p>
+<ul>
+<li><a href="">常用Android学习资源汇总(一)-优秀网站博客</a></li>
+<li><a href="">常用Android学习资源汇总(二)-优秀开源框架</a></li>
+<li><a href="">常用Android学习资源汇总(三)-高频技术专题</a></li>
+<li><a href="">常用Android学习资源汇总(四)-便捷开发工具</a></li>
+</ul>
+<a id="more"></a>
+<h3 id="网络相关"><a href="#网络相关" class="headerlink" title="网络相关"></a>网络相关</h3><ul>
+<li><a href="http://www.cnblogs.com/starstone/p/4890409.html" target="_blank" rel="external">HTTP 必知必会</a></li>
+<li><a href="https://realm.io/news/droidcon-jake-wharton-simple-http-retrofit-2/" target="_blank" rel="external">Retrofit 2 用法解析</a></li>
+<li><a href="http://www.jianshu.com/p/aad5aacd79bf" target="_blank" rel="external">OkHttp3 源码分析</a></li>
+<li><a href="http://blog.csdn.net/nugongahou110/article/details/46829605" target="_blank" rel="external">Volley 源码分析</a></li>
+<li><a href="https://drakeet.me/retrofit-2-0-okhttp-3-0-config" target="_blank" rel="external">Retrofit 2.0 + OkHttp 3.0 配置</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2011/09/restful" target="_blank" rel="external">理解 RESTful架构</a></li>
+<li><a href="http://blog.csdn.net/efan006/article/details/50543990" target="_blank" rel="external">Retrofit + RxJava实战日志</a></li>
+<li><a href="http://www.jianshu.com/p/9c3b4ea108a7" target="_blank" rel="external">使用 Retrofit 和 Okhttp 实现网络缓存</a> —— 无网读缓存，有网根据过期时间重新请求</li>
+<li><a href="http://www.jianshu.com/p/7e28c8216c7d" target="_blank" rel="external">RxJava 处理网络连接失败</a></li>
+<li><a href="http://www.jianshu.com/p/584707554ed7" target="_blank" rel="external">Android 推送技术研究</a></li>
+<li><a href="http://www.jianshu.com/p/77d418e7b5d6" target="_blank" rel="external">OkHttp, Retrofit, Volley 应该选择哪一个？</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/java/j-lo-okhttp/" target="_blank" rel="external">OkHttp：Java 平台上的新一代 HTTP 客户端</a> —— 来自IBM的技术文章</li>
+<li><a href="http://blog.csdn.net/qq_21430549/article/details/51212977" target="_blank" rel="external">Retrofit 文件上传下载</a></li>
+<li><a href="http://blog.csdn.net/evan_man/article/details/51320408" target="_blank" rel="external">Retrofit 的使用与深入学习</a></li>
+<li><a href="http://www.jianshu.com/p/93153b34310e" target="_blank" rel="external">Android Retrofit 2.0 使用-补充篇</a></li>
+<li><a href="http://www.jianshu.com/p/90b1f20b123d" target="_blank" rel="external">Retrofit 笔记</a></li>
+</ul>
+<h3 id="RxJava相关"><a href="#RxJava相关" class="headerlink" title="RxJava相关"></a>RxJava相关</h3><ul>
+<li><a href="http://gank.io/post/560e15be2dca930e00da1083" target="_blank" rel="external">Rxjava 详解</a> —— 抛物线出品经典Rxjava详解</li>
+<li><a href="http://blog.csdn.net/lzyzsd/article/details/41833541" target="_blank" rel="external">深入浅出 Rxjava</a> —— rx教父大头鬼出品深入浅出rxjava</li>
+<li><a href="https://github.com/mcxiaoke/RxDocs" target="_blank" rel="external">RxDocs - RxJava 文档中文版</a></li>
+<li><a href="https://github.com/lzyzsd/Awesome-RxJava" target="_blank" rel="external">RxJava resources</a> —— rx教父大头鬼整理的Rxjava学习集合</li>
+<li><a href="http://wangxinghe.me/blog/2016-03-27/rxjava-basis/" target="_blank" rel="external">RxJava 学习总结</a></li>
+<li><a href="https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.9mc2oeyzo" target="_blank" rel="external">Improving UX with RxJava</a></li>
+<li><a href="https://mcxiaoke.gitbooks.io/rxdocs/content/index.html" target="_blank" rel="external">ReactiveX 文档中文翻译</a></li>
+<li><a href="https://github.com/richardradics/RxAndroidBootstrap" target="_blank" rel="external">RxJava + Dagger2 + LAMBDA 的一个 MVP demo</a></li>
+<li><a href="http://mrfu.me/2016/01/10/RxWeekend/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">RxJava 的周末狂欢</a></li>
+<li><a href="http://www.jianshu.com/p/c2c7c46e6b97" target="_blank" rel="external">使用 RxBinding 响应控件的异步事件</a></li>
+<li><a href="http://www.jianshu.com/p/6d1ef9f43cdc" target="_blank" rel="external">详细解析 RxAndroid 的使用方式</a></li>
+<li><a href="http://www.jianshu.com/p/f3f0eccbcd6f" target="_blank" rel="external">RxJava简洁封装之道</a></li>
+</ul>
+<h3 id="MVP-MVVM架构相关"><a href="#MVP-MVVM架构相关" class="headerlink" title="MVP/MVVM架构相关"></a>MVP/MVVM架构相关</h3><ul>
+<li><a href="http://www.jianshu.com/p/1f21e1d375aa" target="_blank" rel="external">不容错过，最全的 Android 架构合集</a></li>
+<li><a href="http://www.jianshu.com/p/0590f530c617" target="_blank" rel="external">Android MVP 详解</a></li>
+<li><a href="http://www.judymax.com/archives/1141?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">Google官方 MVP 案例 todoAPP 解析</a></li>
+<li><a href="http://www.jianshu.com/p/6872b699879d" target="_blank" rel="external">Android MVVM 框架</a></li>
+<li><a href="http://www.jianshu.com/p/269c3f70ec1e" target="_blank" rel="external">Dagger2 详解</a></li>
+<li><a href="http://www.jianshu.com/collection/b838b070d6de?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=collection&amp;utm_source=weibo" target="_blank" rel="external">Android Dagger2 系列</a></li>
+<li><a href="http://www.jianshu.com/p/01d3c014b0b1" target="_blank" rel="external">Google官方 MVP + Dagger2 架构详解</a></li>
+</ul>
+<h3 id="插件化开发"><a href="#插件化开发" class="headerlink" title="插件化开发"></a>插件化开发</h3><ul>
+<li><a href="http://www.androidblog.cn/index.php/Index/detail/id/16" target="_blank" rel="external">插件化开发专栏</a> —— 有关插件化的资料这里全都有</li>
+<li><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">DroidPlugin</a> —— 360手机助手插件机制</li>
+<li><a href="https://github.com/limpoxe/Android-Plugin-Framework" target="_blank" rel="external">Android-Plugin-Framework</a></li>
+<li><a href="https://github.com/wequick/Small" target="_blank" rel="external">Small</a> —— Small，做最轻巧的跨平台插件化框架</li>
+<li><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">dynamic-load-apk</a> —— Android 使用动态加载框架DL进行插件化开发</li>
+<li><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">DynamicAPK</a> —— 携程动态加载技术</li>
+<li><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">android-pluginmgr</a></li>
+<li><a href="https://github.com/alibaba/AndFix" target="_blank" rel="external">AndFix</a> —— 阿里动态加载</li>
+</ul>
+<h3 id="单元测试系列"><a href="#单元测试系列" class="headerlink" title="单元测试系列"></a>单元测试系列</h3><ul>
+<li><a href="http://rexstjohn.com/unit-testing-with-android-studio/" target="_blank" rel="external">unit-testing-with-android-studio</a></li>
+<li><a href="http://www.jianshu.com/p/9d988a2f8ff7" target="_blank" rel="external">Robolectric3.0 介绍</a></li>
+<li><a href="http://www.jianshu.com/p/b2717dc245da" target="_blank" rel="external">Android 单元测试: 首先，从是什么开始</a></li>
+<li><a href="http://www.jianshu.com/p/4b03123b4f81" target="_blank" rel="external">在 Android 中同时使用 unit test 和 instrument test 作为单元测试</a></li>
+<li><a href="http://www.jianshu.com/p/fa76b126a7e7" target="_blank" rel="external">Android 单元测试——辅助工具介绍</a></li>
+<li><a href="http://www.jianshu.com/p/00ab03f3d394" target="_blank" rel="external">Android 单元测试实践</a></li>
+<li><a href="http://www.jianshu.com/p/cf446be43ae8" target="_blank" rel="external">解读 Android 官方 MVP 项目单元测试</a></li>
+<li><a href="http://tech.meituan.com/Android_unit_test.html" target="_blank" rel="external">美团 Android 单元测试研究与实践</a></li>
+</ul>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li><a href="http://www.stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android 学习之路</a> —— stormzhang的Android学习之路</li>
+<li><a href="https://github.com/tangqi92/Android-Tips" target="_blank" rel="external">Android-Tips</a> —— 作者收集了大量Android开发Tip</li>
+<li><a href="https://github.com/ZhaoKaiQiang/AndroidDifficultAnalysis" target="_blank" rel="external">AndroidDifficultAnalysis</a> —— 安卓开发中遇到的重难点解析，也包括平常的读书笔记和知识点整理</li>
+<li><a href="https://will_he.gitbooks.io/android/content/" target="_blank" rel="external">Android 知识整理 GitBook</a></li>
+<li><a href="https://github.com/bboyfeiyu/android-tech-frontier/wiki" target="_blank" rel="external">Android wiki 周刊</a></li>
+<li><a href="https://github.com/bboyfeiyu/Worth-Reading-the-Android-technical-articles" target="_blank" rel="external">值得阅读的 Android 技术文章</a> </li>
+<li><a href="http://bxbxbai.github.io/2014/10/07/android-develop-resource/" target="_blank" rel="external">整理一些比较好的 Android 开发教程</a> —— 这些都是该作者在学习Android开发过程中觉得比较好的教程和博客</li>
+<li><a href="http://zhuanlan.zhihu.com/kaede/20326073" target="_blank" rel="external">Android 应用性能调优的技术点</a></li>
+<li><a href="https://segmentfault.com/a/1190000004063006" target="_blank" rel="external">Segmentfault 上回答较好的一些问题</a></li>
+<li><a href="http://www.woshipm.com/ucd/243897.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">Android 界面设计视觉规范</a></li>
+<li><a href="http://bugly.qq.com/bbs/forum.php?mod=forumdisplay&amp;fid=39" target="_blank" rel="external">腾讯 bugly 社区</a> —— 腾讯技术大牛写的博客文章</li>
+<li><a href="http://blog.zhaiyifan.cn/2016/03/14/android-new-project-from-0-p1/" target="_blank" rel="external">从零开始的 Android 新项目</a> —— 从架构搭建、到数据层之Retrofit与Realm</li>
+<li><a href="http://www.cloudchou.com/android/post-788.html" target="_blank" rel="external">深入理解 Activity 启动流程</a> </li>
+<li><a href="http://www.jianshu.com/p/f269bcda335f" target="_blank" rel="external">你需要知道的 Android 拍照适配方案</a></li>
+<li><a href="http://www.jianshu.com/p/94e0f9ab3f1d" target="_blank" rel="external">Context 都没弄明白，还怎么做 Android 开发？</a></li>
+<li><a href="http://bugly.qq.com/bbs/forum.php?mod=viewthread&amp;tid=1022&amp;extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline" target="_blank" rel="external">Android 性能优化典范之多线程篇</a></li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
