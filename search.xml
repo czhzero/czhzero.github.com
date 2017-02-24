@@ -32,7 +32,7 @@
     <entry>
       <title><![CDATA[常用Android学习资源汇总(三)-高频技术专题]]></title>
       <url>http://czhzero.com/2017/02/24/android-study-resource-3/</url>
-      <content type="html"><![CDATA[<p>常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第四篇便捷开发工具。</p>
+      <content type="html"><![CDATA[<p>常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第三篇高频技术专题。</p>
 <ul>
 <li><a href="">常用Android学习资源汇总(一)-优秀网站博客</a></li>
 <li><a href="">常用Android学习资源汇总(二)-优秀开源框架</a></li>
@@ -123,9 +123,23 @@
     </entry>
     
     <entry>
-      <title><![CDATA[android-study-resource-2]]></title>
+      <title><![CDATA[常用Android学习资源汇总(二)-优秀开源框架]]></title>
       <url>http://czhzero.com/2017/02/24/android-study-resource-2/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p>常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第二篇优秀开源框架。</p>
+<ul>
+<li><a href="">常用Android学习资源汇总(一)-优秀网站博客</a></li>
+<li><a href="">常用Android学习资源汇总(二)-优秀开源框架</a></li>
+<li><a href="">常用Android学习资源汇总(三)-高频技术专题</a></li>
+<li><a href="">常用Android学习资源汇总(四)-便捷开发工具</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="图片加载框架"><a href="#图片加载框架" class="headerlink" title="图片加载框架"></a>图片加载框架</h2><ul>
+<li><a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank" rel="external">UniversalImageLoader</a> —— 老牌最火的图片加载库</li>
+<li><a href="https://github.com/square/picasso" target="_blank" rel="external">Picasso</a> —— Picasso是Square公司开源的一个Android平台上的图片加载框架，简单易用，一句话搞定项目中的图片加载，好用到令人发指。</li>
+<li><a href="https://github.com/bumptech/glide" target="_blank" rel="external">Glide</a> —— Glide 是 Google 一位员工的大作，他完全是基于 Picasso 的，沿袭了 Picasso 的简洁风格，但是在此做了大量优化与改进。</li>
+<li><a href="https://github.com/facebook/fresco" target="_blank" rel="external">Fresco</a> —— Fresco 是 Facebook 出品</li>
+</ul>
+<h2 id="网络加载框架"><a href="#网络加载框架" class="headerlink" title="网络加载框架"></a>网络加载框架</h2><h2 id="数据库框架"><a href="#数据库框架" class="headerlink" title="数据库框架"></a>数据库框架</h2>]]></content>
     </entry>
     
     <entry>

@@ -68,9 +68,9 @@
     <link href="http://czhzero.com/2017/02/24/android-study-resource-3/"/>
     <id>http://czhzero.com/2017/02/24/android-study-resource-3/</id>
     <published>2017-02-24T15:32:37.000Z</published>
-    <updated>2017-02-24T15:40:45.000Z</updated>
+    <updated>2017-02-24T15:47:48.000Z</updated>
     
-    <content type="html">&lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第四篇便捷开发工具。&lt;/p&gt;
+    <content type="html">&lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第三篇高频技术专题。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(一)-优秀网站博客&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(二)-优秀开源框架&lt;/a&gt;&lt;/li&gt;
@@ -161,7 +161,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第四篇便捷开发工具。&lt;/p&gt;
+      &lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第三篇高频技术专题。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(一)-优秀网站博客&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(二)-优秀开源框架&lt;/a&gt;&lt;/li&gt;
@@ -179,18 +179,44 @@
   </entry>
   
   <entry>
-    <title>android-study-resource-2</title>
+    <title>常用Android学习资源汇总(二)-优秀开源框架</title>
     <link href="http://czhzero.com/2017/02/24/android-study-resource-2/"/>
     <id>http://czhzero.com/2017/02/24/android-study-resource-2/</id>
     <published>2017-02-24T15:31:12.000Z</published>
-    <updated>2017-02-24T15:31:12.000Z</updated>
+    <updated>2017-02-24T15:47:19.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第二篇优秀开源框架。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(一)-优秀网站博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(二)-优秀开源框架&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(三)-高频技术专题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(四)-便捷开发工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;图片加载框架&quot;&gt;&lt;a href=&quot;#图片加载框架&quot; class=&quot;headerlink&quot; title=&quot;图片加载框架&quot;&gt;&lt;/a&gt;图片加载框架&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nostra13/Android-Universal-Image-Loader&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UniversalImageLoader&lt;/a&gt; —— 老牌最火的图片加载库&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/square/picasso&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Picasso&lt;/a&gt; —— Picasso是Square公司开源的一个Android平台上的图片加载框架，简单易用，一句话搞定项目中的图片加载，好用到令人发指。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bumptech/glide&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Glide&lt;/a&gt; —— Glide 是 Google 一位员工的大作，他完全是基于 Picasso 的，沿袭了 Picasso 的简洁风格，但是在此做了大量优化与改进。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/facebook/fresco&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Fresco&lt;/a&gt; —— Fresco 是 Facebook 出品&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;网络加载框架&quot;&gt;&lt;a href=&quot;#网络加载框架&quot; class=&quot;headerlink&quot; title=&quot;网络加载框架&quot;&gt;&lt;/a&gt;网络加载框架&lt;/h2&gt;&lt;h2 id=&quot;数据库框架&quot;&gt;&lt;a href=&quot;#数据库框架&quot; class=&quot;headerlink&quot; title=&quot;数据库框架&quot;&gt;&lt;/a&gt;数据库框架&lt;/h2&gt;</content>
     
     <summary type="html">
     
+      &lt;p&gt;常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第二篇优秀开源框架。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(一)-优秀网站博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(二)-优秀开源框架&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(三)-高频技术专题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;常用Android学习资源汇总(四)-便捷开发工具&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
     </summary>
     
+      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
+    
+    
+      <category term="资源索引" scheme="http://czhzero.com/tags/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/"/>
     
   </entry>
   
