@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title><![CDATA[Java类初始化顺序]]></title>
+      <url>http://czhzero.com/2017/02/24/java-init-sequence-sample/</url>
+      <content type="html"><![CDATA[<p>Java程序在它运行之前，并非完全加载，其各个部分是在必需时才加载。Java类的初始化顺序，是先静态对象，而后是非静态对象。类加载器加载class文件时，初始化静态对象。new操作符时，初始化非静态对象。</p>
+<p>在类的内部，变量定义的先后决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍旧会在任何方法(包括构造方法)被调用之前得到初始化。</p>
+<a id="more"></a>
+<hr>
+<h3 id="1-无继承类初始化"><a href="#1-无继承类初始化" class="headerlink" title="1.无继承类初始化"></a>1.无继承类初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">public class Client &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	public static class Person &#123;</span><br><span class="line">		public Person(String str) &#123;</span><br><span class="line">			System.out.println(str);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static class Test &#123;</span><br><span class="line">		</span><br><span class="line">		//静态成员变量 A</span><br><span class="line">		public static Person sPersonA = new Person(&quot;A 静态成员变量初始化&quot;);</span><br><span class="line">		</span><br><span class="line">		//静态初始化代码块 B</span><br><span class="line">		static &#123;</span><br><span class="line">			System.out.println(&quot;B 静态初始化块&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//成员变量 C</span><br><span class="line">		public Person mPersonC = new Person(&quot;C 成员变量初始化&quot;);</span><br><span class="line">	</span><br><span class="line">		//初始化代码 D</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(&quot;D 初始化代码块&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//构造函数 E</span><br><span class="line">		public Test() &#123;</span><br><span class="line">			System.out.println(&quot;E 构造函数&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		//静态成员变量 F</span><br><span class="line">		public static Person sPersonF = new Person(&quot;F 静态成员变量初始化&quot;);</span><br><span class="line">		</span><br><span class="line">		//静态初始化代码块 G</span><br><span class="line">		static &#123;</span><br><span class="line">			System.out.println(&quot;G 静态初始化块&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//成员变量 H</span><br><span class="line">		public Person mPersonH = new Person(&quot;H 成员变量初始化&quot;);</span><br><span class="line">	</span><br><span class="line">		//初始化代码 I</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.println(&quot;I 初始化代码块&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Test test = new Test();</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A 静态成员变量初始化</span><br><span class="line">B 静态初始化块</span><br><span class="line">F 静态成员变量初始化</span><br><span class="line">G 静态初始化块</span><br><span class="line">C 成员变量初始化</span><br><span class="line">D 初始化代码块</span><br><span class="line">H 成员变量初始化</span><br><span class="line">I 初始化代码块</span><br><span class="line">E 构造函数</span><br></pre></td></tr></table></figure>
+<p>由此可以得出以下结论：</p>
+<blockquote>
+<p><strong>初始化顺序: 静态变量/静态代码块 -&gt;  成员变量/代码块 -&gt; 构造函数</strong><br>其中，静态变量与静态代码块，成员变量与代码块的初始化顺序只取决于定义顺序。</p>
+</blockquote>
+<h3 id="2-子类初始化顺序"><a href="#2-子类初始化顺序" class="headerlink" title="2. 子类初始化顺序"></a>2. 子类初始化顺序</h3><p>创建一个TestSub类继承Test类，    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">public static class TestSub extends Test &#123;</span><br><span class="line">	</span><br><span class="line">	//静态成员变量 a</span><br><span class="line">	public static Person sPersonA = new Person(&quot;a 静态成员变量初始化&quot;);</span><br><span class="line">	</span><br><span class="line">	//静态初始化代码块 b</span><br><span class="line">	static &#123;</span><br><span class="line">		System.out.println(&quot;b 静态初始化块&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//成员变量 c</span><br><span class="line">	public Person mPersonC = new Person(&quot;c 成员变量初始化&quot;);</span><br><span class="line"></span><br><span class="line">	//初始化代码 d</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(&quot;d 初始化代码块&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//构造函数 e</span><br><span class="line">	public TestSub() &#123;</span><br><span class="line">		System.out.println(&quot;e 构造函数&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	//静态成员变量 f</span><br><span class="line">	public static Person sPersonF = new Person(&quot;f 静态成员变量初始化&quot;);</span><br><span class="line">	</span><br><span class="line">	//静态初始化代码块 g</span><br><span class="line">	static &#123;</span><br><span class="line">		System.out.println(&quot;g 静态初始化块&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//成员变量 h</span><br><span class="line">	public Person mPersonH = new Person(&quot;h 成员变量初始化&quot;);</span><br><span class="line"></span><br><span class="line">	//初始化代码 i</span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(&quot;i 初始化代码块&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	//Test test = new Test();</span><br><span class="line">	TestSub sub = new TestSub();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">A 静态成员变量初始化</span><br><span class="line">B 静态初始化块</span><br><span class="line">F 静态成员变量初始化</span><br><span class="line">G 静态初始化块</span><br><span class="line">a 静态成员变量初始化</span><br><span class="line">b 静态初始化块</span><br><span class="line">f 静态成员变量初始化</span><br><span class="line">g 静态初始化块</span><br><span class="line">C 成员变量初始化</span><br><span class="line">D 初始化代码块</span><br><span class="line">H 成员变量初始化</span><br><span class="line">I 初始化代码块</span><br><span class="line">E 构造函数</span><br><span class="line">c 成员变量初始化</span><br><span class="line">d 初始化代码块</span><br><span class="line">h 成员变量初始化</span><br><span class="line">i 初始化代码块</span><br><span class="line">e 构造函数</span><br></pre></td></tr></table></figure>
+<p>由此可以得出以下结论：</p>
+<blockquote>
+<p><strong>子类初始化顺序：</strong><br><strong>父类静态变量/父类静态方法块 -&gt; 子类静态变量/子类静态方法块 -&gt; 父类成员变量/方法块 -&gt; 父类构造函数 -&gt;  子类成员变量/方法块 -&gt; 子类构造函数</strong></p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android性能优化(四)－ 代码优化]]></title>
       <url>http://czhzero.com/2017/02/07/performance-optimization-4/</url>
       <content type="html"><![CDATA[<p>主要介绍Java代码中性能优化方法，包括缓存、异步、延迟、数据存储等方式。</p>
@@ -2064,13 +2089,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Android学习资源索引]]></title>
+      <title><![CDATA[常用Android学习资源汇总]]></title>
       <url>http://czhzero.com/2016/07/19/android-study-resource/</url>
-      <content type="html"><![CDATA[<h2 id="资源目录"><a href="#资源目录" class="headerlink" title="资源目录"></a>资源目录</h2><ul>
+      <content type="html"><![CDATA[<p>常用Android资源汇总:</p>
+<ul>
 <li><a href="#热门网站">热门网站</a><ul>
-<li>官方网站</li>
-<li>教学网站</li>
-<li>开发者社区 </li>
+<li><a href="#官方网站">官方网站</a></li>
+<li><a href="#教学网站">教学网站</a></li>
+<li><a href="#开发者社区">开发者社区</a> </li>
 </ul>
 </li>
 <li><a href="#个人博客">个人博客</a></li>
@@ -2094,7 +2120,7 @@
 <li><a href="http://wiki.jikexueyuan.com/project/android-weekly/" target="_blank" rel="external">Android Weekly 中文版</a></li>
 <li><a href="http://wiki.jikexueyuan.com/list/android" target="_blank" rel="external">极客学院 Wiki Android 板块</a></li>
 <li><a href="https://chaosleong.gitbooks.io/gradle-for-android/content/" target="_blank" rel="external">Gradle Android Plugin 中文版》</a></li>
-<li><a href="https://github.com/googlesamples" target="_blank" rel="external">Google samples</a> —— 看优秀代码是最好的学习方式</li>
+<li><a href="https://github.com/googlesamples" target="_blank" rel="external">Google samples</a> </li>
 </ul>
 <h3 id="教学网站"><a href="#教学网站" class="headerlink" title="教学网站"></a>教学网站</h3><ul>
 <li><a href="http://chinagdg.org/google-videos/" target="_blank" rel="external">Google 官方性能优化视频</a> —— GDG中译版</li>
@@ -2111,6 +2137,9 @@
 <li><a href="http://gank.io" target="_blank" rel="external">干货集中营</a> —— 每日分享妹子图 和 技术干货，还有供大家中午休息的休闲视频</li>
 <li><a href="http://gold.xitu.io/explore/android" target="_blank" rel="external">掘金 Android</a></li>
 <li><a href="https://www.v2ex.com/go/android" target="_blank" rel="external">V2ex</a></li>
+<li><a href="http://www.jcodecraeer.com/" target="_blank" rel="external">泡在网上的日子</a></li>
+<li><a href="https://segmentfault.com/" target="_blank" rel="external">SagmentFault</a></li>
+<li><a href="http://androidxref.com/" target="_blank" rel="external">androidxref</a> - android源码</li>
 </ul>
 <h2 id="个人博客"><a href="#个人博客" class="headerlink" title="个人博客"></a>个人博客</h2><ul>
 <li><a href="http://a.codekk.com/" target="_blank" rel="external">CodeKK</a> —— 专注于开源项目源码解析及优秀开源项目的分享</li>
@@ -2143,6 +2172,7 @@
 <li><a href="http://hujiaweibujidao.github.io" target="_blank" rel="external">hujiaweibujidao</a> —— 《Android开发艺术探索》读书笔记系列</li>
 <li><a href="http://www.jianshu.com/users/b99b0edd4e77/latest_articles" target="_blank" rel="external">BlackSwift</a> —— 简书作者【Blur实时渲染，AnimeWallpaper】</li>
 <li><a href="http://blog.csdn.net/qq_23547831?viewmode=contents" target="_blank" rel="external">Android 源码解析专栏</a></li>
+<li><a href="http://www.cnblogs.com/lwbqqyumidi/" target="_blank" rel="external">Corn</a></li>
 </ul>
 <h2 id="技术专栏"><a href="#技术专栏" class="headerlink" title="技术专栏"></a>技术专栏</h2><h3 id="网络相关"><a href="#网络相关" class="headerlink" title="网络相关"></a>网络相关</h3><ul>
 <li><a href="http://www.cnblogs.com/starstone/p/4890409.html" target="_blank" rel="external">HTTP 必知必会</a></li>
@@ -2187,6 +2217,13 @@
 </ul>
 <h3 id="插件化开发"><a href="#插件化开发" class="headerlink" title="插件化开发"></a>插件化开发</h3><ul>
 <li><a href="http://www.androidblog.cn/index.php/Index/detail/id/16" target="_blank" rel="external">插件化开发专栏</a> —— 有关插件化的资料这里全都有</li>
+<li><a href="https://github.com/Qihoo360/DroidPlugin" target="_blank" rel="external">DroidPlugin</a> —— 360手机助手插件机制</li>
+<li><a href="https://github.com/limpoxe/Android-Plugin-Framework" target="_blank" rel="external">Android-Plugin-Framework</a></li>
+<li><a href="https://github.com/wequick/Small" target="_blank" rel="external">Small</a> —— Small，做最轻巧的跨平台插件化框架</li>
+<li><a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">dynamic-load-apk</a> —— Android 使用动态加载框架DL进行插件化开发</li>
+<li><a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">DynamicAPK</a> —— 携程动态加载技术</li>
+<li><a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">android-pluginmgr</a></li>
+<li><a href="https://github.com/alibaba/AndFix" target="_blank" rel="external">AndFix</a> —— 阿里动态加载</li>
 </ul>
 <h3 id="单元测试系列"><a href="#单元测试系列" class="headerlink" title="单元测试系列"></a>单元测试系列</h3><ul>
 <li><a href="http://rexstjohn.com/unit-testing-with-android-studio/" target="_blank" rel="external">unit-testing-with-android-studio</a></li>
