@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title><![CDATA[常用Android学习资源汇总(四) - 便捷开发工具]]></title>
+      <url>http://czhzero.com/2017/02/24/android-study-resource-4/</url>
+      <content type="html"><![CDATA[<p>常用Android学习资源汇总为Android技术开发相关的资源索引，以供学习查找之用。总共分为四个部分，本篇为第四篇便捷开发工具。</p>
+<ul>
+<li><a href="">常用Android学习资源汇总(一)-优秀网站博客</a></li>
+<li><a href="">常用Android学习资源汇总(二)-优秀开源框架</a></li>
+<li><a href="">常用Android学习资源汇总(三)-高频技术专题</a></li>
+<li><a href="">常用Android学习资源汇总(四)-便捷开发工具</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="开发资源"><a href="#开发资源" class="headerlink" title="开发资源"></a>开发资源</h2><ul>
+<li><a href="http://www.androiddevtools.cn/" target="_blank" rel="external">Android Dev</a> —— android各种工具，资源，我不信你不知道</li>
+<li><a href="https://github.com/Trinea/android-open-project" target="_blank" rel="external">Android 开源项目分类汇总</a> —— 史上最全的Android开源项目汇总</li>
+<li><a href="http://www.oschina.net/project/tag/11/devtools" target="_blank" rel="external">2702款 开发工具开源软件</a> —— 如题</li>
+<li><a href="http://app.memect.com/doc/android.html" target="_blank" rel="external">Android 资源库列表</a> —— 一个超级棒的安卓资源库列表</li>
+<li><a href="http://www.oschina.net/question/2285044_219206?fromerr=gEGePPMG" target="_blank" rel="external">最强开发资源平台大合集</a> —— 各种UI图标库、工具集</li>
+<li><a href="http://www.materialpalette.com" target="_blank" rel="external">MD 调色板</a></li>
+<li><a href="https://icomoon.io/app/#/select" target="_blank" rel="external">icon 图标</a> —— 各种icon图标</li>
+<li><a href="http://www.flaticon.com" target="_blank" rel="external">图标下载库</a> —— 160,428 vector icons grouped in 2,409 packs</li>
+<li><a href="https://github.com/l123456789jy/Lazy" target="_blank" rel="external">一些常用的开发工具类</a></li>
+</ul>
+<h2 id="性能检测工具"><a href="#性能检测工具" class="headerlink" title="性能检测工具"></a>性能检测工具</h2><p>TODO</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[android-study-resource-3]]></title>
+      <url>http://czhzero.com/2017/02/24/android-study-resource-3/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[android-study-resource-2]]></title>
+      <url>http://czhzero.com/2017/02/24/android-study-resource-2/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Java类初始化顺序]]></title>
       <url>http://czhzero.com/2017/02/24/java-init-sequence-sample/</url>
       <content type="html"><![CDATA[<p>Java程序在它运行之前，并非完全加载，其各个部分是在必需时才加载。Java类的初始化顺序，是先静态对象，而后是非静态对象。类加载器加载class文件时，初始化静态对象。new操作符时，初始化非静态对象。</p>
