@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czhzero.com/2017/02/26/how-to-keep-service-alive/</loc>
+    
+    <lastmod>2017-02-26T06:12:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2017/02/24/android-study-resource-2/</loc>
     
     <lastmod>2017-02-24T15:52:15.000Z</lastmod>
@@ -149,7 +156,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
+    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -184,14 +184,21 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
+    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
+    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -199,6 +206,20 @@
   
   <url>
     <loc>http://czhzero.com/2016/06/25/hexoblog/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -219,21 +240,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/08/19/gradle-study-1/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
