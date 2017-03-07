@@ -4,6 +4,74 @@
   
     
     <entry>
+      <title><![CDATA[SurfaceView和View的区别]]></title>
+      <url>http://czhzero.com/2017/03/07/surfaceview-view-diff/</url>
+      <content type="html"><![CDATA[<p>Android的显示过程可以简单的概括为：Android应用程序把经过测量、布局、绘制后的surface缓存数据，通过SurfaceFlinger把数据渲染到显示屏幕上，通过Android但刷新机制来刷新数据。</p>
+<a id="more"></a>
+<h2 id="View简介"><a href="#View简介" class="headerlink" title="View简介"></a>View简介</h2><p>View一般在onDraw方法里面绘图，onDraw在UI主线程执行。onDraw默认只在View初始化的时候调用一遍，所以View不会自动刷新画面，一般要调用invalidate或者postInvalidate来重新执行。</p>
+<p>onDraw里面的代码进行刷新画面。UI主线程一般用来渲染组件、处理组件与用户之间的交互事件，比如说按钮的点击事件、文本框的输入事件。</p>
+<p>如果的画图任务相当繁重，那么onDraw方法里面的代码要执行好长一段时间，就可能会造成UI主线程阻塞。</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/023/20160811221917915.png" alt=""></p>
+<h2 id="SurfaceView简介"><a href="#SurfaceView简介" class="headerlink" title="SurfaceView简介"></a>SurfaceView简介</h2><p>Surfaceview是视图（view）的一个继承类，这个视图里内嵌了一个专门用于绘制的Surface。你可以控制这个这个Surface的格式和尺寸，Surfaceview控制这个Surface的绘制位置。</p>
+<p>Surfaceview也可以在onDraw里面绘图，即直接在UI主线程绘图并渲染，因为Surfaceview是View的子类。我们可以考虑这样的方案：在后台线程执行繁重的绘图任务，把所有绘制的东西缓存起来；绘制完毕后，再回到UI线程，一次性把所绘制的东西渲染到屏幕上（本质：就是后台线程绘制，UI主线程渲染）</p>
+<p>只使用View的onDraw方法是无法实现这种方案的，而Surfaceview可以实现这种方案。先看看Surfaceview的工作原理图：</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/023/20160811222116554" alt=""></p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul>
+<li>View缺乏双缓冲机制，SurfaceView有双缓冲</li>
+<li>当程序需要更新View上的图像时，程序必须重绘View上显示的整张图片</li>
+<li>SurfaceView是在一个新起的单独线程中可以重新绘制画面，而View必须在UI的主线程中更新画面</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[设置Activity退出动画无效问题的解决]]></title>
+      <url>http://czhzero.com/2017/03/07/activity-exit-animation-invalid/</url>
+      <content type="html"><![CDATA[<p>Activity系统默认的进入动画是从右侧进入到左侧停止，退出动画是从左到右移动直到完全退出界面。如果要修改Activity进入和退出动画有两种方式。</p>
+<a id="more"></a>
+<h2 id="第一种方式-overridePendingTransition方法"><a href="#第一种方式-overridePendingTransition方法" class="headerlink" title="第一种方式:overridePendingTransition方法"></a>第一种方式:overridePendingTransition方法</h2><ul>
+<li>startActivity()方法之前调用overridePendingTransition方法。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">startActivity(intent);</span><br><span class="line">overridePendingTransition(R.anim.fade_in, R.anim.fade_out);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重写Activity的finish方法, 并调用overridePendingTransition方法。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void finish() &#123;</span><br><span class="line">    super.finish();</span><br><span class="line">    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第二种方式-设置Activity的theme属性"><a href="#第二种方式-设置Activity的theme属性" class="headerlink" title="第二种方式:设置Activity的theme属性"></a>第二种方式:设置Activity的theme属性</h2><p>在<code>values</code>文件夹的<code>styles.xml</code>中增加样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=&quot;Anim_fade parent=&quot;android:Theme.Light.NoTitleBar.Fullscreen&quot;&gt;</span><br><span class="line">    &lt;item name=&quot;android:windowAnimationStyle&quot;&gt;@style/fade&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;style name=&quot;fade&quot; parent=&quot;@android:style/Animation.Activity&quot;&gt;</span><br><span class="line">    &lt;item name=&quot;android:activityOpenEnterAnimation&quot;&gt;@anim/fade_in&lt;/item&gt;</span><br><span class="line">    &lt;item name=&quot;android:activityOpenExitAnimation&quot;&gt;@anim/fade_out&lt;/item&gt;</span><br><span class="line">    &lt;item name=&quot;android:activityCloseEnterAnimation&quot;&gt;@anim/fade_in&lt;/item&gt;</span><br><span class="line">    &lt;item name=&quot;android:activityCloseExitAnimation&quot;&gt;@anim/fade_out&lt;/item&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>在AndroidManifest.xml文件中设置Activity的样式,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity</span><br><span class="line">    Android:name=&quot;.TestActivity&quot;</span><br><span class="line">    android:theme=&quot;@style/Anim_fade&quot; &gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>为了简洁通用，推荐使用第二种方式进行设置动画。使用第二种方式，有的机器虽然进入的动画是可用的，但是退出的动画无效，你必须使用第一种方式的重写finish方法实现退出动画。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[HashMap vs. LinkedHashMap vs. TreeMap vs. HashTable 四种容器对比]]></title>
+      <url>http://czhzero.com/2017/03/02/four-map-diff/</url>
+      <content type="html"><![CDATA[<p>Java为数据结构中的映射定义了一个接口<code>java.util.Map</code>,它有四个实现类,分别是HashMap Hashtable LinkedHashMap 和TreeMap。</p>
+<a id="more"></a>
+<h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><p>根据键的HashCode 值存储数据,根据键可以直接获取它的值，具有很快的访问速度。</p>
+<p><img src="https://camo.githubusercontent.com/8565fd90daccb7f62375f2164a5eaf5b88b6e2b1/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f32303134303730313139313430333736343f77617465726d61726b2f322f746578742f6148523063446f764c324a736232637559334e6b626935755a585176626e4e665932396b5a513d3d2f666f6e742f3561364c354c32542f666f6e7473697a652f3430302f66696c6c2f49304a42516b46434d413d3d2f646973736f6c76652f37302f677261766974792f536f75746845617374" alt=""></p>
+<ul>
+<li>遍历时，取得数据的顺序是完全随机的</li>
+<li>不支持线程的同步</li>
+<li>最多只允许一条记录的键为Null</li>
+<li>允许多条记录的值为Null</li>
+<li>在插入、删除和定位元素，速度较快。</li>
+</ul>
+<p>更多内容请查看<a href="https://github.com/GeniusVJR/LearningNotes/blob/master/Part2/JavaSE/HashMap%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.md" target="_blank" rel="external">HashMap源码剖析</a></p>
+<h2 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h2><p>LinkedHashMap是HashMap的子类，与HashMap有着同样的存储结构，但它加入了一个双向链表的头结点，将所有put到LinkedHashmap的节点一一串成了一个双向循环链表，因此它保留了节点插入的顺序，可以使节点的输出顺序与输入顺序相同。</p>
+<p>LinkedHashMap可以用来实现LRU算法。</p>
+<p>LinkedHashMap同样是非线程安全的，只在单线程环境下使用。<br>在遍历的时候会比HashMap慢，不过有种情况例外，当HashMap容量很大，实际数据较少时，遍历起来可能会 比LinkedHashMap慢，因为LinkedHashMap的遍历速度只和实际数据有关，和容量无关。</p>
+<p>更多内容请查看<a href="https://github.com/GeniusVJR/LearningNotes/blob/master/Part2/JavaSE/LinkedHashMap%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.md" target="_blank" rel="external">LinkedHashMap源码剖析</a></p>
+<h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><p>TreeMap实现SortMap接口，能够把它保存的记录根据键排序,默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。</p>
+<p>TreeMap取出来的是排序后的键值对。但如果您要按自然顺序或自定义顺序遍历键，那么TreeMap会更好。</p>
+<h2 id="HashTable"><a href="#HashTable" class="headerlink" title="HashTable"></a>HashTable</h2><p>HashMap和Hashtable都实现了Map接口，但决定用哪一个之前先要弄清楚它们之间的分别。主要的区别有：线程安全性，同步(synchronization)，以及速度。Hashtable的方法是同步的，而HashMap的方法不是。所以有人一般都建议如果是涉及到多线程同步时采用HashTable，没有涉及就采用HashMap。</p>
+<p>更多内容请查看<a href="https://github.com/GeniusVJR/LearningNotes/blob/master/Part2/JavaSE/HashTable%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.md" target="_blank" rel="external">HashTable源码剖析</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android后台进程保活策略汇总]]></title>
       <url>http://czhzero.com/2017/02/26/how-to-keep-service-alive/</url>
       <content type="html"><![CDATA[<p>后台常驻一直是Android开发者研究的课题，一方面是为了实现即时通信的长连接，一方面也是为了背地里做一些黑暗的事情。网上后台保活的方案也很多，但是有可执行效果的也不多，尤其是面对国内小米，魅族等深度定制的Android系统。本文也会持续更新，动态收集一些新的方案。</p>

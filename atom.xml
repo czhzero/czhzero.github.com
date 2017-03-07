@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://czhzero.com/"/>
-  <updated>2017-02-26T06:12:04.000Z</updated>
+  <updated>2017-03-07T14:39:01.000Z</updated>
   <id>http://czhzero.com/</id>
   
   <author>
@@ -16,11 +16,127 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SurfaceView和View的区别</title>
+    <link href="http://czhzero.com/2017/03/07/surfaceview-view-diff/"/>
+    <id>http://czhzero.com/2017/03/07/surfaceview-view-diff/</id>
+    <published>2017-03-07T11:35:17.000Z</published>
+    <updated>2017-03-07T14:39:01.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Android的显示过程可以简单的概括为：Android应用程序把经过测量、布局、绘制后的surface缓存数据，通过SurfaceFlinger把数据渲染到显示屏幕上，通过Android但刷新机制来刷新数据。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;View简介&quot;&gt;&lt;a href=&quot;#View简介&quot; class=&quot;headerlink&quot; title=&quot;View简介&quot;&gt;&lt;/a&gt;View简介&lt;/h2&gt;&lt;p&gt;View一般在onDraw方法里面绘图，onDraw在UI主线程执行。onDraw默认只在View初始化的时候调用一遍，所以View不会自动刷新画面，一般要调用invalidate或者postInvalidate来重新执行。&lt;/p&gt;
+&lt;p&gt;onDraw里面的代码进行刷新画面。UI主线程一般用来渲染组件、处理组件与用户之间的交互事件，比如说按钮的点击事件、文本框的输入事件。&lt;/p&gt;
+&lt;p&gt;如果的画图任务相当繁重，那么onDraw方法里面的代码要执行好长一段时间，就可能会造成UI主线程阻塞。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7y1sf21i.bkt.clouddn.com/blog/023/20160811221917915.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;SurfaceView简介&quot;&gt;&lt;a href=&quot;#SurfaceView简介&quot; class=&quot;headerlink&quot; title=&quot;SurfaceView简介&quot;&gt;&lt;/a&gt;SurfaceView简介&lt;/h2&gt;&lt;p&gt;Surfaceview是视图（view）的一个继承类，这个视图里内嵌了一个专门用于绘制的Surface。你可以控制这个这个Surface的格式和尺寸，Surfaceview控制这个Surface的绘制位置。&lt;/p&gt;
+&lt;p&gt;Surfaceview也可以在onDraw里面绘图，即直接在UI主线程绘图并渲染，因为Surfaceview是View的子类。我们可以考虑这样的方案：在后台线程执行繁重的绘图任务，把所有绘制的东西缓存起来；绘制完毕后，再回到UI线程，一次性把所绘制的东西渲染到屏幕上（本质：就是后台线程绘制，UI主线程渲染）&lt;/p&gt;
+&lt;p&gt;只使用View的onDraw方法是无法实现这种方案的，而Surfaceview可以实现这种方案。先看看Surfaceview的工作原理图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7y1sf21i.bkt.clouddn.com/blog/023/20160811222116554&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;区别&quot;&gt;&lt;a href=&quot;#区别&quot; class=&quot;headerlink&quot; title=&quot;区别&quot;&gt;&lt;/a&gt;区别&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;View缺乏双缓冲机制，SurfaceView有双缓冲&lt;/li&gt;
+&lt;li&gt;当程序需要更新View上的图像时，程序必须重绘View上显示的整张图片&lt;/li&gt;
+&lt;li&gt;SurfaceView是在一个新起的单独线程中可以重新绘制画面，而View必须在UI的主线程中更新画面&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Android的显示过程可以简单的概括为：Android应用程序把经过测量、布局、绘制后的surface缓存数据，通过SurfaceFlinger把数据渲染到显示屏幕上，通过Android但刷新机制来刷新数据。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
+    
+    
+      <category term="surfaceview" scheme="http://czhzero.com/tags/surfaceview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设置Activity退出动画无效问题的解决</title>
+    <link href="http://czhzero.com/2017/03/07/activity-exit-animation-invalid/"/>
+    <id>http://czhzero.com/2017/03/07/activity-exit-animation-invalid/</id>
+    <published>2017-03-07T07:52:29.000Z</published>
+    <updated>2017-03-07T14:05:15.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Activity系统默认的进入动画是从右侧进入到左侧停止，退出动画是从左到右移动直到完全退出界面。如果要修改Activity进入和退出动画有两种方式。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;第一种方式-overridePendingTransition方法&quot;&gt;&lt;a href=&quot;#第一种方式-overridePendingTransition方法&quot; class=&quot;headerlink&quot; title=&quot;第一种方式:overridePendingTransition方法&quot;&gt;&lt;/a&gt;第一种方式:overridePendingTransition方法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;startActivity()方法之前调用overridePendingTransition方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;startActivity(intent);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;overridePendingTransition(R.anim.fade_in, R.anim.fade_out);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;重写Activity的finish方法, 并调用overridePendingTransition方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public void finish() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    super.finish();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;第二种方式-设置Activity的theme属性&quot;&gt;&lt;a href=&quot;#第二种方式-设置Activity的theme属性&quot; class=&quot;headerlink&quot; title=&quot;第二种方式:设置Activity的theme属性&quot;&gt;&lt;/a&gt;第二种方式:设置Activity的theme属性&lt;/h2&gt;&lt;p&gt;在&lt;code&gt;values&lt;/code&gt;文件夹的&lt;code&gt;styles.xml&lt;/code&gt;中增加样式&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;style name=&amp;quot;Anim_fade parent=&amp;quot;android:Theme.Light.NoTitleBar.Fullscreen&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item name=&amp;quot;android:windowAnimationStyle&amp;quot;&amp;gt;@style/fade&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;style name=&amp;quot;fade&amp;quot; parent=&amp;quot;@android:style/Animation.Activity&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item name=&amp;quot;android:activityOpenEnterAnimation&amp;quot;&amp;gt;@anim/fade_in&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item name=&amp;quot;android:activityOpenExitAnimation&amp;quot;&amp;gt;@anim/fade_out&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item name=&amp;quot;android:activityCloseEnterAnimation&amp;quot;&amp;gt;@anim/fade_in&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;item name=&amp;quot;android:activityCloseExitAnimation&amp;quot;&amp;gt;@anim/fade_out&amp;lt;/item&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在AndroidManifest.xml文件中设置Activity的样式,&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;activity&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Android:name=&amp;quot;.TestActivity&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    android:theme=&amp;quot;@style/Anim_fade&amp;quot; &amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;p&gt;为了简洁通用，推荐使用第二种方式进行设置动画。使用第二种方式，有的机器虽然进入的动画是可用的，但是退出的动画无效，你必须使用第一种方式的重写finish方法实现退出动画。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Activity系统默认的进入动画是从右侧进入到左侧停止，退出动画是从左到右移动直到完全退出界面。如果要修改Activity进入和退出动画有两种方式。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bug分析" scheme="http://czhzero.com/categories/Bug%E5%88%86%E6%9E%90/"/>
+    
+    
+      <category term="动画" scheme="http://czhzero.com/tags/%E5%8A%A8%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HashMap vs. LinkedHashMap vs. TreeMap vs. HashTable 四种容器对比</title>
+    <link href="http://czhzero.com/2017/03/02/four-map-diff/"/>
+    <id>http://czhzero.com/2017/03/02/four-map-diff/</id>
+    <published>2017-03-02T13:03:11.000Z</published>
+    <updated>2017-03-07T14:05:15.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Java为数据结构中的映射定义了一个接口&lt;code&gt;java.util.Map&lt;/code&gt;,它有四个实现类,分别是HashMap Hashtable LinkedHashMap 和TreeMap。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;HashMap&quot;&gt;&lt;a href=&quot;#HashMap&quot; class=&quot;headerlink&quot; title=&quot;HashMap&quot;&gt;&lt;/a&gt;HashMap&lt;/h2&gt;&lt;p&gt;根据键的HashCode 值存储数据,根据键可以直接获取它的值，具有很快的访问速度。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/8565fd90daccb7f62375f2164a5eaf5b88b6e2b1/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f32303134303730313139313430333736343f77617465726d61726b2f322f746578742f6148523063446f764c324a736232637559334e6b626935755a585176626e4e665932396b5a513d3d2f666f6e742f3561364c354c32542f666f6e7473697a652f3430302f66696c6c2f49304a42516b46434d413d3d2f646973736f6c76652f37302f677261766974792f536f75746845617374&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;遍历时，取得数据的顺序是完全随机的&lt;/li&gt;
+&lt;li&gt;不支持线程的同步&lt;/li&gt;
+&lt;li&gt;最多只允许一条记录的键为Null&lt;/li&gt;
+&lt;li&gt;允许多条记录的值为Null&lt;/li&gt;
+&lt;li&gt;在插入、删除和定位元素，速度较快。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多内容请查看&lt;a href=&quot;https://github.com/GeniusVJR/LearningNotes/blob/master/Part2/JavaSE/HashMap%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HashMap源码剖析&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;LinkedHashMap&quot;&gt;&lt;a href=&quot;#LinkedHashMap&quot; class=&quot;headerlink&quot; title=&quot;LinkedHashMap&quot;&gt;&lt;/a&gt;LinkedHashMap&lt;/h2&gt;&lt;p&gt;LinkedHashMap是HashMap的子类，与HashMap有着同样的存储结构，但它加入了一个双向链表的头结点，将所有put到LinkedHashmap的节点一一串成了一个双向循环链表，因此它保留了节点插入的顺序，可以使节点的输出顺序与输入顺序相同。&lt;/p&gt;
+&lt;p&gt;LinkedHashMap可以用来实现LRU算法。&lt;/p&gt;
+&lt;p&gt;LinkedHashMap同样是非线程安全的，只在单线程环境下使用。&lt;br&gt;在遍历的时候会比HashMap慢，不过有种情况例外，当HashMap容量很大，实际数据较少时，遍历起来可能会 比LinkedHashMap慢，因为LinkedHashMap的遍历速度只和实际数据有关，和容量无关。&lt;/p&gt;
+&lt;p&gt;更多内容请查看&lt;a href=&quot;https://github.com/GeniusVJR/LearningNotes/blob/master/Part2/JavaSE/LinkedHashMap%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LinkedHashMap源码剖析&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;TreeMap&quot;&gt;&lt;a href=&quot;#TreeMap&quot; class=&quot;headerlink&quot; title=&quot;TreeMap&quot;&gt;&lt;/a&gt;TreeMap&lt;/h2&gt;&lt;p&gt;TreeMap实现SortMap接口，能够把它保存的记录根据键排序,默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。&lt;/p&gt;
+&lt;p&gt;TreeMap取出来的是排序后的键值对。但如果您要按自然顺序或自定义顺序遍历键，那么TreeMap会更好。&lt;/p&gt;
+&lt;h2 id=&quot;HashTable&quot;&gt;&lt;a href=&quot;#HashTable&quot; class=&quot;headerlink&quot; title=&quot;HashTable&quot;&gt;&lt;/a&gt;HashTable&lt;/h2&gt;&lt;p&gt;HashMap和Hashtable都实现了Map接口，但决定用哪一个之前先要弄清楚它们之间的分别。主要的区别有：线程安全性，同步(synchronization)，以及速度。Hashtable的方法是同步的，而HashMap的方法不是。所以有人一般都建议如果是涉及到多线程同步时采用HashTable，没有涉及就采用HashMap。&lt;/p&gt;
+&lt;p&gt;更多内容请查看&lt;a href=&quot;https://github.com/GeniusVJR/LearningNotes/blob/master/Part2/JavaSE/HashTable%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HashTable源码剖析&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java为数据结构中的映射定义了一个接口&lt;code&gt;java.util.Map&lt;/code&gt;,它有四个实现类,分别是HashMap Hashtable LinkedHashMap 和TreeMap。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="http://czhzero.com/categories/Java/"/>
+    
+    
+      <category term="容器" scheme="http://czhzero.com/tags/%E5%AE%B9%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android后台进程保活策略汇总</title>
     <link href="http://czhzero.com/2017/02/26/how-to-keep-service-alive/"/>
     <id>http://czhzero.com/2017/02/26/how-to-keep-service-alive/</id>
     <published>2017-02-26T03:07:32.000Z</published>
-    <updated>2017-02-26T06:12:04.000Z</updated>
+    <updated>2017-03-07T14:05:01.000Z</updated>
     
     <content type="html">&lt;p&gt;后台常驻一直是Android开发者研究的课题，一方面是为了实现即时通信的长连接，一方面也是为了背地里做一些黑暗的事情。网上后台保活的方案也很多，但是有可执行效果的也不多，尤其是面对国内小米，魅族等深度定制的Android系统。本文也会持续更新，动态收集一些新的方案。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1358,263 +1474,6 @@
     
     
       <category term="treeview" scheme="http://czhzero.com/tags/treeview/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android删除文件&quot;Device or resource busy&quot;错误解决方案</title>
-    <link href="http://czhzero.com/2016/12/02/android-deletefile/"/>
-    <id>http://czhzero.com/2016/12/02/android-deletefile/</id>
-    <published>2016-12-02T03:10:36.000Z</published>
-    <updated>2017-01-15T05:03:28.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Android开发过程中，进行文件操作时，可以通过Java的File类进行文件删除，也可以通过向Runtime发送shell命令进行删除。&lt;/p&gt;
-&lt;p&gt;当删除一个文件，再重新下载这个同名文件，保存到手机内存储时，可能会出现如下错误。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt; EBUSY (Device or resource busy)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;检查sdcard存储，会发现下载目录下回出现一个时间为&lt;code&gt;1970-01-01&lt;/code&gt;的文件。在adb shell 下可以通过&lt;code&gt;ls&lt;/code&gt;命令查看到该文件，但是 执行 &lt;code&gt;ls -la&lt;/code&gt; 无法查看到该文件。&lt;/p&gt;
-&lt;p&gt;尝试通过以下两种方法删除该文件，都无法删除该文件。通过一些android文件管理软件，也无法删除。 网上查阅资料，无法删除的原因是有进程在操作该文件，无法释放该文件。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一旦出现这种文件只有强行 &lt;code&gt;kill -9&lt;/code&gt; 或者 重启设备, 才能删除。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;通过File类删除&quot;&gt;&lt;a href=&quot;#通过File类删除&quot; class=&quot;headerlink&quot; title=&quot;通过File类删除&quot;&gt;&lt;/a&gt;通过File类删除&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;private static boolean deleteDir(File dir) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if (dir.isDirectory()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        String[] children = dir.list();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        //递归删除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        for (int i = 0; i &amp;lt; children.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            boolean success = deleteDir(new File(dir, children[i]));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            if (!success) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                return false;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    // 目录此时为空，可以删除&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return dir.delete();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;通过Shell命令删除&quot;&gt;&lt;a href=&quot;#通过Shell命令删除&quot; class=&quot;headerlink&quot; title=&quot;通过Shell命令删除&quot;&gt;&lt;/a&gt;通过Shell命令删除&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;97&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;98&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;99&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;101&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;102&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;103&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;104&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;105&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;106&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;107&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;108&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;109&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;110&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;111&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;112&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;113&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;114&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;115&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;116&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;117&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;118&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;119&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;120&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;121&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;122&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;123&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;124&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;125&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;126&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;127&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;128&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;129&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;130&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;131&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;132&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import android.util.Log;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.BufferedReader;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.DataOutputStream;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.IOException;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.InputStreamReader;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * Created by chenzhaohua on 16/12/1.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class CommandExecution &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public static final String TAG = &amp;quot;czh&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public final static String COMMAND_SU = &amp;quot;su&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public final static String COMMAND_SH = &amp;quot;sh&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public final static String COMMAND_EXIT = &amp;quot;exit\n&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public final static String COMMAND_LINE_END = &amp;quot;\n&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    /**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * result&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public static class CommandResult &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        public int result = -1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        public String errorMsg;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        public String successMsg;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    /**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * excute single command&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * @param command      &amp;quot;rm -rf /storage/emulated/legacy/Android/data/test&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * @param isRoot        &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * @return&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public static CommandResult execCommand(String command, boolean isRoot) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        String[] commands = &amp;#123;command&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return execCommand(commands, isRoot);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    /**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * excute multiple command&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * @param commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * @param isRoot&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     * @return&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public static CommandResult execCommand(String[] commands, boolean isRoot) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        CommandResult commandResult = new CommandResult();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        if (commands == null || commands.length == 0) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            return commandResult;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Process process = null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        DataOutputStream os = null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        BufferedReader successResult = null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        BufferedReader errorResult = null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        StringBuilder successMsg = new StringBuilder();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        StringBuilder errorMsg = new StringBuilder();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            process = Runtime.getRuntime().exec(isRoot ? COMMAND_SU : COMMAND_SH);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            os = new DataOutputStream(process.getOutputStream());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            for (String command : commands) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if (command != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    os.write(command.getBytes());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    os.writeBytes(COMMAND_LINE_END);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    os.flush();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            os.writeBytes(COMMAND_EXIT);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            os.flush();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            commandResult.result = process.waitFor();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            successResult = new BufferedReader(new InputStreamReader(process.getInputStream()));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            errorResult = new BufferedReader(new InputStreamReader(process.getErrorStream()));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            String s;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            while ((s = successResult.readLine()) != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                successMsg.append(s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            while ((s = errorResult.readLine()) != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                errorMsg.append(s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            commandResult.successMsg = successMsg.toString();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            commandResult.errorMsg = errorMsg.toString();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            Log.i(TAG, commandResult.result + &amp;quot; | &amp;quot; + commandResult.successMsg&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    + &amp;quot; | &amp;quot; + commandResult.errorMsg);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125; catch (Exception e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            String msg = e.getMessage();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            if (msg != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                Log.e(TAG, msg);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125; finally &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                //close stream&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if (os != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    os.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if (successResult != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    successResult.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if (errorResult != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    errorResult.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if (process != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    process.destroy();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; catch (Exception e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                String msg = e.getMessage();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                if (msg != null) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    Log.e(TAG, msg);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return commandResult;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;stackoverflow一种解决方案:先对要删除的文件进行重命名，然后再删除。这样删除过程中的文件锁就加在另一个文件上了，不会影响再次创建的过程。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;final File to = new File(file.getAbsolutePath() + System.currentTimeMillis());  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;file.renameTo(to);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;to.delete();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;参考：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/11539657/open-failed-ebusy-device-or-resource-busy&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;open-failed-ebusy-device-or-resource-busy&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Android开发过程中，进行文件操作时，可以通过Java的File类进行文件删除，也可以通过向Runtime发送shell命令进行删除。&lt;/p&gt;
-&lt;p&gt;当删除一个文件，再重新下载这个同名文件，保存到手机内存储时，可能会出现如下错误。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt; EBUSY (Device or resource busy)&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo加载vendor目录下js文件失败导致博客页面加载空白</title>
-    <link href="http://czhzero.com/2016/11/16/hexo-js-loadingfailure/"/>
-    <id>http://czhzero.com/2016/11/16/hexo-js-loadingfailure/</id>
-    <published>2016-11-16T11:14:36.000Z</published>
-    <updated>2017-01-17T15:30:29.000Z</updated>
-    
-    <content type="html">&lt;p&gt;今天下午用hexo框架deploy一篇文章，发布完成后，发现网页无法打开了。出现了很多404错误。&lt;/p&gt;
-&lt;p&gt;各种vender目录下的js加载都是失败的。本地部署是没有问题的，一旦上传到托管平台github或者coding后，就无法找到这些js文件。折腾了半天，网上搜资料才知道原来我的代码托管平台把vender目录禁止了。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;img src=&quot;http://o7y1sf21i.bkt.clouddn.com/blog/014/jserror.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;网上有两种解决方案:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;手动修改&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;首先修改source/vendors为source/lib，然后修改_config.yml，将 _internal: vendors修改为_internal:lib，然后修改next底下所有引用source/vendors路径为source/lib。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;这些地方可以通过文件查找找出来。主要集中在这几个文件中。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1. Hexo\themes\next.bowerrc &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. Hexo\themes\next.gitignore &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. Hexo\themes\next.javascript_ignore &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4. Hexo\themes\next\bower.json 。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;更新next主题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;next新主题代码，已经将vender目录改为了lib目录，不过更新之前，要对自己的私人配置进行保存。&lt;/p&gt;
-&lt;p&gt;参考文章: &lt;a href=&quot;https://www.zhihu.com/question/52272170/answer/129909383&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo+Github Page搭建的博客无法加载样式表？&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天下午用hexo框架deploy一篇文章，发布完成后，发现网页无法打开了。出现了很多404错误。&lt;/p&gt;
-&lt;p&gt;各种vender目录下的js加载都是失败的。本地部署是没有问题的，一旦上传到托管平台github或者coding后，就无法找到这些js文件。折腾了半天，网上搜资料才知道原来我的代码托管平台把vender目录禁止了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bug分析" scheme="http://czhzero.com/categories/Bug%E5%88%86%E6%9E%90/"/>
-    
-    
-      <category term="hexo" scheme="http://czhzero.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android Studio常用快捷键汇总</title>
-    <link href="http://czhzero.com/2016/11/16/AndroidStudio-KeyboardKeymap/"/>
-    <id>http://czhzero.com/2016/11/16/AndroidStudio-KeyboardKeymap/</id>
-    <published>2016-11-16T06:24:28.000Z</published>
-    <updated>2017-01-17T15:24:00.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Android Studio 是基于 IntelliJ IDEA 的官方 Android 应用开发集成开发环境 (IDE)。本篇总结了部分Android Studio常用的快捷键。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;普通补全代码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用快捷键 &lt;code&gt;Control+Space&lt;/code&gt; 。显示对变量、类型、方法和表达式等的基本建议。 如果连续两次调用基本自动完成，将显示更多结果，包括私有成员和非导入静态成员。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;智能代码补全&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用快捷键 &lt;code&gt;Control+Shift+空格&lt;/code&gt; 。根据上下文显示相关选项。 智能自动完成可识别预期类型和数据流。 如果连续两次调用智能自动完成，将显示更多结果，包括链。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;语句自动完成&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用快捷键 &lt;code&gt;Shift+Command+Enter&lt;/code&gt; 。 自动完成当前语句，添加缺失的圆括号、大括号、花括号和格式化等。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;执行代码快速修复并显示建议的操作，用来补全代码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用快捷键 &lt;code&gt;Alt+Enter&lt;/code&gt; 可以进行快速修复，补全代码。 例如:&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//光标移动到OnClickListener处，执行快捷键补全。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;View.OnClickListener() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;自动代码生成&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用 &lt;code&gt;Command + N&lt;/code&gt; 自动生成一些代码，如getters, setters, constructors, hashCode/equals, toString, override 等， 同时也包括一些自定义插件，如GsonFormat,Parcelable等&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Override methods&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Control + O&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implement methods&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Control + I&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;删除光标所在行的全部内容&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Backspace&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;展开或者关闭当前代码块&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + minus/plus&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;展开或者关闭所有代码块&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Shift + minus/plus&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;复制选中的行内容&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + D&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;跳转到代码声明处&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + B or Command + Click&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;跳转到代码实现处&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Alt + B&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;跳转到超类，或者父方法。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + U&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;编译运行&quot;&gt;&lt;a href=&quot;#编译运行&quot; class=&quot;headerlink&quot; title=&quot;编译运行&quot;&gt;&lt;/a&gt;编译运行&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Build&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + F9&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Build and run&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Control + R&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;代码重构&quot;&gt;&lt;a href=&quot;#代码重构&quot; class=&quot;headerlink&quot; title=&quot;代码重构&quot;&gt;&lt;/a&gt;代码重构&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Extract method    &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Option + M&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Extract variable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Option + V&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Extract field&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Option + F&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Extract constant&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Option + C&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Extract parameter&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Option + P&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;导航&quot;&gt;&lt;a href=&quot;#导航&quot; class=&quot;headerlink&quot; title=&quot;导航&quot;&gt;&lt;/a&gt;导航&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;查看最近访问文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用最近文件操作在最近访问的文件之间切换。按 Control+E（在 Mac 上，按 Command+E）调出“最近文件”操作。 默认情况下将选择最后一次访问的文件。 在此操作中您还可以通过左侧列访问任何工具窗口。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;查看当前文件的结构，快速定位具体代码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用文件结构操作查看当前文件的结构。 按 Control+F12（在 Mac 上，按 Command+F12）调出“文件结构”操作。您可以使用此操作快速导航至当前文件的任何部分。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在项目中搜索指定类&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用导航至类操作搜索并导航至项目中的特定类。 按 Control+N（在 Mac 上，按 Command+O）调出此操作。 “导航至类”支持复杂的表达式，包括驼峰、路径、直线导航和中间名匹配等。 如果连续两次调用此操作，将显示项目类以外的结果。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在项目中搜索指定的文件或者文件夹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用导航至文件操作导航至文件或文件夹。 按 Control+Shift+N（在 Mac 上，按 Command+Shift+O）调出“导航至文件”操作。要搜索文件夹，但不搜索文件，请在表达式末尾添加“/”。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Find Usages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;按 Alt+F7 查找引用当前光标位置处的类、方法、字段、参数或语句的所有代码片段。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;项目搜索&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用 &lt;code&gt;Command + F&lt;/code&gt; 搜当前文件的文本内容， 使用 &lt;code&gt;Command + Shift + F&lt;/code&gt; 搜索整个项目。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;项目搜索并替换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用 &lt;code&gt;Command + R&lt;/code&gt; 搜当前文件并替换， 使用 &lt;code&gt;Command + Shift + R&lt;/code&gt; 搜索并替换整个项目。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Jump to source    &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用 &lt;code&gt;Command + 鼠标按下&lt;/code&gt; 跳转到代码部分&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Search everything&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;搜索所有东西，连续按两次Shift。搜索全项目所有文件。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;跳转到上次更改的代码位置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Shift + Backspace&lt;/code&gt; 跳转到上次更改的位置，不用拖动鼠标在找到之前的位置。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;跳转到指定代码行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + L&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Open type hierarchy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Control + H&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Open method hierarchy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Shift + H&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Open call hierarchy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Command + Shift + H&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;样式和格式化&quot;&gt;&lt;a href=&quot;#样式和格式化&quot; class=&quot;headerlink&quot; title=&quot;样式和格式化&quot;&gt;&lt;/a&gt;样式和格式化&lt;/h2&gt;&lt;p&gt;在您编辑时，Android Studio 将自动应用代码样式设置中指定的格式设置和样式。您可以通过编程语言自定义代码样式设置，包括指定选项卡和缩进、空格、换行、花括号以及空白行的约定。要自定义代码样式设置，请点击 File &amp;gt; Settings &amp;gt; Editor &amp;gt; Code Style（在 Mac 上，点击 Android Studio &amp;gt; Preferences &amp;gt; Editor &amp;gt; Code Style）。&lt;/p&gt;
-&lt;p&gt;虽然 IDE 会在您工作时自动应用格式化，但您也可以通过按 Control+Alt+L（在 Mac 上，按 Opt+Command+L）显式调用重新格式化代码操作，或按 Control+Alt+I（在 Mac 上，按 Alt+Option+I*）自动缩进所有行。&lt;/p&gt;
-&lt;h2 id=&quot;版本控制基础知识&quot;&gt;&lt;a href=&quot;#版本控制基础知识&quot; class=&quot;headerlink&quot; title=&quot;版本控制基础知识&quot;&gt;&lt;/a&gt;版本控制基础知识&lt;/h2&gt;&lt;p&gt;Android Studio 支持多个版本控制系统 (VCS)，包括 Git、GitHub、CVS、Mercurial、Subversion 和 Google Cloud Source Repositories。&lt;/p&gt;
-&lt;p&gt;在将您的应用导入 Android Studio 后，使用 Android Studio VCS 菜单选项启用对所需版本控制系统的 VCS 支持、创建存储库、导入新文件至版本控制以及执行其他版本控制操作。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在 Android Studio VCS 菜单中点击 Enable Version Control Integration。&lt;/li&gt;
-&lt;li&gt;从下拉菜单中选择要与项目根目录关联的版本控制系统，然后点击 OK。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;此时，VCS 菜单将根据您选择的系统显示多个版本控制选项。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注： 您还可以使用 File &amp;gt; Settings &amp;gt; Version Control 菜单选项设置和修改版本控制设置。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;更多快捷键相关的请参考:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.android.com/studio/intro/keyboard-shortcuts.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Keyboard Shortcuts&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Android Studio 是基于 IntelliJ IDEA 的官方 Android 应用开发集成开发环境 (IDE)。本篇总结了部分Android Studio常用的快捷键。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="开发工具" scheme="http://czhzero.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Keymaps" scheme="http://czhzero.com/tags/Keymaps/"/>
     
   </entry>
   
