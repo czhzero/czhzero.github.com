@@ -2,21 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://czhzero.com/2017/03/07/surfaceview-view-diff/</loc>
+    <loc>http://czhzero.com/2017/03/08/performance-optimization-5/</loc>
     
-    <lastmod>2017-03-07T14:39:01.000Z</lastmod>
+    <lastmod>2017-03-08T15:30:54.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/02/four-map-diff/</loc>
+    <loc>http://czhzero.com/2017/03/07/surfaceview-view-diff/</loc>
+    
+    <lastmod>2017-03-08T14:32:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/02/24/android-study-resource-3/</loc>
+    
+    <lastmod>2017-03-07T14:55:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/03/07/activity-exit-animation-invalid/</loc>
     
     <lastmod>2017-03-07T14:05:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/07/activity-exit-animation-invalid/</loc>
+    <loc>http://czhzero.com/2017/03/02/four-map-diff/</loc>
     
     <lastmod>2017-03-07T14:05:15.000Z</lastmod>
     
@@ -33,13 +47,6 @@
     <loc>http://czhzero.com/2017/02/24/android-study-resource-2/</loc>
     
     <lastmod>2017-02-24T15:52:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2017/02/24/android-study-resource-3/</loc>
-    
-    <lastmod>2017-02-24T15:52:07.000Z</lastmod>
     
   </url>
   
@@ -177,7 +184,35 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
+    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -185,6 +220,20 @@
   
   <url>
     <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -205,6 +254,13 @@
   </url>
   
   <url>
+    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -219,56 +275,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/07/18/android-6-0-permission/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/12/02/android-deletefile/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/07/15/leakcanary-simple-analysis/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     

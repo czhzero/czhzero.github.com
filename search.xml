@@ -4,6 +4,55 @@
   
     
     <entry>
+      <title><![CDATA[Android性能优化(五)－ 安装包大小优化]]></title>
+      <url>http://czhzero.com/2017/03/08/performance-optimization-5/</url>
+      <content type="html"><![CDATA[<p>应用安装包大小对应用的使用没有影响，但是如果安装包过大，用户每次更新下载的门槛就会越高，影响用户体验和使用意愿。</p>
+<a id="more"></a>
+<p>性能优化系列:</p>
+<ul>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-1/" target="_blank" rel="external">Android性能优化(一)－UI优化</a></li>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-2/" target="_blank" rel="external">Android性能优化(二)－数据库优化</a></li>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-3/" target="_blank" rel="external">Android性能优化(三)－ 移动网络优化</a></li>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-4/" target="_blank" rel="external">Android性能优化(四)－ 代码优化</a></li>
+<li><a href="">Android性能优化(五)－ 安装包大小优化</a></li>
+<li><a href="">Android性能优化(六)－ 省电优化</a></li>
+<li><a href="">Android性能优化(七)－ 内存优化</a></li>
+<li><a href="">Android性能优化(八)－ 稳定性优化</a></li>
+</ul>
+<h2 id="应用安装包构成"><a href="#应用安装包构成" class="headerlink" title="应用安装包构成"></a>应用安装包构成</h2><h3 id="1-assets"><a href="#1-assets" class="headerlink" title="1.assets"></a>1.assets</h3><p>assets可以存放一些不需要编译的资源，如果配置文件，Webview本地资源，图片资源等等。代码中通过AssetManager进行资源的饮用。</p>
+<h3 id="2-lib"><a href="#2-lib" class="headerlink" title="2.lib"></a>2.lib</h3><p>存放native文件，该目录会根据Cpu类型不同而分为不同的目录，从而加载不同的so库。通常分为这四种目录,ARM,ARM-v7a,ARM64-v8a,MIPS,X86等等。</p>
+<h3 id="3-res"><a href="#3-res" class="headerlink" title="3.res"></a>3.res</h3><p>存放资源，这个目录的资源均会被映射到R.java中。</p>
+<h3 id="4-META-INF"><a href="#4-META-INF" class="headerlink" title="4.META-INF"></a>4.META-INF</h3><p>保存应用的签名信息</p>
+<h3 id="5-AndroidManifest-xml"><a href="#5-AndroidManifest-xml" class="headerlink" title="5.AndroidManifest.xml"></a>5.AndroidManifest.xml</h3><p>Android应用程序的配置文件。</p>
+<h3 id="6-classes-dex"><a href="#6-classes-dex" class="headerlink" title="6.classes.dex"></a>6.classes.dex</h3><p>Java字节码class文件合并组合的文件。</p>
+<h3 id="7-proguard-cfg"><a href="#7-proguard-cfg" class="headerlink" title="7.proguard.cfg"></a>7.proguard.cfg</h3><p>代码混淆配置文件</p>
+<h3 id="8-resources-arsc"><a href="#8-resources-arsc" class="headerlink" title="8.resources.arsc"></a>8.resources.arsc</h3><p>记录资源文件和资源ID的映射关系。</p>
+<blockquote>
+<p>一般Apk大小中的大头是，classes.dex,lib和资源文件。</p>
+</blockquote>
+<h2 id="常用方案"><a href="#常用方案" class="headerlink" title="常用方案"></a>常用方案</h2><h3 id="1-代码混淆"><a href="#1-代码混淆" class="headerlink" title="1.代码混淆"></a>1.代码混淆</h3><p>按照代码混淆规则，对代码进行混淆，压缩和优化。</p>
+<ul>
+<li>proguard-rules.pro编辑</li>
+<li>配置gradle文件，增加<code>minifyEnabled true</code>属性</li>
+</ul>
+<h3 id="2-资源优化"><a href="#2-资源优化" class="headerlink" title="2.资源优化"></a>2.资源优化</h3><h4 id="Android-Lint去冗余"><a href="#Android-Lint去冗余" class="headerlink" title="Android Lint去冗余"></a>Android Lint去冗余</h4><h4 id="资源文件最小化"><a href="#资源文件最小化" class="headerlink" title="资源文件最小化"></a>资源文件最小化</h4><ul>
+<li>尽量使用一套图片</li>
+<li>使用轻量级的第三方库</li>
+<li>减少apk中预置图片，改为从服务端下载</li>
+</ul>
+<h4 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h4><ul>
+<li>降低图片色彩位数</li>
+<li>图片压缩</li>
+</ul>
+<h3 id="3-其他优化"><a href="#3-其他优化" class="headerlink" title="3.其他优化"></a>3.其他优化</h3><ul>
+<li>避免使用重复的第三方库</li>
+<li>插件化</li>
+<li>使用WebP图片格式 </li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[SurfaceView和View的区别]]></title>
       <url>http://czhzero.com/2017/03/07/surfaceview-view-diff/</url>
       <content type="html"><![CDATA[<p>Android的显示过程可以简单的概括为：Android应用程序把经过测量、布局、绘制后的surface缓存数据，通过SurfaceFlinger把数据渲染到显示屏幕上，通过Android但刷新机制来刷新数据。</p>
@@ -16,6 +65,13 @@
 <p>Surfaceview也可以在onDraw里面绘图，即直接在UI主线程绘图并渲染，因为Surfaceview是View的子类。我们可以考虑这样的方案：在后台线程执行繁重的绘图任务，把所有绘制的东西缓存起来；绘制完毕后，再回到UI线程，一次性把所绘制的东西渲染到屏幕上（本质：就是后台线程绘制，UI主线程渲染）</p>
 <p>只使用View的onDraw方法是无法实现这种方案的，而Surfaceview可以实现这种方案。先看看Surfaceview的工作原理图：</p>
 <p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/023/20160811222116554" alt=""></p>
+<h3 id="SurfaceHolder"><a href="#SurfaceHolder" class="headerlink" title="SurfaceHolder"></a>SurfaceHolder</h3><ol>
+<li>Canvas lockCanvas():锁定整个SurfaceView对象，获取该Surface上的Canvas</li>
+<li>Canvas lockCanvas(Rect dirty):锁定SurfaceView上Rect划分的区域，获取该Surface上的Canvas</li>
+<li>unlockCanvasAndPost(canvas):释放绘图、提交所绘制的图形，需要注意，当调用SurfaceHolder上的unlockCanvasAndPost方法之后，该方法之前所绘制的图形还处于缓冲之中，下一次lockCanvas()方法锁定的区域可能会“遮挡”它。</li>
+</ol>
+<p>使用的SurfaceView的时候，一般情况下要对其进行创建，销毁，改变时的情况进行监视，这就要用到 SurfaceHolder.Callback。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class XxxView extends SurfaceView implements SurfaceHolder.Callback &#123; </span><br><span class="line"></span><br><span class="line">public void surfaceChanged(SurfaceHolder holder,int format,int width,int height)&#123;&#125; </span><br><span class="line">//看其名知其义，在surface的大小发生改变时激发 </span><br><span class="line">public void surfaceCreated(SurfaceHolder holder)&#123;&#125; </span><br><span class="line">//同上，在创建时激发，一般在这里调用画图的线程。 </span><br><span class="line">public void surfaceDestroyed(SurfaceHolder holder) &#123;&#125; </span><br><span class="line">//同上，销毁时激发，一般在这里将画图的线程停止、释放。 </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul>
 <li>View缺乏双缓冲机制，SurfaceView有双缓冲</li>
 <li>当程序需要更新View上的图像时，程序必须重绘View上显示的整张图片</li>
@@ -180,6 +236,11 @@
 <li><a href="http://blog.csdn.net/evan_man/article/details/51320408" target="_blank" rel="external">Retrofit 的使用与深入学习</a></li>
 <li><a href="http://www.jianshu.com/p/93153b34310e" target="_blank" rel="external">Android Retrofit 2.0 使用-补充篇</a></li>
 <li><a href="http://www.jianshu.com/p/90b1f20b123d" target="_blank" rel="external">Retrofit 笔记</a></li>
+</ul>
+<h3 id="视图绘制与事件分发"><a href="#视图绘制与事件分发" class="headerlink" title="视图绘制与事件分发"></a>视图绘制与事件分发</h3><ul>
+<li><a href="http://blog.csdn.net/huangjijie123456/article/details/51365097c" target="_blank" rel="external">Activity是如何接收到touch事件的</a></li>
+<li><a href="http://www.jianshu.com/p/e99b5e8bd67b" target="_blank" rel="external">图解 Android 事件分发机制</a></li>
+<li><a href="http://www.jianshu.com/p/5a71014e7b1b" target="_blank" rel="external">Android View的绘制流程</a></li>
 </ul>
 <h3 id="RxJava相关"><a href="#RxJava相关" class="headerlink" title="RxJava相关"></a>RxJava相关</h3><ul>
 <li><a href="http://gank.io/post/560e15be2dca930e00da1083" target="_blank" rel="external">Rxjava 详解</a> —— 抛物线出品经典Rxjava详解</li>
