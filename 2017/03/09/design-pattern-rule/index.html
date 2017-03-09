@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="知识体系," />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -86,25 +86,21 @@
 
 
 
-<meta name="description" content="本文转载自: 知乎-郑均原文地址: http://zhuanlan.zhihu.com/zhengyun/20270317
-
-面试的时候，我会问面试者，你日常如何构建自己的知识体系，如何让自己更高更快更强？多数工程师并没有深入地思考过这个问题，基本上是零敲碎打，随机性大。本着不能让你白来一趟的精神，好为人师的我会娓娓道来：">
+<meta name="description" content="设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的；设计模式使代码编制真正工程化；设计模式是软件工程的基石脉络，如同大厦的结构一样。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="技术高手如何炼成？">
-<meta property="og:url" content="http://czhzero.com/2016/07/30/how-to-be-stronger/index.html">
+<meta property="og:title" content="设计模式学习笔记-六大原则">
+<meta property="og:url" content="http://czhzero.com/2017/03/09/design-pattern-rule/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
-<meta property="og:description" content="本文转载自: 知乎-郑均原文地址: http://zhuanlan.zhihu.com/zhengyun/20270317
-
-面试的时候，我会问面试者，你日常如何构建自己的知识体系，如何让自己更高更快更强？多数工程师并没有深入地思考过这个问题，基本上是零敲碎打，随机性大。本着不能让你白来一趟的精神，好为人师的我会娓娓道来：">
-<meta property="og:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/007/bingshanyijiao.jpg">
-<meta property="og:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/007/xuexijinzita.png">
-<meta property="og:updated_time" content="2017-01-17T15:25:48.000Z">
+<meta property="og:description" content="设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的；设计模式使代码编制真正工程化；设计模式是软件工程的基石脉络，如同大厦的结构一样。">
+<meta property="og:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110231.jpg">
+<meta property="og:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110232.jpg">
+<meta property="og:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110233.jpg">
+<meta property="og:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110234.jpg">
+<meta property="og:updated_time" content="2017-03-09T15:52:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术高手如何炼成？">
-<meta name="twitter:description" content="本文转载自: 知乎-郑均原文地址: http://zhuanlan.zhihu.com/zhengyun/20270317
-
-面试的时候，我会问面试者，你日常如何构建自己的知识体系，如何让自己更高更快更强？多数工程师并没有深入地思考过这个问题，基本上是零敲碎打，随机性大。本着不能让你白来一趟的精神，好为人师的我会娓娓道来：">
-<meta name="twitter:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/007/bingshanyijiao.jpg">
+<meta name="twitter:title" content="设计模式学习笔记-六大原则">
+<meta name="twitter:description" content="设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的；设计模式使代码编制真正工程化；设计模式是软件工程的基石脉络，如同大厦的结构一样。">
+<meta name="twitter:image" content="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110231.jpg">
 
 
 
@@ -132,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://czhzero.com/2016/07/30/how-to-be-stronger/"/>
+  <link rel="canonical" href="http://czhzero.com/2017/03/09/design-pattern-rule/"/>
 
 
 
 
 
-  <title> 技术高手如何炼成？ | Alvin-一座小楼 </title>
+  <title> 设计模式学习笔记-六大原则 | Alvin-一座小楼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -294,7 +290,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://czhzero.com/2016/07/30/how-to-be-stronger/">
+  <link itemprop="mainEntityOfPage" href="http://czhzero.com/2017/03/09/design-pattern-rule/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Alvin-一座小楼">
@@ -318,7 +314,7 @@
             
             
               
-                技术高手如何炼成？
+                设计模式学习笔记-六大原则
               
             
           </h1>
@@ -333,8 +329,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-30T16:56:56+08:00">
-                2016-07-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T23:49:54+08:00">
+                2017-03-09
               </time>
             
 
@@ -356,8 +352,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/文摘随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">文摘随笔</span>
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
                   </a>
                 </span>
 
@@ -374,8 +370,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/07/30/how-to-be-stronger/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/30/how-to-be-stronger/" itemprop="commentCount"></span>
+                <a href="/2017/03/09/design-pattern-rule/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/09/design-pattern-rule/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -385,7 +381,7 @@
 
           
           
-             <span id="/2016/07/30/how-to-be-stronger/" class="leancloud_visitors" data-flag-title="技术高手如何炼成？">
+             <span id="/2017/03/09/design-pattern-rule/" class="leancloud_visitors" data-flag-title="设计模式学习笔记-六大原则">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -412,193 +408,63 @@
       
 
       
-        <blockquote>
-<p>本文转载自: 知乎-郑均<br>原文地址: <a href="http://zhuanlan.zhihu.com/zhengyun/20270317" target="_blank" rel="external">http://zhuanlan.zhihu.com/zhengyun/20270317</a></p>
-</blockquote>
-<p>面试的时候，我会问面试者，你日常如何构建自己的知识体系，如何让自己更高更快更强？多数工程师并没有深入地思考过这个问题，基本上是零敲碎打，随机性大。本着不能让你白来一趟的精神，好为人师的我会娓娓道来：</p>
+        <p>设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的；设计模式使代码编制真正工程化；设计模式是软件工程的基石脉络，如同大厦的结构一样。</p>
 <a id="more"></a>
-<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/007/bingshanyijiao.jpg" alt="技术高手如何炼成？"></p>
-<h1 id="第一阶段-认真构建完整的知识体系"><a href="#第一阶段-认真构建完整的知识体系" class="headerlink" title="第一阶段 认真构建完整的知识体系"></a>第一阶段 认真构建完整的知识体系</h1><p>十几年前我投身软件行业的时候，光是讲解数据库原理、操作系统、TCP/IP、组网、算法等等基础知识的英文原版书摞起来就等身，认认真真看完，各种上手实践，入行后，读遍 C++ 各种经典著作，读遍各种协议原文，认认真真打基础。很多工程师都说自己平常就是在某些 IT 门户上看看推荐的博文或新闻，我说这属于典型的零敲碎打，不够刺激。</p>
-<p>聊到这时，我会举一个例子，为什么要阅读长篇小说，因为中短篇小说就像用针扎你，而长篇小说就像把你装进一个沙袋里吊起来，从四面八方用狼牙棒打你，酣畅淋漓。构建可用的知识体系，就得读书，书是有体系结构的，你关心不关心，现阶段你用到用不到，它都讲到了，从头到尾看几遍，针扎得透透的。</p>
-<p>何谓知识体系？</p>
-<p>几年前，前支付宝架构师姚建东曾经在我们公司做过技术人员如何规划自己的分享讲座，他是这么论述的：</p>
-<p>技术与技巧包括：</p>
-<ul>
-<li>计算机基础理论<ul>
-<li>计算机模型：内存/IO/时钟/CPU……</li>
-<li>算法</li>
-<li>专项技术领域：</li>
-<li>数据挖掘</li>
-<li>数据管理</li>
-<li>智能推荐</li>
-<li>搜索</li>
-<li>……</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>语言与工具<ul>
-<li>语言与相关体系</li>
-<li>开发工具，分析工具，代码管理工具</li>
-<li>HTML/CSS/JS/Ajax</li>
-<li>常用框架与第三方类库</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>调试与测试<ul>
-<li>调试方法和哲学</li>
-<li>定位问题</li>
-<li>BUG管理工具</li>
-<li>单元测试</li>
-<li>集成测试</li>
-<li>性能测试</li>
-<li>安全测试</li>
-<li>兼容性测试与方法</li>
-<li>JS/Ajax测试与方法</li>
-<li>服务层测试</li>
-<li>Web层测试</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>网络与系统<ul>
-<li>TCP/IP协议与模型，HTTP/SMTP等协议</li>
-<li>Linux系统，网络分析工具，系统分析工具</li>
-<li>容量，流量与负载均衡</li>
-<li>应用部署、规范、规划</li>
-<li>安全</li>
-<li>监控与故障分析</li>
-<li>磁盘与存储</li>
-<li>Shell</li>
-<li>DNS与域名</li>
-<li>缓存，反向代理</li>
-<li>图片服务器（海量小文件）</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>需求挖掘与分析<ul>
-<li>需求文档格式</li>
-<li>需求访谈</li>
-<li>需求分析方法，需求分析工具</li>
-<li>领域知识与经验</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>系统分析与设计<ul>
-<li>UML语言与模型</li>
-<li>分析模式</li>
-<li>设计模式，领域驱动</li>
-<li>系统分析文档格式</li>
-<li>系统设计文档格式</li>
-<li>功能性需求与非功能性需求</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>数据与系统<ul>
-<li>数据库</li>
-<li>可伸缩策略，扩展策略，备份，容灾，性能，安全，高可用……</li>
-<li>数据设计与范式，SQL/NoSQL，Cache，分布式文件</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>架构设计<ul>
-<li>架构模式，典型互联网公司架构演进历史</li>
-<li>架构原则，常用策略</li>
-<li>架构设计方法</li>
-<li>非功能性理解<ul>
-<li>扩展性</li>
-<li>伸缩性</li>
-<li>稳定性</li>
-<li>一致性</li>
-<li>性能</li>
-<li>吞吐量</li>
-</ul>
-</li>
-<li>容量预测与规划</li>
-<li>架构体系与相关技术</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>过程与管理<ul>
-<li>分析过程</li>
-<li>研发过程</li>
-<li>评审过程</li>
-<li>测试过程</li>
-<li>发布过程</li>
-<li>回滚过程</li>
-<li>文档管理</li>
-<li>知识管理</li>
-<li>项目管理</li>
-</ul>
-</li>
-</ul>
-<p>以上其实就是一份从业基础知识清单，你可以按图索骥，阅读相关书籍。</p>
-<h1 id="第二阶段-顺着一个Topic钻进去，锻炼自己的预研能力"><a href="#第二阶段-顺着一个Topic钻进去，锻炼自己的预研能力" class="headerlink" title="第二阶段 顺着一个Topic钻进去，锻炼自己的预研能力"></a>第二阶段 顺着一个Topic钻进去，锻炼自己的预研能力</h1><p>无论公司业务还是自己喜欢做的事，都可以抽象出通用性课题，然后以做论文的方式杀进去。这个事情得反复操练，有意识操练。</p>
-<p>做事方式为：</p>
-<ul>
-<li>抽象出 Topic——如分布式锁，分布式并行计算引擎，防CSRF的FormToken自动生成框架，定时任务管理与调度平台，分布式跟踪，等等</li>
-<li>向功课好的学生学习——有针对性地深入了解业界其他公司是如何分析问题和解决问题的，汇总各种方案，站在巨人的肩膀上</li>
-<li>分析特定应用场景，技术选型</li>
-<li>兼顾高可用性和可伸缩，做设计评审</li>
-<li>做测试自证靠谱，梳理知识点，开技术分享会</li>
-<li>上线商用，总结经验教训，开经验分享会</li>
-</ul>
-<p>其中一个重点是汇总和分享。05年时，应电信级统一消息业务需要，我去研究了 SIP 协议，做了各种试验，分析报文，写了一系列的幻灯片，做了公开分享，一时间还颇受欢迎：</p>
-<ul>
-<li>SIP_to_Freshman_by_zhengyun.ppt</li>
-<li>SIP之穿越NAT_by_zhengyun.ppt</li>
-<li>SIP体系架构讲义及消息交互演示_by_zhengyun.ppt</li>
-<li>SIP多方会话消息之实例讲解_by_zhengyun.ppt</li>
-<li>SIP安全框架之认证[NTLM和Kerberos]_by_zhengyun.ppt</li>
-<li>SIP消息之逐项讲解_by_zhengyun.ppt</li>
-</ul>
-<p>为什么要写出来、讲出来呢？因为有一个学习金字塔理论，如下图所示：</p>
-<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/007/xuexijinzita.png" alt="技术高手如何炼成？"></p>
-<p>我们读过的事情能够记住学习内容的10%，<br>我们听过的事情能够记住20%，<br>我们看过的事情能够记住30%，<br>我们听过和看过的事情能够记住50%——如看影像/看展览/看演示/现场观摩，<br>我们说过的事情能够记住70%——如参与讨论/发言，<br>我们说过和做过的事情能够记住90%——如做报告，给别人讲，亲身体验，动手做。</p>
-<p>这也就是我在<a href="http://www.cnblogs.com/zhengyun_ustc/p/rightThings.html" target="_blank" rel="external">《窝窝研发过去几年做对了哪些事》</a>中阐述的管理方法：我们从入职之后就有意识地训练大家，让大家能够公开陈述、清晰表达。所以，试用期内，新人必须做一次技术分享和一次技术评审，面对各方的 challenge；预研的中间和结尾都要有分享会；平时也要定期组织技术讲座。</p>
-<h1 id="第三阶段-疯狂回答技术问题"><a href="#第三阶段-疯狂回答技术问题" class="headerlink" title="第三阶段 疯狂回答技术问题"></a>第三阶段 疯狂回答技术问题</h1><p>知识体系慢慢构建，与业务相关的抽象 Topic 也在探索中。但这还不够。因为你亲身接触到的世界太小，可能不足以构成挑战，你可能意识不到自己缺多少知识和技能，不利于你分析问题、提出问题和解决问题的能力培养。</p>
-<p>所以，要主动出击：疯狂回答问题。</p>
-<p>我曾经在入行的头几年里几乎把我关注的垂直领域（包括语言领域和业务领域）里的所有问题都回答了一遍。我对外宣扬知无不言言无不尽，放出邮件地址和 MSN（那时候 MSN 很高大上），很多网友都会发邮件或者加我好友，问各种开发疑难问题，平均每天都有几个，然后我把解决问题的过程写成微软 KB（KnowledgeBase） 文体发表在我的博客上。</p>
-<p>你想想看，工作中的问题你平均每隔几天才能遇到一个，而这么做，每天你都会遇到几个乃至于十几个，第一让你脑力激荡，第二接触到更多新知。05年到06年期间，我因工作需要学习了 JavaME（或古老的称呼 J2ME），早年间 Symbian 手机上的客户端开发。那段时间我天天扫中文论坛的帖子，力求回答所有问题，尤其是那些 BUG 或故障。对于那些暂时没有人解决的，如流媒体实时播放，如仿 OperaMini 二级菜单界面，都上下求索，最后放出思路以及源码。</p>
-<p>同时，我经常整理常见问题，梳理成册并发布。譬如我整理过的 J2ME 疑难问题：</p>
-<ul>
-<li>[J2ME Q&amp;A]真机报告MontyThread -n的错误之解释</li>
-<li>[J2MEQ&amp;A]WTK初始化WMAClient报错XXX has no IP address的解释</li>
-<li>[J2ME Q&amp;A]untrusted domain is not configured问题回应</li>
-<li>[J2ME]“Cannot open socket for LIME events”错误解决</li>
-</ul>
-<p>几个月后，我成为 J2ME 中文论坛超级版主。通过这个历程，我想告诉大家，回答网友问题，技巧得当的话，比如别老是重复回答新手问题，试着攻克那些疑难问题，或者离奇故障，绝对不会浪费你的时间。为什么？</p>
-<p>因为你要信奉：</p>
-<blockquote>
-<p>你学过的每一样东西，你遭受的每一次苦难，都会在你一生中的某个<br>时候派上用场。<br>——佩内洛普·菲兹杰拉德 《离岸》</p>
-<p>Everything that you’ve learnt and all the<br>hardships you’ve suffered will all come in handy<br>at some point in your life.</p>
-</blockquote>
-<h1 id="第四阶段-RCA-总结"><a href="#第四阶段-RCA-总结" class="headerlink" title="第四阶段 RCA/总结"></a>第四阶段 RCA/总结</h1><p>现在是你把经验教训变为财富的时刻了。</p>
-<p>什么是好的技术 Leader？</p>
-<p>随便一个业务需求或业务场景讲出来，你立刻把它抽象为几个模块/系统/Topic，然后侃侃而谈，业界都是怎么解决的，我们以前又是怎么分析怎么解决的，现在咱们这种情况下应该如何设计，可能会遇到什么问题，我们应该做哪些预防设计，blabla。</p>
-<p>怎么做到这一点？</p>
-<p>第一，写 RCA 报告。我以前说过，『窝窝从 2011 年开始，一直坚持每错必查、错了又错就整改、每错必写，用身体力行告诉每一个新员工直面错误、公开技术细节、分享给所有人，长此以往，每一次事故和线上漏测都会变为我们的财富。这就是我们的 RCA（Root Cause Analysis）制度，截止到目前已经收集整理了近两百个详尽的 RCA 报告。』</p>
-<p>RCA 报告格式为：</p>
-<ul>
-<li>背景知识（Optional）</li>
-<li>问题现象</li>
-<li>影响范围</li>
-<li>问题原因</li>
-<li>问题分析过程（Optional）</li>
-<li>解决办法</li>
-<li>后续处理措施：如线上脏数据如何修复，如对用户造成的影响如何弥补等（Optional）</li>
-<li>经验教训</li>
-<li>RCA类型：如代码问题、实施问题、配置问题、设计问题、测试问题</li>
-</ul>
-<p>这样，作为一名合格的老兵，你见过了足够多的血，并且把它们变成了你的人生财富。</p>
-<p>第二，写总结。话说，要经常拉清单。侃侃而谈得有资料，这些都得是你自己写才能印象深刻，关键时刻想得起来。</p>
-<p>好了，这就是我告诉面试者的高手炼成四个阶段。</p>
+<p>设计模式(面向对象)有六大原则：</p>
+<h2 id="单一职责模式"><a href="#单一职责模式" class="headerlink" title="单一职责模式"></a>单一职责模式</h2><p>定义：不要存在多于一个导致类变更的原因。通俗的说，即一个类只负责一项职责。<br>问题由来：类T负责两个不同的职责：职责P1，职责P2。当由于职责P1需求发生改变而需要修改类T时，有可能会导致原本运行正常的职责P2功能发生故障。</p>
+<p>解决方案：遵循单一职责原则。分别建立两个类T1、T2，使T1完成职责P1功能，T2完成职责P2功能。这样，当修改类T1时，不会使职责P2发生故障风险；同理，当修改T2时，也不会使职责P1发生故障风险。</p>
+<p>说到单一职责原则，很多人都会不屑一顾。因为它太简单了。稍有经验的程序员即使从来没有读过设计模式、从来没有听说过单一职责原则，在设计软件时也会自觉的遵守这一重要原则，因为这是常识。在软件编程中，谁也不希望因为修改了一个功能导致其他的功能发生故障。而避免出现这一问题的方法便是遵循单一职责原则。虽然单一职责原则如此简单，并且被认为是常识，但是即便是经验丰富的程序员写出的程序，也会有违背这一原则的代码存在。为什么会出现这种现象呢？因为有职责扩散。所谓职责扩散，就是因为某种原因，职责P被分化为粒度更细的职责P1和P2。</p>
+<p>比如：类T只负责一个职责P，这样设计是符合单一职责原则的。后来由于某种原因，也许是需求变更了，也许是程序的设计者境界提高了，需要将职责P细分为粒度更细的职责P1，P2，这时如果要使程序遵循单一职责原则，需要将类T也分解为两个类T1和T2，分别负责P1、P2两个职责。但是在程序已经写好的情况下，这样做简直太费时间了。所以，简单的修改类T，用它来负责两个职责是一个比较不错的选择，虽然这样做有悖于单一职责原则。（这样做的风险在于职责扩散的不确定性，因为我们不会想到这个职责P，在未来可能会扩散为P1，P2，P3，P4……Pn。所以记住，在职责扩散到我们无法控制的程度之前，立刻对代码进行重构。）</p>
+<p>遵循单一职责原的优点有：</p>
+<p>可以降低类的复杂度，一个类只负责一项职责，其逻辑肯定要比负责多项职责简单的多；<br>提高类的可读性，提高系统的可维护性；<br>变更引起的风险降低，变更是必然的，如果单一职责原则遵守的好，当修改一个功能时，可以显著降低对其他功能的影响。<br>需要说明的一点是单一职责原则不只是面向对象编程思想所特有的，只要是模块化的程序设计，都适用单一职责原则。</p>
+<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><p>肯定有不少人跟我刚看到这项原则的时候一样，对这个原则的名字充满疑惑。其实原因就是这项原则最早是在1988年，由麻省理工学院的一位姓里的女士（Barbara Liskov）提出来的。</p>
+<p>定义1：如果对每一个类型为 T1的对象 o1，都有类型为 T2 的对象o2，使得以 T1定义的所有程序 P 在所有的对象 o1 都代换成 o2 时，程序 P 的行为没有发生变化，那么类型 T2 是类型 T1 的子类型。</p>
+<p>定义2：所有引用基类的地方必须能透明地使用其子类的对象。</p>
+<p>问题由来：有一功能P1，由类A完成。现需要将功能P1进行扩展，扩展后的功能为P，其中P由原有功能P1与新功能P2组成。新功能P由类A的子类B来完成，则子类B在完成新功能P2的同时，有可能会导致原有功能P1发生故障。</p>
+<p>解决方案：当使用继承时，遵循里氏替换原则。类B继承类A时，除添加新的方法完成新增功能P2外，尽量不要重写父类A的方法，也尽量不要重载父类A的方法。</p>
+<p>继承包含这样一层含义：父类中凡是已经实现好的方法（相对于抽象方法而言），实际上是在设定一系列的规范和契约，虽然它不强制要求所有的子类必须遵从这些契约，但是如果子类对这些非抽象方法任意修改，就会对整个继承体系造成破坏。而里氏替换原则就是表达了这一层含义。</p>
+<p>继承作为面向对象三大特性之一，在给程序设计带来巨大便利的同时，也带来了弊端。比如使用继承会给程序带来侵入性，程序的可移植性降低，增加了对象间的耦合性，如果一个类被其他的类所继承，则当这个类需要修改时，必须考虑到所有的子类，并且父类修改后，所有涉及到子类的功能都有可能会产生故障。</p>
+<p>里氏替换原则通俗的来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。它包含以下4层含义：</p>
+<p>子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。<br>子类中可以增加自己特有的方法。<br>当子类的方法重载父类的方法时，方法的前置条件（即方法的形参）要比父类方法的输入参数更宽松。<br>当子类的方法实现父类的抽象方法时，方法的后置条件（即方法的返回值）要比父类更严格。<br>看上去很不可思议，因为我们会发现在自己编程中常常会违反里氏替换原则，程序照样跑的好好的。所以大家都会产生这样的疑问，假如我非要不遵循里氏替换原则会有什么后果？</p>
+<p>后果就是：你写的代码出问题的几率将会大大增加。</p>
+<h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2><p>定义：高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象。</p>
+<p>问题由来：类A直接依赖类B，假如要将类A改为依赖类C，则必须通过修改类A的代码来达成。这种场景下，类A一般是高层模块，负责复杂的业务逻辑；类B和类C是低层模块，负责基本的原子操作；假如修改类A，会给程序带来不必要的风险。</p>
+<p>解决方案：将类A修改为依赖接口I，类B和类C各自实现接口I，类A通过接口I间接与类B或者类C发生联系，则会大大降低修改类A的几率。</p>
+<p>依赖倒置原则基于这样一个事实：相对于细节的多变性，抽象的东西要稳定的多。以抽象为基础搭建起来的架构比以细节为基础搭建起来的架构要稳定的多。在java中，抽象指的是接口或者抽象类，细节就是具体的实现类，使用接口或者抽象类的目的是制定好规范和契约，而不去涉及任何具体的操作，把展现细节的任务交给他们的实现类去完成。</p>
+<p>传递依赖关系有三种方式，以上的例子中使用的方法是接口传递，另外还有两种传递方式：构造方法传递和setter方法传递，相信用过Spring框架的，对依赖的传递方式一定不会陌生。</p>
+<p>在实际编程中，我们一般需要做到如下3点：</p>
+<p>低层模块尽量都要有抽象类或接口，或者两者都有。<br>变量的声明类型尽量是抽象类或接口。<br>使用继承时遵循里氏替换原则。<br>依赖倒置原则的核心就是要我们面向接口编程，理解了面向接口编程，也就理解了依赖倒置。</p>
+<h2 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h2><p>定义：客户端不应该依赖它不需要的接口；一个类对另一个类的依赖应该建立在最小的接口上。 </p>
+<p>问题由来：类A通过接口I依赖类B，类C通过接口I依赖类D，如果接口I对于类A和类B来说不是最小接口，则类B和类D必须去实现他们不需要的方法。</p>
+<p>解决方案：将臃肿的接口I拆分为独立的几个接口，类A和类C分别与他们需要的接口建立依赖关系。也就是采用接口隔离原则。</p>
+<p>举例来说明接口隔离原则：</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110231.jpg" alt=""></p>
+<p>（图1 未遵循接口隔离原则的设计）</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110232.jpg" alt=""></p>
+<p>（图2 遵循接口隔离原则的设计）</p>
+<p>接口隔离原则的含义是：建立单一接口，不要建立庞大臃肿的接口，尽量细化接口，接口中的方法尽量少。也就是说，我们要为各个类建立专用的接口，而不要试图去建立一个很庞大的接口供所有依赖它的类去调用。本文例子中，将一个庞大的接口变更为3个专用的接口所采用的就是接口隔离原则。在程序设计中，依赖几个专用的接口要比依赖一个综合的接口更灵活。接口是设计时对外部设定的“契约”，通过分散定义多个接口，可以预防外来变更的扩散，提高系统的灵活性和可维护性。</p>
+<p>说到这里，很多人会觉的接口隔离原则跟之前的单一职责原则很相似，其实不然。其一，单一职责原则原注重的是职责；而接口隔离原则注重对接口依赖的隔离。其二，单一职责原则主要是约束类，其次才是接口和方法，它针对的是程序中的实现和细节；而接口隔离原则主要约束接口接口，主要针对抽象，针对程序整体框架的构建。</p>
+<p>采用接口隔离原则对接口进行约束时，要注意以下几点：</p>
+<p>接口尽量小，但是要有限度。对接口进行细化可以提高程序设计灵活性是不挣的事实，但是如果过小，则会造成接口数量过多，使设计复杂化。所以一定要适度。<br>为依赖接口的类定制服务，只暴露给调用的类它需要的方法，它不需要的方法则隐藏起来。只有专注地为一个模块提供定制服务，才能建立最小的依赖关系。<br>提高内聚，减少对外交互。使接口用最少的方法去完成最多的事情。<br>运用接口隔离原则，一定要适度，接口设计的过大或过小都不好。设计接口的时候，只有多花些时间去思考和筹划，才能准确地实践这一原则。</p>
+<h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><p>定义：一个对象应该对其他对象保持最少的了解。</p>
+<p>问题由来：类与类之间的关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。</p>
+<p>解决方案：尽量降低类与类之间的耦合。</p>
+<p>自从我们接触编程开始，就知道了软件编程的总的原则：低耦合，高内聚。无论是面向过程编程还是面向对象编程，只有使各个模块之间的耦合尽量的低，才能提高代码的复用率。低耦合的优点不言而喻，但是怎么样编程才能做到低耦合呢？那正是迪米特法则要去完成的。</p>
+<p>迪米特法则又叫最少知道原则，最早是在1987年由美国Northeastern University的Ian Holland提出。通俗的来讲，就是一个类对自己依赖的类知道的越少越好。也就是说，对于被依赖的类来说，无论逻辑多么复杂，都尽量地的将逻辑封装在类的内部，对外除了提供的public方法，不对外泄漏任何信息。迪米特法则还有一个更简单的定义：只与直接的朋友通信。首先来解释一下什么是直接的朋友：每个对象都会与其他对象有耦合关系，只要两个对象之间有耦合关系，我们就说这两个对象之间是朋友关系。耦合的方式很多，依赖、关联、组合、聚合等。其中，我们称出现成员变量、方法参数、方法返回值中的类为直接的朋友，而出现在局部变量中的类则不是直接的朋友。也就是说，陌生的类最好不要作为局部变量的形式出现在类的内部。</p>
+<p>迪米特法则的初衷是降低类之间的耦合，由于每个类都减少了不必要的依赖，因此的确可以降低耦合关系。但是凡事都有度，虽然可以避免与非直接的类通信，但是要通信，必然会通过一个“中介”来发生联系，例如本例中，总公司就是通过分公司这个“中介”来与分公司的员工发生联系的。过分的使用迪米特原则，会产生大量这样的中介和传递类，导致系统复杂度变大。所以在采用迪米特法则时要反复权衡，既做到结构清晰，又要高内聚低耦合。</p>
+<h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><p>定义：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。</p>
+<p>问题由来：在软件的生命周期内，因为变化、升级和维护等原因需要对软件原有代码进行修改时，可能会给旧代码中引入错误，也可能会使我们不得不对整个功能进行重构，并且需要原有代码经过重新测试。</p>
+<p>解决方案：当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。</p>
+<p>开闭原则是面向对象设计中最基础的设计原则，它指导我们如何建立稳定灵活的系统。开闭原则可能是设计模式六项原则中定义最模糊的一个了，它只告诉我们对扩展开放，对修改关闭，可是到底如何才能做到对扩展开放，对修改关闭，并没有明确的告诉我们。以前，如果有人告诉我“你进行设计的时候一定要遵守开闭原则”，我会觉的他什么都没说，但貌似又什么都说了。因为开闭原则真的太虚了。</p>
+<p>在仔细思考以及仔细阅读很多设计模式的文章后，终于对开闭原则有了一点认识。其实，我们遵循设计模式前面5大原则，以及使用23种设计模式的目的就是遵循开闭原则。也就是说，只要我们对前面5项原则遵守的好了，设计出的软件自然是符合开闭原则的，这个开闭原则更像是前面五项原则遵守程度的“平均得分”，前面5项原则遵守的好，平均分自然就高，说明软件设计开闭原则遵守的好；如果前面5项原则遵守的不好，则说明开闭原则遵守的不好。</p>
+<p>其实笔者认为，开闭原则无非就是想表达这样一层意思：用抽象构建框架，用实现扩展细节。因为抽象灵活性好，适应性广，只要抽象的合理，可以基本保持软件架构的稳定。而软件中易变的细节，我们用从抽象派生的实现类来进行扩展，当软件需要发生变化时，我们只需要根据需求重新派生一个实现类来扩展就可以了。当然前提是我们的抽象要合理，要对需求的变更有前瞻性和预见性才行。</p>
+<p>说到这里，再回想一下前面说的5项原则，恰恰是告诉我们用抽象构建框架，用实现扩展细节的注意事项而已：单一职责原则告诉我们实现类要职责单一；里氏替换原则告诉我们不要破坏继承体系；依赖倒置原则告诉我们要面向接口编程；接口隔离原则告诉我们在设计接口的时候要精简单一；迪米特法则告诉我们要降低耦合。而开闭原则是总纲，他告诉我们要对扩展开放，对修改关闭。</p>
+<p>最后说明一下如何去遵守这六个原则。对这六个原则的遵守并不是是和否的问题，而是多和少的问题，也就是说，我们一般不会说有没有遵守，而是说遵守程度的多少。任何事都是过犹不及，设计模式的六个设计原则也是一样，制定这六个原则的目的并不是要我们刻板的遵守他们，而需要根据实际情况灵活运用。对他们的遵守程度只要在一个合理的范围内，就算是良好的设计。我们用一幅图来说明一下。</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110233.jpg" alt=""></p>
+<p>图中的每一条维度各代表一项原则，我们依据对这项原则的遵守程度在维度上画一个点，则如果对这项原则遵守的合理的话，这个点应该落在红色的同心圆内部；如果遵守的差，点将会在小圆内部；如果过度遵守，点将会落在大圆外部。一个良好的设计体现在图中，应该是六个顶点都在同心圆中的六边形。</p>
+<p><img src="http://o7y1sf21i.bkt.clouddn.com/blog/021/2012110234.jpg" alt=""></p>
+<p>在上图中，设计1、设计2属于良好的设计，他们对六项原则的遵守程度都在合理的范围内；设计3、设计4设计虽然有些不足，但也基本可以接受；设计5则严重不足，对各项原则都没有很好的遵守；而设计6则遵守过渡了，设计5和设计6都是迫切需要重构的设计。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.uml.org.cn/sjms/201211023.asp" target="_blank" rel="external">设计模式六大原则</a></p>
 
       
     </div>
@@ -622,7 +488,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/知识体系/" rel="tag"># 知识体系</a>
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
           
         </div>
       
@@ -631,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/21/android-studio-compile-speed-up/" rel="next" title="Android Studio提升编译速度方法总结">
-                <i class="fa fa-chevron-left"></i> Android Studio提升编译速度方法总结
+              <a href="/2017/03/09/design-pattern-singleinstance/" rel="next" title="设计模式学习笔记-单例模式">
+                <i class="fa fa-chevron-left"></i> 设计模式学习笔记-单例模式
               </a>
             
           </div>
@@ -640,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/31/android-6-0-changes/" rel="prev" title="解读Android6.0新功能和Api变更">
-                解读Android6.0新功能和Api变更 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -658,10 +520,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/07/30/how-to-be-stronger/"
-     data-title="技术高手如何炼成？"
+        <div class="ds-share flat" data-thread-key="2017/03/09/design-pattern-rule/"
+     data-title="设计模式学习笔记-六大原则"
      data-content=""
-     data-url="http://czhzero.com/2016/07/30/how-to-be-stronger/">
+     data-url="http://czhzero.com/2017/03/09/design-pattern-rule/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -691,8 +553,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/30/how-to-be-stronger/"
-           data-title="技术高手如何炼成？" data-url="http://czhzero.com/2016/07/30/how-to-be-stronger/">
+      <div class="ds-thread" data-thread-key="2017/03/09/design-pattern-rule/"
+           data-title="设计模式学习笔记-六大原则" data-url="http://czhzero.com/2017/03/09/design-pattern-rule/">
       </div>
     
   </div>
@@ -819,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一阶段-认真构建完整的知识体系"><span class="nav-number">1.</span> <span class="nav-text">第一阶段 认真构建完整的知识体系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二阶段-顺着一个Topic钻进去，锻炼自己的预研能力"><span class="nav-number">2.</span> <span class="nav-text">第二阶段 顺着一个Topic钻进去，锻炼自己的预研能力</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三阶段-疯狂回答技术问题"><span class="nav-number">3.</span> <span class="nav-text">第三阶段 疯狂回答技术问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四阶段-RCA-总结"><span class="nav-number">4.</span> <span class="nav-text">第四阶段 RCA/总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单一职责模式"><span class="nav-number">1.</span> <span class="nav-text">单一职责模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#里氏替换原则"><span class="nav-number">2.</span> <span class="nav-text">里氏替换原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖倒置原则"><span class="nav-number">3.</span> <span class="nav-text">依赖倒置原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口隔离原则"><span class="nav-number">4.</span> <span class="nav-text">接口隔离原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迪米特法则"><span class="nav-number">5.</span> <span class="nav-text">迪米特法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开闭原则"><span class="nav-number">6.</span> <span class="nav-text">开闭原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">7.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
