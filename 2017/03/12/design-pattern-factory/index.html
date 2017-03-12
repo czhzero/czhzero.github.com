@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="单例模式是23种设计模式中最为简单的一种。通常情况下，单例模式实现有两类方式，饿汉式单例和懒汉式单例。">
+<meta name="description" content="工厂方法模式，是创建型设计模式之一，是一种结构简单的模式。应用广泛，例如Activity的onCreate方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式学习笔记-单例模式">
-<meta property="og:url" content="http://czhzero.com/2017/03/09/design-pattern-singleinstance/index.html">
+<meta property="og:title" content="设计模式学习笔记-工厂模式">
+<meta property="og:url" content="http://czhzero.com/2017/03/12/design-pattern-factory/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
-<meta property="og:description" content="单例模式是23种设计模式中最为简单的一种。通常情况下，单例模式实现有两类方式，饿汉式单例和懒汉式单例。">
-<meta property="og:updated_time" content="2017-03-12T02:56:34.000Z">
+<meta property="og:description" content="工厂方法模式，是创建型设计模式之一，是一种结构简单的模式。应用广泛，例如Activity的onCreate方法。">
+<meta property="og:updated_time" content="2017-03-12T08:55:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式学习笔记-单例模式">
-<meta name="twitter:description" content="单例模式是23种设计模式中最为简单的一种。通常情况下，单例模式实现有两类方式，饿汉式单例和懒汉式单例。">
+<meta name="twitter:title" content="设计模式学习笔记-工厂模式">
+<meta name="twitter:description" content="工厂方法模式，是创建型设计模式之一，是一种结构简单的模式。应用广泛，例如Activity的onCreate方法。">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://czhzero.com/2017/03/09/design-pattern-singleinstance/"/>
+  <link rel="canonical" href="http://czhzero.com/2017/03/12/design-pattern-factory/"/>
 
 
 
 
 
-  <title> 设计模式学习笔记-单例模式 | Alvin-一座小楼 </title>
+  <title> 设计模式学习笔记-工厂模式 | Alvin-一座小楼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -285,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://czhzero.com/2017/03/09/design-pattern-singleinstance/">
+  <link itemprop="mainEntityOfPage" href="http://czhzero.com/2017/03/12/design-pattern-factory/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Alvin-一座小楼">
@@ -309,7 +309,7 @@
             
             
               
-                设计模式学习笔记-单例模式
+                设计模式学习笔记-工厂模式
               
             
           </h1>
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T22:57:47+08:00">
-                2017-03-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T16:07:32+08:00">
+                2017-03-12
               </time>
             
 
@@ -365,8 +365,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/09/design-pattern-singleinstance/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/09/design-pattern-singleinstance/" itemprop="commentCount"></span>
+                <a href="/2017/03/12/design-pattern-factory/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/design-pattern-factory/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -376,7 +376,7 @@
 
           
           
-             <span id="/2017/03/09/design-pattern-singleinstance/" class="leancloud_visitors" data-flag-title="设计模式学习笔记-单例模式">
+             <span id="/2017/03/12/design-pattern-factory/" class="leancloud_visitors" data-flag-title="设计模式学习笔记-工厂模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -403,52 +403,28 @@
       
 
       
-        <p>单例模式是23种设计模式中最为简单的一种。通常情况下，单例模式实现有两类方式，饿汉式单例和懒汉式单例。</p>
+        <p>工厂方法模式，是创建型设计模式之一，是一种结构简单的模式。应用广泛，例如Activity的onCreate方法。</p>
 <a id="more"></a>
-<h2 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h2><blockquote>
-<p>Ensure a class has only one instance, and provide a global point of access to it.<br>(确保某一个类只有实例，并向整个系统提供这是实例)</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义:"></a>定义:</h2><blockquote>
+<p>定义一个用于创建对象的接口，让子类决定实例化哪个类。</p>
 </blockquote>
 <h2 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h2><ul>
-<li>由于单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，优势十分明显。</li>
-<li>由于单例模式只生成一个实例，所以减少了重复的性能开销，如读取配置等。</li>
-<li>单例模式可以避免对资源的多重占用，例如一个写文件动作，由于只有一个实例存在在内存中，避免对同一个资源文件进行写动作。</li>
-<li>单例模式可以在系统设置全局的访问点，优化和共享资源访问。</li>
+<li>良好的封装性，结构清晰</li>
+<li>扩展性好，增加产品类十分方便</li>
+<li>屏蔽产品类，高层只关心产品抽象类</li>
 </ul>
-<h2 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h2><ul>
-<li>单例模式一般没有接口，扩展很困难，若要扩展，除了修改代码基本没有其他方途径。</li>
-<li>单例模式对测试不利，在并行开发环境中，如果单例模式没有完成，是不能进行测试的，没有接口也不能使用mock的方式虚拟一个对象。</li>
-</ul>
-<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景:"></a>使用场景:</h2><ul>
-<li>要求生成唯一序列号的环境</li>
-<li>在整个项目中需要一个共享访问点或共享数据</li>
-<li>创建一个对象需要消耗的资源过多，如要访问IO和数据库等资源</li>
-<li>需要定义大量的静态常量和静态方法的环境</li>
-</ul>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h2><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景:"></a>使用场景:</h2><p>在任何需要生成复杂对象的地方，都可以使用工厂模式。复杂对象适合工厂模式，简单对象就不需要了。</p>
 <h2 id="常见实例"><a href="#常见实例" class="headerlink" title="常见实例:"></a>常见实例:</h2><ul>
-<li>Android常见的ImageLoader图片加载库</li>
-<li>Android系统的LayoutInflater类布局加载类</li>
+<li>BitmapFactory</li>
+<li>Activity的onCreate方法</li>
 </ul>
 <hr>
-<p>具体实现根据实际情况不同，分为以下几种。</p>
-<ol>
-<li>懒汉式单例(非线程安全)</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种懒汉式是最通俗易懂的写法，一般非多线程环境下，可直接使用。</p>
-<p>2.懒汉式单例（线程安全）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static synchronized Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过synchronized关键字可以保证多线程模式下，内存中实例也会只有一个。但是大部分情况下，并不需要同步，影响效率。</p>
-<p>3.饿汉式单例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过classloader,在类加载的时候，就会在内存中创建一个实例。不管你需不需要使用这个实例。若在某个逻辑条件下，并需要这个单例实例，就会造成内存的浪费。</p>
-<p>4.静态内部类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static class SingletonHolder &#123;  </span><br><span class="line">    private static final Singleton INSTANCE = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static final Singleton getInstance() &#123;  </span><br><span class="line">    return SingletonHolder.INSTANCE;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种方式与第3种方式都是利用classloader进行控制。不同的是第四种方式在装载Singleton类时，并不会去实例化单例。只有在调用getInstance方法后，才会进行加载，实现了懒加载。</p>
-<p>5.枚举式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Resource&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public enum SomeThing &#123;</span><br><span class="line">    INSTANCE;</span><br><span class="line">    private Resource instance;</span><br><span class="line">    SomeThing() &#123;</span><br><span class="line">        instance = new Resource();</span><br><span class="line">    &#125;</span><br><span class="line">    public Resource getInstance() &#123;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面的类Resource是我们要应用单例模式的资源，具体可以表现为网络连接，数据库连接，线程池等等。<br>获取资源的方式很简单，只要 SomeThing.INSTANCE.getInstance() 即可获得所要实例。</p>
-<p>这种方式是Effective Java作者Josh Bloch 提倡的方式，它不仅能避免多线程同步问题，而且还能防止反序列化重新创建新的对象。</p>
-<p>总结：<br>个人而言，如果实例对象不是很大的话，一般用第三种就可以了。<br>如果考虑运行时内存大小，推荐第三种，也是比较常用的一种用法。</p>
+<p>通常工厂模式有三种实现方式。</p>
+<h2 id="反射工厂模式"><a href="#反射工厂模式" class="headerlink" title="反射工厂模式"></a>反射工厂模式</h2><p>产品类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Product &#123;</span><br><span class="line">    public abstract void method();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class ConcreatProductA extends Product &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        System.out.println(&quot;i am ProductA&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class ConcreatProductB extends Product &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        System.out.println(&quot;i am ProductB&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public abstract class FactoryType1 &#123;</span><br><span class="line">    public abstract &lt;T extends Product&gt; T createProduct(Class&lt;T&gt; c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class ConcreateFactoryType1 extends FactoryType1 &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public &lt;T extends Product&gt; T createProduct(Class&lt;T&gt; c) &#123;</span><br><span class="line"></span><br><span class="line">        Product p = null;</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            p = (Product) Class.forName(c.getName()).newInstance();</span><br><span class="line">        &#125; catch (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (InstantiationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return (T) p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void main(String args[]) &#123;</span><br><span class="line"></span><br><span class="line">    //反射方式实现工厂模式</span><br><span class="line">    FactoryType1 factory = new ConcreateFactoryType1();</span><br><span class="line">    Product A1 = factory.createProduct(ConcreatProductA.class);</span><br><span class="line">    Product B1 = factory.createProduct(ConcreatProductB.class);</span><br><span class="line">    A1.method();</span><br><span class="line">    B1.method();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="多工厂模式"><a href="#多工厂模式" class="headerlink" title="多工厂模式"></a>多工厂模式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public abstract class FactoryType2 &#123;</span><br><span class="line">    public abstract Product createProduct();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//工厂A</span><br><span class="line">public class ConcreateFactoryType2A extends FactoryType2 &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Product createProduct() &#123;</span><br><span class="line">        return new ConcreatProductA();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//工厂B</span><br><span class="line">public class ConcreateFactoryType2B extends FactoryType2 &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Product createProduct() &#123;</span><br><span class="line">        return new ConcreatProductB();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void main(String args[]) &#123;</span><br><span class="line"></span><br><span class="line">    //多工厂方法模式</span><br><span class="line">    FactoryType2 factoryType2A = new ConcreateFactoryType2A();</span><br><span class="line">    Product A2 = factoryType2A.createProduct();</span><br><span class="line">    FactoryType2 factoryType2B = new ConcreateFactoryType2B();</span><br><span class="line">    Product B2 = factoryType2B.createProduct();</span><br><span class="line">    A2.method();</span><br><span class="line">    B2.method();</span><br><span class="line">｝</span><br></pre></td></tr></table></figure>
+<h2 id="简单工厂模式-静态工厂模式"><a href="#简单工厂模式-静态工厂模式" class="headerlink" title="简单工厂模式(静态工厂模式)"></a>简单工厂模式(静态工厂模式)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class FactoryType3 &#123;</span><br><span class="line">    public static ConcreatProductA createProductA() &#123;</span><br><span class="line">        return new ConcreatProductA();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static ConcreatProductB createProductB() &#123;</span><br><span class="line">        return new ConcreatProductB();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void main(String args[]) &#123;</span><br><span class="line"></span><br><span class="line">//简单工厂模式或者静态工厂模式&#123;</span><br><span class="line">Product A3 = FactoryType3.createProductA();</span><br><span class="line">Product B3 = FactoryType3.createProductB();</span><br><span class="line">A3.method();</span><br><span class="line">B3.method();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -481,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/08/performance-optimization-5/" rel="next" title="Android性能优化(五)－ 安装包大小优化">
-                <i class="fa fa-chevron-left"></i> Android性能优化(五)－ 安装包大小优化
+              <a href="/2017/03/12/design-pattern-prototype/" rel="next" title="设计模式学习笔记-原型模式">
+                <i class="fa fa-chevron-left"></i> 设计模式学习笔记-原型模式
               </a>
             
           </div>
@@ -490,10 +466,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/09/design-pattern-rule/" rel="prev" title="设计模式学习笔记-六大原则">
-                设计模式学习笔记-六大原则 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -508,10 +480,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/03/09/design-pattern-singleinstance/"
-     data-title="设计模式学习笔记-单例模式"
+        <div class="ds-share flat" data-thread-key="2017/03/12/design-pattern-factory/"
+     data-title="设计模式学习笔记-工厂模式"
      data-content=""
-     data-url="http://czhzero.com/2017/03/09/design-pattern-singleinstance/">
+     data-url="http://czhzero.com/2017/03/12/design-pattern-factory/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -541,8 +513,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/09/design-pattern-singleinstance/"
-           data-title="设计模式学习笔记-单例模式" data-url="http://czhzero.com/2017/03/09/design-pattern-singleinstance/">
+      <div class="ds-thread" data-thread-key="2017/03/12/design-pattern-factory/"
+           data-title="设计模式学习笔记-工厂模式" data-url="http://czhzero.com/2017/03/12/design-pattern-factory/">
       </div>
     
   </div>
@@ -669,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义："><span class="nav-number">1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">2.</span> <span class="nav-text">优点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺点："><span class="nav-number">3.</span> <span class="nav-text">缺点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用场景"><span class="nav-number">4.</span> <span class="nav-text">使用场景:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见实例"><span class="nav-number">5.</span> <span class="nav-text">常见实例:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">2.</span> <span class="nav-text">优点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺点"><span class="nav-number">3.</span> <span class="nav-text">缺点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用场景"><span class="nav-number">4.</span> <span class="nav-text">使用场景:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见实例"><span class="nav-number">5.</span> <span class="nav-text">常见实例:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射工厂模式"><span class="nav-number">6.</span> <span class="nav-text">反射工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多工厂模式"><span class="nav-number">7.</span> <span class="nav-text">多工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单工厂模式-静态工厂模式"><span class="nav-number">8.</span> <span class="nav-text">简单工厂模式(静态工厂模式)</span></a></li></ol></div>
             
 
           </div>
