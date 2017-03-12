@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://czhzero.com/2017/03/09/design-pattern-singleinstance/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
 <meta property="og:description" content="单例模式是23种设计模式中最为简单的一种。通常情况下，单例模式实现有两类方式，饿汉式单例和懒汉式单例。">
-<meta property="og:updated_time" content="2017-03-09T15:41:15.000Z">
+<meta property="og:updated_time" content="2017-03-12T02:56:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式学习笔记-单例模式">
 <meta name="twitter:description" content="单例模式是23种设计模式中最为简单的一种。通常情况下，单例模式实现有两类方式，饿汉式单例和懒汉式单例。">
@@ -405,31 +405,26 @@
       
         <p>单例模式是23种设计模式中最为简单的一种。通常情况下，单例模式实现有两类方式，饿汉式单例和懒汉式单例。</p>
 <a id="more"></a>
-<p>定义：</p>
-<blockquote>
+<h2 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h2><blockquote>
 <p>Ensure a class has only one instance, and provide a global point of access to it.<br>(确保某一个类只有实例，并向整个系统提供这是实例)</p>
 </blockquote>
-<p>优点:</p>
-<ul>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h2><ul>
 <li>由于单例模式在内存中只有一个实例，减少了内存开支，特别是一个对象需要频繁的创建和销毁时，优势十分明显。</li>
 <li>由于单例模式只生成一个实例，所以减少了重复的性能开销，如读取配置等。</li>
 <li>单例模式可以避免对资源的多重占用，例如一个写文件动作，由于只有一个实例存在在内存中，避免对同一个资源文件进行写动作。</li>
 <li>单例模式可以在系统设置全局的访问点，优化和共享资源访问。</li>
 </ul>
-<p>缺点：</p>
-<ul>
+<h2 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h2><ul>
 <li>单例模式一般没有接口，扩展很困难，若要扩展，除了修改代码基本没有其他方途径。</li>
 <li>单例模式对测试不利，在并行开发环境中，如果单例模式没有完成，是不能进行测试的，没有接口也不能使用mock的方式虚拟一个对象。</li>
 </ul>
-<p>使用场景:</p>
-<ul>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景:"></a>使用场景:</h2><ul>
 <li>要求生成唯一序列号的环境</li>
 <li>在整个项目中需要一个共享访问点或共享数据</li>
 <li>创建一个对象需要消耗的资源过多，如要访问IO和数据库等资源</li>
 <li>需要定义大量的静态常量和静态方法的环境</li>
 </ul>
-<p>实例:</p>
-<ul>
+<h2 id="常见实例"><a href="#常见实例" class="headerlink" title="常见实例:"></a>常见实例:</h2><ul>
 <li>Android常见的ImageLoader图片加载库</li>
 <li>Android系统的LayoutInflater类布局加载类</li>
 </ul>
@@ -571,8 +566,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/my_head.jpeg"
@@ -585,7 +589,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">60</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -603,7 +607,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">44</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -655,6 +659,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义："><span class="nav-number">1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">2.</span> <span class="nav-text">优点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺点："><span class="nav-number">3.</span> <span class="nav-text">缺点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用场景"><span class="nav-number">4.</span> <span class="nav-text">使用场景:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见实例"><span class="nav-number">5.</span> <span class="nav-text">常见实例:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
