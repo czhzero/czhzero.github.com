@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://czhzero.com/2017/03/30/design-pattern-model/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
 <meta property="og:description" content="在面向对象开发过程中，通常会遇到这样一类问题。我们知道一个算法所需的关键步骤，并确定这些步骤的执行顺序，但是，某些步骤的具体实现是未知的，或者说某些步骤的具体实现是会随着环境的变化而改变。这时候就需要用到模版方法模式。">
-<meta property="og:updated_time" content="2017-04-06T13:57:29.000Z">
+<meta property="og:updated_time" content="2017-04-06T14:00:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式学习笔记-模版方法模式">
 <meta name="twitter:description" content="在面向对象开发过程中，通常会遇到这样一类问题。我们知道一个算法所需的关键步骤，并确定这些步骤的执行顺序，但是，某些步骤的具体实现是未知的，或者说某些步骤的具体实现是会随着环境的变化而改变。这时候就需要用到模版方法模式。">
@@ -420,7 +420,7 @@
 </ul>
 <h2 id="常见实例"><a href="#常见实例" class="headerlink" title="常见实例:"></a>常见实例:</h2><ul>
 <li>AsyncTask</li>
-<li>Activity的生命周期函数onCreate()等方法均是模版方法</li>
+<li>Activity的生命周期函数onCreate()等方法均是模版方法的运用</li>
 </ul>
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public static abstract class CarModel &#123;</span><br><span class="line">    </span><br><span class="line">    //发动</span><br><span class="line">    protected abstract void start();</span><br><span class="line">    </span><br><span class="line">    //鸣笛</span><br><span class="line">    protected abstract void alarm();</span><br><span class="line"></span><br><span class="line">    //引擎轰鸣</span><br><span class="line">    protected abstract void engineBoom();</span><br><span class="line">    </span><br><span class="line">    //停止</span><br><span class="line">    protected abstract void stop();</span><br><span class="line">    </span><br><span class="line">    //模版方法,增加final关键字,不允许被复写</span><br><span class="line">    final public void run() &#123;</span><br><span class="line">        start();</span><br><span class="line">        engineBoom();</span><br><span class="line">        if(isAlarm()) &#123;</span><br><span class="line">            alarm();</span><br><span class="line">        &#125;</span><br><span class="line">        stop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //钩子函数</span><br><span class="line">    protected boolean isAlarm() &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">public static class AudiCar extends CarModel &#123;</span><br><span class="line">    </span><br><span class="line">    private boolean flag;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void start() &#123;</span><br><span class="line">        System.out.println(&quot;奥迪启动&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void alarm() &#123;</span><br><span class="line">        System.out.println(&quot;奥迪鸣笛&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void engineBoom() &#123;</span><br><span class="line">        System.out.println(&quot;奥迪车引擎轰轰作响&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void stop() &#123;</span><br><span class="line">        System.out.println(&quot;奥迪停车&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected boolean isAlarm() &#123;</span><br><span class="line">        return flag;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void setAlarmFlag(boolean flag) &#123;</span><br><span class="line">        this.flag = flag;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    AudiCar car = new AudiCar();</span><br><span class="line">    car.setAlarmFlag(false);</span><br><span class="line">    car.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -465,6 +465,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/06/design-pattern-stragety/" rel="prev" title="设计模式学习笔记-策略模式">
+                设计模式学习笔记-策略模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -560,7 +564,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -578,7 +582,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">48</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
