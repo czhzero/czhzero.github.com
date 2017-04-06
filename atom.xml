@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://czhzero.com/"/>
-  <updated>2017-03-30T15:18:57.000Z</updated>
+  <updated>2017-04-06T13:57:29.000Z</updated>
   <id>http://czhzero.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式学习笔记-模版方法模式</title>
+    <link href="http://czhzero.com/2017/03/30/design-pattern-model/"/>
+    <id>http://czhzero.com/2017/03/30/design-pattern-model/</id>
+    <published>2017-03-30T15:37:26.000Z</published>
+    <updated>2017-04-06T13:57:29.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在面向对象开发过程中，通常会遇到这样一类问题。我们知道一个算法所需的关键步骤，并确定这些步骤的执行顺序，但是，某些步骤的具体实现是未知的，或者说某些步骤的具体实现是会随着环境的变化而改变。这时候就需要用到模版方法模式。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义:&quot;&gt;&lt;/a&gt;定义:&lt;/h2&gt;&lt;p&gt;定义一个操作中的算法的框架，而将一些步骤延迟到子类中，使得子类可以不改变一个算法的结构，即可重定义该算法的某些特定步骤。&lt;/p&gt;
+&lt;h2 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点:&quot;&gt;&lt;/a&gt;优点:&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;封装不变部分，扩展可变部分&lt;/li&gt;
+&lt;li&gt;提取公共部分代码，便于维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺点&quot; class=&quot;headerlink&quot; title=&quot;缺点:&quot;&gt;&lt;/a&gt;缺点:&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;模版方法会带来代码阅读的难度，会让用户觉得难以理解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;使用场景&quot;&gt;&lt;a href=&quot;#使用场景&quot; class=&quot;headerlink&quot; title=&quot;使用场景:&quot;&gt;&lt;/a&gt;使用场景:&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;多个子类有公有的方法，并且逻辑基本相同时。&lt;/li&gt;
+&lt;li&gt;重要、复杂的算法可以把核心算法设计为模版方法，周边细节功能则由子类实现&lt;/li&gt;
+&lt;li&gt;重构时，模版方法模式是一个经常使用的模式，把相同的代码抽取到父类中，然后通过钩子函数约束其行为。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;常见实例&quot;&gt;&lt;a href=&quot;#常见实例&quot; class=&quot;headerlink&quot; title=&quot;常见实例:&quot;&gt;&lt;/a&gt;常见实例:&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;AsyncTask&lt;/li&gt;
+&lt;li&gt;Activity的生命周期函数onCreate()等方法均是模版方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public static abstract class CarModel &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //发动&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected abstract void start();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //鸣笛&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected abstract void alarm();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //引擎轰鸣&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected abstract void engineBoom();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //停止&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected abstract void stop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //模版方法,增加final关键字,不允许被复写&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    final public void run() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        start();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        engineBoom();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        if(isAlarm()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            alarm();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        stop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //钩子函数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected boolean isAlarm() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return true;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public static class AudiCar extends CarModel &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    private boolean flag;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected void start() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(&amp;quot;奥迪启动&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected void alarm() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(&amp;quot;奥迪鸣笛&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected void engineBoom() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(&amp;quot;奥迪车引擎轰轰作响&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected void stop() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(&amp;quot;奥迪停车&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    protected boolean isAlarm() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        return flag;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    public void setAlarmFlag(boolean flag) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        this.flag = flag;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public static void main(String[] args) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AudiCar car = new AudiCar();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    car.setAlarmFlag(false);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    car.run();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在面向对象开发过程中，通常会遇到这样一类问题。我们知道一个算法所需的关键步骤，并确定这些步骤的执行顺序，但是，某些步骤的具体实现是未知的，或者说某些步骤的具体实现是会随着环境的变化而改变。这时候就需要用到模版方法模式。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://czhzero.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="模版方法模式" scheme="http://czhzero.com/tags/%E6%A8%A1%E7%89%88%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式学习笔记-代理模式</title>
@@ -1004,71 +1047,6 @@
     
     
       <category term="设计模式" scheme="http://czhzero.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android性能优化(五)－ 安装包大小优化</title>
-    <link href="http://czhzero.com/2017/03/08/performance-optimization-5/"/>
-    <id>http://czhzero.com/2017/03/08/performance-optimization-5/</id>
-    <published>2017-03-08T14:44:07.000Z</published>
-    <updated>2017-03-08T15:30:54.000Z</updated>
-    
-    <content type="html">&lt;p&gt;应用安装包大小对应用的使用没有影响，但是如果安装包过大，用户每次更新下载的门槛就会越高，影响用户体验和使用意愿。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;性能优化系列:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.czhzero.com/2017/02/07/performance-optimization-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android性能优化(一)－UI优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.czhzero.com/2017/02/07/performance-optimization-2/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android性能优化(二)－数据库优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.czhzero.com/2017/02/07/performance-optimization-3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android性能优化(三)－ 移动网络优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.czhzero.com/2017/02/07/performance-optimization-4/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android性能优化(四)－ 代码优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;&quot;&gt;Android性能优化(五)－ 安装包大小优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;&quot;&gt;Android性能优化(六)－ 省电优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;&quot;&gt;Android性能优化(七)－ 内存优化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;&quot;&gt;Android性能优化(八)－ 稳定性优化&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;应用安装包构成&quot;&gt;&lt;a href=&quot;#应用安装包构成&quot; class=&quot;headerlink&quot; title=&quot;应用安装包构成&quot;&gt;&lt;/a&gt;应用安装包构成&lt;/h2&gt;&lt;h3 id=&quot;1-assets&quot;&gt;&lt;a href=&quot;#1-assets&quot; class=&quot;headerlink&quot; title=&quot;1.assets&quot;&gt;&lt;/a&gt;1.assets&lt;/h3&gt;&lt;p&gt;assets可以存放一些不需要编译的资源，如果配置文件，Webview本地资源，图片资源等等。代码中通过AssetManager进行资源的饮用。&lt;/p&gt;
-&lt;h3 id=&quot;2-lib&quot;&gt;&lt;a href=&quot;#2-lib&quot; class=&quot;headerlink&quot; title=&quot;2.lib&quot;&gt;&lt;/a&gt;2.lib&lt;/h3&gt;&lt;p&gt;存放native文件，该目录会根据Cpu类型不同而分为不同的目录，从而加载不同的so库。通常分为这四种目录,ARM,ARM-v7a,ARM64-v8a,MIPS,X86等等。&lt;/p&gt;
-&lt;h3 id=&quot;3-res&quot;&gt;&lt;a href=&quot;#3-res&quot; class=&quot;headerlink&quot; title=&quot;3.res&quot;&gt;&lt;/a&gt;3.res&lt;/h3&gt;&lt;p&gt;存放资源，这个目录的资源均会被映射到R.java中。&lt;/p&gt;
-&lt;h3 id=&quot;4-META-INF&quot;&gt;&lt;a href=&quot;#4-META-INF&quot; class=&quot;headerlink&quot; title=&quot;4.META-INF&quot;&gt;&lt;/a&gt;4.META-INF&lt;/h3&gt;&lt;p&gt;保存应用的签名信息&lt;/p&gt;
-&lt;h3 id=&quot;5-AndroidManifest-xml&quot;&gt;&lt;a href=&quot;#5-AndroidManifest-xml&quot; class=&quot;headerlink&quot; title=&quot;5.AndroidManifest.xml&quot;&gt;&lt;/a&gt;5.AndroidManifest.xml&lt;/h3&gt;&lt;p&gt;Android应用程序的配置文件。&lt;/p&gt;
-&lt;h3 id=&quot;6-classes-dex&quot;&gt;&lt;a href=&quot;#6-classes-dex&quot; class=&quot;headerlink&quot; title=&quot;6.classes.dex&quot;&gt;&lt;/a&gt;6.classes.dex&lt;/h3&gt;&lt;p&gt;Java字节码class文件合并组合的文件。&lt;/p&gt;
-&lt;h3 id=&quot;7-proguard-cfg&quot;&gt;&lt;a href=&quot;#7-proguard-cfg&quot; class=&quot;headerlink&quot; title=&quot;7.proguard.cfg&quot;&gt;&lt;/a&gt;7.proguard.cfg&lt;/h3&gt;&lt;p&gt;代码混淆配置文件&lt;/p&gt;
-&lt;h3 id=&quot;8-resources-arsc&quot;&gt;&lt;a href=&quot;#8-resources-arsc&quot; class=&quot;headerlink&quot; title=&quot;8.resources.arsc&quot;&gt;&lt;/a&gt;8.resources.arsc&lt;/h3&gt;&lt;p&gt;记录资源文件和资源ID的映射关系。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一般Apk大小中的大头是，classes.dex,lib和资源文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;常用方案&quot;&gt;&lt;a href=&quot;#常用方案&quot; class=&quot;headerlink&quot; title=&quot;常用方案&quot;&gt;&lt;/a&gt;常用方案&lt;/h2&gt;&lt;h3 id=&quot;1-代码混淆&quot;&gt;&lt;a href=&quot;#1-代码混淆&quot; class=&quot;headerlink&quot; title=&quot;1.代码混淆&quot;&gt;&lt;/a&gt;1.代码混淆&lt;/h3&gt;&lt;p&gt;按照代码混淆规则，对代码进行混淆，压缩和优化。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;proguard-rules.pro编辑&lt;/li&gt;
-&lt;li&gt;配置gradle文件，增加&lt;code&gt;minifyEnabled true&lt;/code&gt;属性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;2-资源优化&quot;&gt;&lt;a href=&quot;#2-资源优化&quot; class=&quot;headerlink&quot; title=&quot;2.资源优化&quot;&gt;&lt;/a&gt;2.资源优化&lt;/h3&gt;&lt;h4 id=&quot;Android-Lint去冗余&quot;&gt;&lt;a href=&quot;#Android-Lint去冗余&quot; class=&quot;headerlink&quot; title=&quot;Android Lint去冗余&quot;&gt;&lt;/a&gt;Android Lint去冗余&lt;/h4&gt;&lt;h4 id=&quot;资源文件最小化&quot;&gt;&lt;a href=&quot;#资源文件最小化&quot; class=&quot;headerlink&quot; title=&quot;资源文件最小化&quot;&gt;&lt;/a&gt;资源文件最小化&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;尽量使用一套图片&lt;/li&gt;
-&lt;li&gt;使用轻量级的第三方库&lt;/li&gt;
-&lt;li&gt;减少apk中预置图片，改为从服务端下载&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;图片优化&quot;&gt;&lt;a href=&quot;#图片优化&quot; class=&quot;headerlink&quot; title=&quot;图片优化&quot;&gt;&lt;/a&gt;图片优化&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;降低图片色彩位数&lt;/li&gt;
-&lt;li&gt;图片压缩&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;3-其他优化&quot;&gt;&lt;a href=&quot;#3-其他优化&quot; class=&quot;headerlink&quot; title=&quot;3.其他优化&quot;&gt;&lt;/a&gt;3.其他优化&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;避免使用重复的第三方库&lt;/li&gt;
-&lt;li&gt;插件化&lt;/li&gt;
-&lt;li&gt;使用WebP图片格式 &lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;应用安装包大小对应用的使用没有影响，但是如果安装包过大，用户每次更新下载的门槛就会越高，影响用户体验和使用意愿。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
-    
-    
-      <category term="性能优化" scheme="http://czhzero.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   

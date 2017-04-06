@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czhzero.com/2017/03/30/design-pattern-model/</loc>
+    
+    <lastmod>2017-04-06T13:57:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2017/03/29/design-pattern-proxy/</loc>
     
     <lastmod>2017-03-30T15:18:57.000Z</lastmod>
@@ -51,14 +58,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/scangon-get/</loc>
-    
-    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2017/03/10/how-to-resign-apk/</loc>
+    <loc>http://czhzero.com/2017/03/10/fragment-setuservisiblehit/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
@@ -72,28 +72,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/get-buildconfig-debug/</loc>
+    <loc>http://czhzero.com/2017/03/10/multi-ssh-key/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/dialog-matchparent-invalid/</loc>
-    
-    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2017/03/10/git-submodule-introduce/</loc>
-    
-    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2017/03/10/android-share-introduce/</loc>
+    <loc>http://czhzero.com/2017/03/10/how-to-resign-apk/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
@@ -107,7 +93,28 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/fragment-setuservisiblehit/</loc>
+    <loc>http://czhzero.com/2017/03/10/git-submodule-introduce/</loc>
+    
+    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/03/10/dialog-matchparent-invalid/</loc>
+    
+    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/03/10/scangon-get/</loc>
+    
+    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/03/10/get-buildconfig-debug/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
@@ -121,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/multi-ssh-key/</loc>
+    <loc>http://czhzero.com/2017/03/10/android-share-introduce/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
@@ -156,14 +163,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/07/activity-exit-animation-invalid/</loc>
+    <loc>http://czhzero.com/2017/03/02/four-map-diff/</loc>
     
     <lastmod>2017-03-07T14:05:15.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/02/four-map-diff/</loc>
+    <loc>http://czhzero.com/2017/03/07/activity-exit-animation-invalid/</loc>
     
     <lastmod>2017-03-07T14:05:15.000Z</lastmod>
     
@@ -331,7 +338,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
+    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -345,7 +352,28 @@
   </url>
   
   <url>
+    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -360,20 +388,6 @@
   
   <url>
     <loc>http://czhzero.com/2016/07/21/android-version-configure/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/07/treeview/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/07/21/android-studio-compile-speed-up/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -401,14 +415,7 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
+    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -422,14 +429,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
+    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
+    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
