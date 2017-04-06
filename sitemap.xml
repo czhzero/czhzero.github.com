@@ -4,7 +4,14 @@
   <url>
     <loc>http://czhzero.com/2017/04/06/design-pattern-stragety/</loc>
     
-    <lastmod>2017-04-06T15:16:00.000Z</lastmod>
+    <lastmod>2017-04-06T15:42:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/04/06/design-pattern-observer/</loc>
+    
+    <lastmod>2017-04-06T15:36:25.000Z</lastmod>
     
   </url>
   
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/scangon-get/</loc>
-    
-    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2017/03/10/multi-ssh-key/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/fragment-setuservisiblehit/</loc>
+    <loc>http://czhzero.com/2017/03/10/scangon-get/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2017/03/10/dialog-matchparent-invalid/</loc>
+    <loc>http://czhzero.com/2017/03/10/fragment-setuservisiblehit/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
@@ -136,6 +136,13 @@
   
   <url>
     <loc>http://czhzero.com/2017/03/10/android-share-introduce/</loc>
+    
+    <lastmod>2017-03-10T13:27:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2017/03/10/dialog-matchparent-invalid/</loc>
     
     <lastmod>2017-03-10T13:27:29.000Z</lastmod>
     
@@ -331,13 +338,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/12/07/treeview/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -345,7 +345,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
+    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -359,21 +366,21 @@
   </url>
   
   <url>
+    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/07/31/android-6-0-changes/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czhzero.com/2016/12/02/android-deletefile/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czhzero.com/2016/12/21/how-to-install-apk-on-Android7-0/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -408,13 +415,6 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/10/24/how-to-upload-library-to-jcenter/</loc>
-    
-    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://czhzero.com/2016/06/25/hexoblog/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
@@ -422,7 +422,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/08/24/gradle-study-2/</loc>
+    <loc>http://czhzero.com/2016/12/23/java-value-format-and-converter/</loc>
+    
+    <lastmod>2017-01-15T05:03:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czhzero.com/2016/08/26/windowmanager-keyevent/</loc>
     
     <lastmod>2017-01-15T05:03:28.000Z</lastmod>
     
@@ -436,14 +443,14 @@
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
+    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://czhzero.com/2016/06/28/android-studio-tips/</loc>
+    <loc>http://czhzero.com/2016/06/29/java-rules/</loc>
     
     <lastmod>2016-06-29T14:04:18.000Z</lastmod>
     

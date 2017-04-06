@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://czhzero.com/2017/04/06/design-pattern-stragety/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
 <meta property="og:description" content="在软件开发过程中，常常遇到这样的情况，实现某一个功能可以有多种算法，我们根据实际情况，选择不同的算法来完成这个功能。常规方法是通过if/else条件判断而选择算法。也可以通过策略模式来实现。">
-<meta property="og:updated_time" content="2017-04-06T15:16:00.000Z">
+<meta property="og:updated_time" content="2017-04-06T15:42:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式学习笔记-策略模式">
 <meta name="twitter:description" content="在软件开发过程中，常常遇到这样的情况，实现某一个功能可以有多种算法，我们根据实际情况，选择不同的算法来完成这个功能。常规方法是通过if/else条件判断而选择算法。也可以通过策略模式来实现。">
@@ -406,7 +406,15 @@
         <p>在软件开发过程中，常常遇到这样的情况，实现某一个功能可以有多种算法，我们根据实际情况，选择不同的算法来完成这个功能。常规方法是通过if/else条件判断而选择算法。也可以通过策略模式来实现。</p>
 <a id="more"></a>
 <h2 id="定义"><a href="#定义" class="headerlink" title="定义:"></a>定义:</h2><p>策略模式定义了一系列的算法，并每个算法封装起来，而且使他们还可以互相替换。策略模式让算法独立于使用它的客户而独立变化。</p>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h2><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h2><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景:"></a>使用场景:</h2><ul>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点:"></a>优点:</h2><p>－ 结构清晰明了、使用简单直观</p>
+<ul>
+<li>耦合度相对而言较低，扩展方便</li>
+<li>操作封装也更为彻底，数据更为安全</li>
+</ul>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h2><ul>
+<li>策略增加后，子类也会增加</li>
+</ul>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景:"></a>使用场景:</h2><ul>
 <li>针对同一类型问题的多种处理方式，仅仅是具体行为有差别时</li>
 <li>需要安全地封装多种同一类型的操作时</li>
 <li>出现同一抽象类有多个子类，而又需要使用条件判断语句来选择具体子类时。</li>
@@ -472,6 +480,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/06/design-pattern-observer/" rel="prev" title="设计模式学习笔记-观察者模式">
+                设计模式学习笔记-观察者模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -567,7 +579,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">67</span>
+                <span class="site-state-item-count">68</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -585,7 +597,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
