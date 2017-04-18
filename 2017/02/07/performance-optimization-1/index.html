@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="本文为Android性能优化的第一篇——UI优化，主要介绍使用抽象布局标签(include, viewstub, merge)、去除不必要的嵌套和View节点、减少不必要的infalte及其他Layout方面可调优点，顺带提及布局调优相关工具。">
+<meta name="description" content="本章为Android性能优化的第一篇——绘制优化，主要包括，性能问题指标，界面卡顿场景和原因，Android系统显示原理，性能分析工具介绍，以及各种优化方式。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android性能优化(一)－UI优化">
+<meta property="og:title" content="Android性能优化(一)－绘制优化">
 <meta property="og:url" content="http://czhzero.com/2017/02/07/performance-optimization-1/index.html">
 <meta property="og:site_name" content="Alvin-一座小楼">
-<meta property="og:description" content="本文为Android性能优化的第一篇——UI优化，主要介绍使用抽象布局标签(include, viewstub, merge)、去除不必要的嵌套和View节点、减少不必要的infalte及其他Layout方面可调优点，顺带提及布局调优相关工具。">
-<meta property="og:updated_time" content="2017-02-07T15:17:14.000Z">
+<meta property="og:description" content="本章为Android性能优化的第一篇——绘制优化，主要包括，性能问题指标，界面卡顿场景和原因，Android系统显示原理，性能分析工具介绍，以及各种优化方式。">
+<meta property="og:updated_time" content="2017-04-16T07:10:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android性能优化(一)－UI优化">
-<meta name="twitter:description" content="本文为Android性能优化的第一篇——UI优化，主要介绍使用抽象布局标签(include, viewstub, merge)、去除不必要的嵌套和View节点、减少不必要的infalte及其他Layout方面可调优点，顺带提及布局调优相关工具。">
+<meta name="twitter:title" content="Android性能优化(一)－绘制优化">
+<meta name="twitter:description" content="本章为Android性能优化的第一篇——绘制优化，主要包括，性能问题指标，界面卡顿场景和原因，Android系统显示原理，性能分析工具介绍，以及各种优化方式。">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title> Android性能优化(一)－UI优化 | Alvin-一座小楼 </title>
+  <title> Android性能优化(一)－绘制优化 | Alvin-一座小楼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -309,7 +309,7 @@
             
             
               
-                Android性能优化(一)－UI优化
+                Android性能优化(一)－绘制优化
               
             
           </h1>
@@ -376,7 +376,7 @@
 
           
           
-             <span id="/2017/02/07/performance-optimization-1/" class="leancloud_visitors" data-flag-title="Android性能优化(一)－UI优化">
+             <span id="/2017/02/07/performance-optimization-1/" class="leancloud_visitors" data-flag-title="Android性能优化(一)－绘制优化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -403,14 +403,18 @@
       
 
       
-        <p>本文为Android性能优化的第一篇——UI优化，主要介绍使用抽象布局标签(include, viewstub, merge)、去除不必要的嵌套和View节点、减少不必要的infalte及其他Layout方面可调优点，顺带提及布局调优相关工具。</p>
+        <p>本章为Android性能优化的第一篇——绘制优化，主要包括，性能问题指标，界面卡顿场景和原因，Android系统显示原理，性能分析工具介绍，以及各种优化方式。</p>
 <a id="more"></a>
 <p>性能优化系列:</p>
 <ul>
-<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-1/" target="_blank" rel="external">Android性能优化(一)－UI优化</a></li>
-<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-2/" target="_blank" rel="external">Android性能优化(一)－数据库优化</a></li>
-<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-3/" target="_blank" rel="external">Android性能优化(三)－ 移动网络优化</a></li>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-1/" target="_blank" rel="external">Android性能优化(一)－绘制优化</a></li>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-2/" target="_blank" rel="external">Android性能优化(一)－存储优化</a></li>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-3/" target="_blank" rel="external">Android性能优化(三)－ 网络优化</a></li>
 <li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-4/" target="_blank" rel="external">Android性能优化(四)－ 代码优化</a></li>
+<li><a href="http://www.czhzero.com/2017/02/07/performance-optimization-5/" target="_blank" rel="external">Android性能优化(五)－ 安装包大小优化</a></li>
+<li><a href="">Android性能优化(六)－ 省电优化</a></li>
+<li><a href="">Android性能优化(七)－ 内存优化</a></li>
+<li><a href="">Android性能优化(八)－ 稳定优化</a></li>
 </ul>
 <h2 id="性能问题指标"><a href="#性能问题指标" class="headerlink" title="性能问题指标"></a>性能问题指标</h2><ul>
 <li>响应时间</li>
@@ -429,44 +433,184 @@
 <li>耗电量</li>
 </ul>
 <p>在移动设备开发中耗电量是一个非常重要的指标，如果用户一旦发现我们的应用非常耗电，不好意思，他们大多会选择卸载来解决此类问题，所以耗电量是一个十分重要的问题。其实我们一款应用耗电量最大的部分不是UI绘制显示等，常见耗电量最大原因基本都是因为网络数据交互、GPS定位、大量内存性能问题、冗余的后台线程和Service等造成。</p>
-<h2 id="UI优化"><a href="#UI优化" class="headerlink" title="UI优化"></a>UI优化</h2><h3 id="1-抽象布局标签"><a href="#1-抽象布局标签" class="headerlink" title="1.抽象布局标签"></a>1.抽象布局标签</h3><ul>
-<li><code>&lt;include&gt;</code>标签</li>
-</ul>
-<p>include标签常用于将布局中的公共部分提取出来供其他layout共用，以实现布局模块化，这在布局编写方便提供了大大的便利。<br>下面以在一个布局main.xml中用include引入另一个布局foot.xml为例。main.mxl代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot; &gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id=&quot;@+id/tv_text&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;match_parent&quot;</span><br><span class="line">        android:layout_marginBottom=&quot;@dimen/dp_80&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;include layout=&quot;@layout/foot.xml&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
-<p>其中include引入的foot.xml为公用的页面底部，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot; &gt;</span><br><span class="line"> </span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=&quot;@+id/button&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;@dimen/dp_40&quot;</span><br><span class="line">        android:layout_above=&quot;@+id/text&quot;/&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:id=&quot;@+id/text&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;@dimen/dp_40&quot;</span><br><span class="line">        android:layout_alignParentBottom=&quot;true&quot;</span><br><span class="line">        android:text=&quot;@string/app_name&quot; /&gt;</span><br><span class="line"> </span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
-<p><include>标签唯一需要的属性是layout属性，指定需要包含的布局文件。可以定义android:id和android:layout_*属性来覆盖被引入布局根节点的对应属性值。注意重新定义android:id后，子布局的顶结点i就变化了。</include></p>
+<h2 id="界面卡顿场景和原因"><a href="#界面卡顿场景和原因" class="headerlink" title="界面卡顿场景和原因"></a>界面卡顿场景和原因</h2><p>Android应用卡顿的场景很多，一般有以下几类, UI绘制，应用启动，页面跳转，事件响应。在几个场景下又可以分为几个小类。</p>
 <ul>
-<li><code>&lt;viewstub&gt;</code>标签 </li>
+<li>UI<ul>
+<li>绘制</li>
+<li>刷新</li>
 </ul>
-<p>viewstub标签同include标签一样可以用来引入一个外部布局，不同的是，viewstub引入的布局默认不会扩张，即既不会占用显示也不会占用位置，从而在解析layout时节省cpu和内存。<br>viewstub常用来引入那些默认不会显示，只在特殊情况下显示的布局，如进度布局、网络失败显示的刷新布局、信息出错出现的提示布局等。<br>下面以在一个布局main.xml中加入网络错误时的提示页面network_error.xml为例。main.mxl代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot; &gt;</span><br><span class="line"> </span><br><span class="line">	……</span><br><span class="line">    &lt;ViewStub</span><br><span class="line">        android:id=&quot;@+id/network_error_layout&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;match_parent&quot;</span><br><span class="line">        android:layout=&quot;@layout/network_error&quot; /&gt;</span><br><span class="line"> </span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
-<p>其中network_error.xml为只有在网络错误时才需要显示的布局，默认不会被解析，示例代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot; &gt;</span><br><span class="line"> </span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=&quot;@+id/network_setting&quot;</span><br><span class="line">        android:layout_width=&quot;@dimen/dp_160&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_centerHorizontal=&quot;true&quot;</span><br><span class="line">        android:text=&quot;@string/network_setting&quot; /&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=&quot;@+id/network_refresh&quot;</span><br><span class="line">        android:layout_width=&quot;@dimen/dp_160&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_below=&quot;@+id/network_setting&quot;</span><br><span class="line">        android:layout_centerHorizontal=&quot;true&quot;</span><br><span class="line">        android:layout_marginTop=&quot;@dimen/dp_10&quot;</span><br><span class="line">        android:text=&quot;@string/network_refresh&quot; /&gt;</span><br><span class="line"> </span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
-<p>在java中通过(ViewStub)findViewById(id)找到ViewStub，通过stub.inflate()展开ViewStub，然后得到子View，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">private View networkErrorView;</span><br><span class="line"> </span><br><span class="line">private void showNetError() &#123;</span><br><span class="line">	// not repeated infalte</span><br><span class="line">	if (networkErrorView != null) &#123;</span><br><span class="line">		networkErrorView.setVisibility(View.VISIBLE);</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	ViewStub stub = (ViewStub)findViewById(R.id.network_error_layout);</span><br><span class="line">	networkErrorView = stub.inflate();</span><br><span class="line">	Button networkSetting = (Button)networkErrorView.findViewById(R.id.network_setting);</span><br><span class="line">	Button refresh = (Button)findViewById(R.id.network_refresh);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">private void showNormal() &#123;</span><br><span class="line">	if (networkErrorView != null) &#123;</span><br><span class="line">		networkErrorView.setVisibility(View.GONE);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在上面showNetError()中展开了ViewStub，同时我们对networkErrorView进行了保存，这样下次不用继续inflate。这就是后面第三部分提到的减少不必要的infalte。<br>viewstub标签大部分属性同include标签类似。</p>
-<p>viewstub标签大部分属性同include标签类似。</p>
-<p>上面展开ViewStub部分代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ViewStub stub = (ViewStub)findViewById(R.id.network_error_layout);</span><br><span class="line">networkErrorView = stub.inflate();</span><br></pre></td></tr></table></figure>
-<p>也可以写成下面的形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">View viewStub = findViewById(R.id.network_error_layout);</span><br><span class="line">viewStub.setVisibility(View.VISIBLE);   // ViewStub被展开后的布局所替换</span><br><span class="line">networkErrorView =  findViewById(R.id.network_error_layout); // 获取展开后的布局</span><br></pre></td></tr></table></figure>
-<p>效果一致，只是不用显示的转换为ViewStub。通过viewstub的原理我们可以知道将一个view设置为GONE不会被解析，从而提高layout解析速度，而VISIBLE和INVISIBLE这两个可见性属性会被正常解析。</p>
+</li>
+<li>启动<ul>
+<li>安装启动</li>
+<li>冷启动</li>
+<li>热启动</li>
+</ul>
+</li>
+<li>跳转<ul>
+<li>页面间切换</li>
+<li>前后台切换</li>
+</ul>
+</li>
+<li>响应<ul>
+<li>按键</li>
+<li>系统事件</li>
+<li>滑动触摸事件</li>
+</ul>
+</li>
+</ul>
+<p>这四种场景的卡顿原因又可以分为两类。</p>
 <ul>
-<li><code>&lt;merge&gt;</code>标签</li>
+<li><p>界面绘制</p>
+<ul>
+<li>绘制层级深</li>
+<li>页面复杂</li>
+<li>刷新不合理</li>
 </ul>
-<p>在使用了include后可能导致布局嵌套过多，多余不必要的layout节点，从而导致解析变慢，不必要的节点和嵌套可通过hierarchy viewer(下面布局调优工具中有具体介绍)或设置-&gt;开发者选项-&gt;显示布局边界查看。</p>
+</li>
+<li><p>数据处理</p>
+<ul>
+<li>数据处理在UI线程</li>
+<li>数据处理占用CPU高，导致主线程拿不到时间片</li>
+<li>内存增加导致GC频繁，从而引起卡顿</li>
+</ul>
+</li>
+</ul>
+<h2 id="Android系统显示原理"><a href="#Android系统显示原理" class="headerlink" title="Android系统显示原理"></a>Android系统显示原理</h2><p>Android的显示过程可以简单的概括为：Android应用程序把经过测量、布局、绘制后的surface缓存数据，通过SurfaceFlinger把数据渲染到显示屏幕上，通过Android系统的刷新机制来刷新数据。</p>
+<h3 id="绘制原理"><a href="#绘制原理" class="headerlink" title="绘制原理"></a>绘制原理</h3><p>每个View绘制有三个核心步骤，通过Measure和Layout确定当前需要绘制的View所在的大小和位置，通过Draw方法到surface,在Android系统中整体的绘制源码说在ViewRootImp类的performTraversals()方法。通过这个方法可以看出Measure和Layout都是递归获取View的大小和位置，并且以深度作为优先级。层级越深，元素越多，绘制时间越长。</p>
+<h3 id="刷新机制"><a href="#刷新机制" class="headerlink" title="刷新机制"></a>刷新机制</h3><p>显示数据通过跨进程通信机制将显示数据交给SurfaceFlinger。在Android的显示系统，使用了Android的匿名共享内存：<code>SharedClient</code>,每一个应用和SurfaceFlinger之间都会创建一个SharedClient。在每个SharedClient中，最多可以创建31个SharedBufferStack,每个Surface都对应一个SharedBufferStack，也就是一个window。</p>
+<p>一个SharedClient对应一个Android应用程序，而一个Android应用程序可能保护多个窗口，即Surface。一个Android应用最多可以包含31个窗口，同时每个SharedBufferStack中又包含了两个(低于4.1版本)或者三个(4.1和以上版本)缓冲区。</p>
+<p>总结起来，显示的整个流程为三个模块，应用层绘制到缓存区，SurfaceFlinger把缓存区数据渲染到屏幕，由于是两个不同的进程，所以使用Android的匿名共享内存SharedClient缓存需要显示的数据来达到目的。</p>
+<p>如果绘制时间超过16ms(FPS&gt;60)，则用户感觉到卡顿，从4.1开始Android引入了VSYNC、TripleBuffer、Choreographer。</p>
+<ul>
+<li>VSYNC 定时中断，一旦受到中断信号，CPU则开始处理各帧数据</li>
+<li>TripleBuffer， 三缓冲数据，交替切换显示，避免闪烁感</li>
+<li>Choreographer， 收到VSYNC信号，调用用户设置的回调函数</li>
+</ul>
+<h2 id="性能分析工具"><a href="#性能分析工具" class="headerlink" title="性能分析工具"></a>性能分析工具</h2><ul>
+<li>Android系统的GPU Profile工具, 使用GPU过度绘制分析UI性能, 使用GPU呈现模式图及FPS</li>
+<li>Hierarchy View,查看layout层级</li>
+<li>使用Memory监测及GC打印与Allocation Tracker进行UI卡顿分析</li>
+<li>使用Traceview和dmtracedump进行分析优化</li>
+<li>使用Systrace进行分析优化</li>
+<li>通过Android SDK中tools目录下的layoutopt命令</li>
+</ul>
+<p>更多这些工具的使用，请看这篇文章，<a href="http://blog.csdn.net/yanbober/article/details/48394201" target="_blank" rel="external">Android应用开发性能优化完全分析</a></p>
+<h2 id="布局优化"><a href="#布局优化" class="headerlink" title="布局优化"></a>布局优化</h2><h3 id="1-减少层级"><a href="#1-减少层级" class="headerlink" title="1. 减少层级"></a>1. 减少层级</h3><h4 id="1-1-合理使用RelativeLayout和LinearLayout"><a href="#1-1-合理使用RelativeLayout和LinearLayout" class="headerlink" title="1.1 合理使用RelativeLayout和LinearLayout"></a>1.1 合理使用RelativeLayout和LinearLayout</h4><p>RelativeLayout可以减少层级，但是RelativeLayout也存在性能低的问题，原因是其会对子View做两次测量。但是LinearLayout如果使用了weight属性，也会测量两次。</p>
+<p>如果布局本事层次太深，还是推荐使用RelativeLayout减少层次，布局层次深会增加内存消耗，甚至引起栈溢出等问题。</p>
+<p>因此，</p>
+<ul>
+<li>尽量使用RelativeLayout和LinearLayout</li>
+<li>布局层级相同的情况下，使用LinearLayout</li>
+<li>用LinearLayout使得层数明显变多时，使用RelativeLayout</li>
+</ul>
+<h4 id="1-2-合理使用merge"><a href="#1-2-合理使用merge" class="headerlink" title="1.2 合理使用merge"></a>1.2 合理使用merge</h4><p>在使用了include后可能导致布局嵌套过多，多余不必要的layout节点，从而导致解析变慢，不必要的节点和嵌套可通过hierarchy viewer(下面布局调优工具中有具体介绍)或设置-&gt;开发者选项-&gt;显示布局边界查看。</p>
 <p>merge标签可用于两种典型情况：</p>
 <p>a.布局顶结点是FrameLayout且不需要设置background或padding等属性，可以用merge代替，因为Activity内容试图的parent view就是个FrameLayout，所以可以用merge消除只剩一个。</p>
 <p>b.某布局作为子布局被其他布局include时，使用merge当作该布局的顶节点，这样在被引入时顶结点会自动被忽略，而将其子节点全部合并到主布局中。</p>
-<h3 id="2-去除不必要的嵌套和View节点"><a href="#2-去除不必要的嵌套和View节点" class="headerlink" title="2.去除不必要的嵌套和View节点"></a>2.去除不必要的嵌套和View节点</h3><p>(1) 首次不需要使用的节点设置为GONE或使用viewstub</p>
-<p>(2) 使用RelativeLayout代替LinearLayout大约在Android4.0之前，新建工程的默认main.xml中顶节点是LinearLayout，而在之后已经改为RelativeLayout，因为RelativeLayout性能更优，且可以简单实现LinearLayout嵌套才能实现的布局。</p>
-<h3 id="3-减少不必要的infalte"><a href="#3-减少不必要的infalte" class="headerlink" title="3.减少不必要的infalte"></a>3.减少不必要的infalte</h3><p>(1) 对于inflate的布局可以直接缓存，用全部变量代替局部变量，避免下次需再次inflate<br>如上面ViewStub示例中的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (networkErrorView != null) &#123;</span><br><span class="line">	networkErrorView.setVisibility(View.VISIBLE);</span><br><span class="line">	return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>(2) ListView提供了item缓存，adapter getView的标准写法，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public View getView(int position, View convertView, ViewGroup parent) &#123;</span><br><span class="line">	ViewHolder holder;</span><br><span class="line">	if (convertView == null) &#123;</span><br><span class="line">		convertView = inflater.inflate(R.layout.list_item, null);</span><br><span class="line">		holder = new ViewHolder();</span><br><span class="line">		……</span><br><span class="line">		convertView.setTag(holder);</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		holder = (ViewHolder)convertView.getTag();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">/**</span><br><span class="line"> * ViewHolder</span><br><span class="line"> * </span><br><span class="line"> * @author trinea@trinea.cn 2013-08-01</span><br><span class="line"> */</span><br><span class="line">private static class ViewHolder &#123;</span><br><span class="line"> </span><br><span class="line">	ImageView appIcon;</span><br><span class="line">	TextView  appName;</span><br><span class="line">	TextView  appInfo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-其他建议"><a href="#4-其他建议" class="headerlink" title="4.其他建议"></a>4.其他建议</h3><p>(1) 用SurfaceView或TextureView代替普通View<br>SurfaceView或TextureView可以通过将绘图操作移动到另一个单独线程上提高性能。<br>普通View的绘制过程都是在主线程(UI线程)中完成，如果某些绘图操作影响性能就不好优化了，这时我们可以考虑使用SurfaceView和TextureView，他们的绘图操作发生在UI线程之外的另一个线程上。<br>因为SurfaceView在常规视图系统之外，所以无法像常规试图一样移动、缩放或旋转一个SurfaceView。TextureView是Android4.0引入的，除了与SurfaceView一样在单独线程绘制外，还可以像常规视图一样被改变。</p>
+<h3 id="2-提高显示速度"><a href="#2-提高显示速度" class="headerlink" title="2. 提高显示速度"></a>2. 提高显示速度</h3><h4 id="2-1-ViewStub"><a href="#2-1-ViewStub" class="headerlink" title="2.1 ViewStub"></a>2.1 ViewStub</h4><p>ViewStub是一个轻量级的View, 当ViewStub被设置为Visible或者被inflate后，才会被加载和实例化。使用ViewStub需要注意以下几点。</p>
+<ul>
+<li>ViewStub加载一次，之后就不能够通过ViewStub来控制隐藏或者显示。</li>
+<li>ViewStub只能用来加载一个布局文件，而不是某个具体的View。</li>
+<li>ViewStub不能够嵌套merge标签</li>
+</ul>
+<p>ViewStub主要应用场景， </p>
+<ul>
+<li>在程序运行期间，某个布局加载后，就不会有变化，除非销毁。</li>
+<li>想要控制显示与隐藏的是一个布局文件，而不是一个View。</li>
+</ul>
+<h4 id="2-2-使用include复用布局"><a href="#2-2-使用include复用布局" class="headerlink" title="2.2 使用include复用布局"></a>2.2 使用include复用布局</h4><p>include标签常用于将布局中的公共部分提取出来供其他layout共用，以实现布局模块化，这在布局编写方便提供了大大的便利。</p>
+<h2 id="避免过度绘制"><a href="#避免过度绘制" class="headerlink" title="避免过度绘制"></a>避免过度绘制</h2><p>导致过度绘制的原因是，</p>
+<ul>
+<li>XML布局控件有重叠，且都有设置背景</li>
+<li>View的onDraw方法被多次重复执行</li>
+</ul>
+<h3 id="XML避免重叠"><a href="#XML避免重叠" class="headerlink" title="XML避免重叠"></a>XML避免重叠</h3><ul>
+<li>移除xml中非必要的背景，根据条件设置</li>
+<li>移除window默认的背景</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.getWindow().setBackgroudDrawable(null);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>按需显示占位背景图片</li>
+</ul>
+<h3 id="View的onDraw优化"><a href="#View的onDraw优化" class="headerlink" title="View的onDraw优化"></a>View的onDraw优化</h3><p>自定义View中，可以通过<code>canvas.clipRect()</code>来帮助系统识别那些可见区域，只有在这个区域内才会被绘制。</p>
+<blockquote>
+<p>在listview中，如果itemview比较复杂，建议实现一个自绘View</p>
+</blockquote>
+<h2 id="启动优化"><a href="#启动优化" class="headerlink" title="启动优化"></a>启动优化</h2><h3 id="增加闪屏启动页"><a href="#增加闪屏启动页" class="headerlink" title="增加闪屏启动页"></a>增加闪屏启动页</h3><p>闪屏页可以作为品牌宣传展示，同时在闪屏展示的同时，可以进行底层模块的初始化和数据预拉取</p>
+<h3 id="启动逻辑优化"><a href="#启动逻辑优化" class="headerlink" title="启动逻辑优化"></a>启动逻辑优化</h3><p>可以用以下四个维度整理各个启动点。</p>
+<ul>
+<li>必要且耗时: 启动初始化，考虑用线程来初始化。</li>
+<li>必要不耗时: 首页绘制</li>
+<li>非必要要耗时: 数据上报、插件初始化</li>
+<li>非必要不耗时： 需要时再加载。</li>
+</ul>
+<p>把数据整理完成后，按需实现加载逻辑，采取分步加载、异步加载、延期加载等策略。</p>
+<h2 id="合理的刷新机制"><a href="#合理的刷新机制" class="headerlink" title="合理的刷新机制"></a>合理的刷新机制</h2><h3 id="减少刷新次数"><a href="#减少刷新次数" class="headerlink" title="减少刷新次数"></a>减少刷新次数</h3><ul>
+<li>控制刷新频率</li>
+</ul>
+<p>没有必要在每次数据变化时都更新对应的控件。</p>
+<ul>
+<li>避免没有必要的刷新</li>
+</ul>
+<p>数据没有变化，就不需要刷新</p>
+<h3 id="避免后台线程影响"><a href="#避免后台线程影响" class="headerlink" title="避免后台线程影响"></a>避免后台线程影响</h3><p>需要刷新时，避免后台开销后台的线程。比如ListView滚动时，暂停其他线程的工作。</p>
+<h3 id="缩小刷新区域"><a href="#缩小刷新区域" class="headerlink" title="缩小刷新区域"></a>缩小刷新区域</h3><ul>
+<li><p>只invalidate需要的区域 - invalidate(0,0,100,100) </p>
+</li>
+<li><p>只更新需要更新的item - notifyDataSetChanged()</p>
+</li>
+</ul>
+<h2 id="提升动画性能"><a href="#提升动画性能" class="headerlink" title="提升动画性能"></a>提升动画性能</h2><p>Android平台提供了三种动画框架</p>
+<ul>
+<li>帧动画</li>
+<li>补间动画</li>
+<li>属性动画</li>
+</ul>
+<h3 id="帧动画"><a href="#帧动画" class="headerlink" title="帧动画"></a>帧动画</h3><p>帧动画，就是将一组图片按顺序显示出来，耗费内存资源相当大，能不用就不用。</p>
+<h3 id="补间动画"><a href="#补间动画" class="headerlink" title="补间动画"></a>补间动画</h3><p>补间动画共四种，</p>
+<ul>
+<li>淡入淡出</li>
+<li>缩放</li>
+<li>平移</li>
+<li>旋转</li>
+</ul>
+<p>补间动画使得view重绘非常频繁，补间动画也有其局限性。</p>
+<ul>
+<li>只能作用于View对象</li>
+<li>只改变显示效果，不会改变view的属性</li>
+</ul>
+<h3 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h3><p>属性动画通过修改实际属性来实现动画效果，相比于补间动画，重绘次数要少得多。</p>
+<h3 id="硬件加速"><a href="#硬件加速" class="headerlink" title="硬件加速"></a>硬件加速</h3><p>Android3.0引入了硬件加速的概念，用来提高渲染速度。硬件加速渲染时，若只有一个view发生变化，只会刷新这个view。通过OpenGLRender负责将RootView中的DisplayList渲染到屏幕上。</p>
+<p>如果应用程序中只使用了标准的View或者Drawable,就可以为整个系统打开硬件加速器，但是并不是所有的2D绘制和操作都支持硬件加速。为避免这个问题，Android提供了一个级别控制。</p>
+<ul>
+<li>Application级别</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;application android:hardwareAccelerated=&quot;true&quot; ...&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Activity级别</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;activity android:hardwareAccelerated=&quot;true&quot; ...&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Window级别</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getWindow().setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>View级别</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">view.setLayerType(View.LAYER_TYPE_HARDWARE,null);</span><br></pre></td></tr></table></figure>
+<p>一个View可以使用如下三种Layer类型之一：</p>
+<ul>
+<li>LAYER_TYPE_NONE : 默认普通渲染方式，不会返回一个离屏缓冲。</li>
+<li>LAYER_TYPE_SOFTWARE : 通过软件渲染为一个Bitmap</li>
+<li>LAYER_TYPE_HARDWARE : 如被设置为使用硬件加速，则通过硬件渲染，否则等同于第二种类型。</li>
+</ul>
+<p>根据前面的描述，总结出设计一个动画的流程如下，</p>
+<ul>
+<li>将要执行动画的View的LayerType设置为LAYER_TYPE_HARDWARE</li>
+<li>计算动画View的属性等信息，更新View属性</li>
+<li>若动画结束，将LayerType设置为NONE</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>(1) 用SurfaceView或TextureView代替普通View<br>SurfaceView或TextureView可以通过将绘图操作移动到另一个单独线程上提高性能。<br>普通View的绘制过程都是在主线程(UI线程)中完成，如果某些绘图操作影响性能就不好优化了，这时我们可以考虑使用SurfaceView和TextureView，他们的绘图操作发生在UI线程之外的另一个线程上。<br>因为SurfaceView在常规视图系统之外，所以无法像常规试图一样移动、缩放或旋转一个SurfaceView。TextureView是Android4.0引入的，除了与SurfaceView一样在单独线程绘制外，还可以像常规视图一样被改变。</p>
 <p>(2) 使用RenderJavascript<br>RenderScript是Adnroid3.0引进的用来在Android上写高性能代码的一种语言，语法给予C语言的C99标准，他的结构是独立的，所以不需要为不同的CPU或者GPU定制代码代码。</p>
 <p>(3) 使用OpenGL绘图<br>Android支持使用OpenGL API的高性能绘图，这是Android可用的最高级的绘图机制，在游戏类对性能要求较高的应用中得到广泛使用。<br>Android 4.3最大的改变，就是支持OpenGL ES 3.0。相比2.0，3.0有更多的缓冲区对象、增加了新的着色语言、增加多纹理支持等等，将为Android游戏带来更出色的视觉体验。</p>
 <p>(4)尽量为所有分辨率创建资源<br>减少不必要的硬件缩放，这会降低UI的绘制速度。</p>
@@ -474,20 +618,11 @@
 <p>(6)尽量避免在draw、measure、layout中做过于耗时及耗内存操作，尤其是draw方法中，尽量减少draw、measure、layout等执行次数。</p>
 <p>(7)将Activity中的window的背景图设置为空，默认的背景不为空getWindow().setBackgroundDrawable(null)。</p>
 <p>(8)View中设置缓存属性.setDrawingCache为true。</p>
-<h3 id="5-布局调优工具"><a href="#5-布局调优工具" class="headerlink" title="5.布局调优工具"></a>5.布局调优工具</h3><ul>
-<li>Hierarchy viewer</li>
-<li>Android Lint</li>
-<li>使用GPU过度绘制分析UI性能</li>
-<li>使用GPU呈现模式图及FPS</li>
-<li>使用Memory监测及GC打印与Allocation Tracker进行UI卡顿分析</li>
-<li>使用Traceview和dmtracedump进行分析优化</li>
-<li>使用Systrace进行分析优化</li>
-<li>通过Android SDK中tools目录下的layoutopt命令</li>
-</ul>
 <p>详细内容具体参考<a href="http://blog.csdn.net/christopher_411524/article/details/50582740" target="_blank" rel="external">Android性能优化总结</a></p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
 <li><a href="http://blog.csdn.net/christopher_411524/article/details/50582740" target="_blank" rel="external">Android性能优化总结</a></li>
 <li><a href="http://www.trinea.cn/android/layout-performance/" target="_blank" rel="external">性能优化之布局优化</a></li>
+<li><a href="http://blog.csdn.net/yanbober/article/details/48394201" target="_blank" rel="external">Android应用开发性能优化完全分析</a></li>
 </ul>
 
       
@@ -549,7 +684,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/02/07/performance-optimization-1/"
-     data-title="Android性能优化(一)－UI优化"
+     data-title="Android性能优化(一)－绘制优化"
      data-content=""
      data-url="http://czhzero.com/2017/02/07/performance-optimization-1/">
   <div class="ds-share-inline">
@@ -582,7 +717,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/07/performance-optimization-1/"
-           data-title="Android性能优化(一)－UI优化" data-url="http://czhzero.com/2017/02/07/performance-optimization-1/">
+           data-title="Android性能优化(一)－绘制优化" data-url="http://czhzero.com/2017/02/07/performance-optimization-1/">
       </div>
     
   </div>
@@ -709,7 +844,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#性能问题指标"><span class="nav-number">1.</span> <span class="nav-text">性能问题指标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UI优化"><span class="nav-number">2.</span> <span class="nav-text">UI优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-抽象布局标签"><span class="nav-number">2.1.</span> <span class="nav-text">1.抽象布局标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-去除不必要的嵌套和View节点"><span class="nav-number">2.2.</span> <span class="nav-text">2.去除不必要的嵌套和View节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-减少不必要的infalte"><span class="nav-number">2.3.</span> <span class="nav-text">3.减少不必要的infalte</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-其他建议"><span class="nav-number">2.4.</span> <span class="nav-text">4.其他建议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-布局调优工具"><span class="nav-number">2.5.</span> <span class="nav-text">5.布局调优工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#性能问题指标"><span class="nav-number">1.</span> <span class="nav-text">性能问题指标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#界面卡顿场景和原因"><span class="nav-number">2.</span> <span class="nav-text">界面卡顿场景和原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android系统显示原理"><span class="nav-number">3.</span> <span class="nav-text">Android系统显示原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制原理"><span class="nav-number">3.1.</span> <span class="nav-text">绘制原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#刷新机制"><span class="nav-number">3.2.</span> <span class="nav-text">刷新机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性能分析工具"><span class="nav-number">4.</span> <span class="nav-text">性能分析工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局优化"><span class="nav-number">5.</span> <span class="nav-text">布局优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-减少层级"><span class="nav-number">5.1.</span> <span class="nav-text">1. 减少层级</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-合理使用RelativeLayout和LinearLayout"><span class="nav-number">5.1.1.</span> <span class="nav-text">1.1 合理使用RelativeLayout和LinearLayout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-合理使用merge"><span class="nav-number">5.1.2.</span> <span class="nav-text">1.2 合理使用merge</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-提高显示速度"><span class="nav-number">5.2.</span> <span class="nav-text">2. 提高显示速度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-ViewStub"><span class="nav-number">5.2.1.</span> <span class="nav-text">2.1 ViewStub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-使用include复用布局"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.2 使用include复用布局</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免过度绘制"><span class="nav-number">6.</span> <span class="nav-text">避免过度绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XML避免重叠"><span class="nav-number">6.1.</span> <span class="nav-text">XML避免重叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#View的onDraw优化"><span class="nav-number">6.2.</span> <span class="nav-text">View的onDraw优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动优化"><span class="nav-number">7.</span> <span class="nav-text">启动优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增加闪屏启动页"><span class="nav-number">7.1.</span> <span class="nav-text">增加闪屏启动页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动逻辑优化"><span class="nav-number">7.2.</span> <span class="nav-text">启动逻辑优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合理的刷新机制"><span class="nav-number">8.</span> <span class="nav-text">合理的刷新机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少刷新次数"><span class="nav-number">8.1.</span> <span class="nav-text">减少刷新次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#避免后台线程影响"><span class="nav-number">8.2.</span> <span class="nav-text">避免后台线程影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缩小刷新区域"><span class="nav-number">8.3.</span> <span class="nav-text">缩小刷新区域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提升动画性能"><span class="nav-number">9.</span> <span class="nav-text">提升动画性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#帧动画"><span class="nav-number">9.1.</span> <span class="nav-text">帧动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补间动画"><span class="nav-number">9.2.</span> <span class="nav-text">补间动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性动画"><span class="nav-number">9.3.</span> <span class="nav-text">属性动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件加速"><span class="nav-number">9.4.</span> <span class="nav-text">硬件加速</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">10.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">11.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
