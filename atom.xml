@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://czhzero.com/"/>
-  <updated>2017-04-06T15:36:25.000Z</updated>
+  <updated>2017-04-19T14:49:17.000Z</updated>
   <id>http://czhzero.com/</id>
   
   <author>
@@ -14,6 +14,106 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java多态的概念</title>
+    <link href="http://czhzero.com/2017/04/19/java-polymorphism/"/>
+    <id>http://czhzero.com/2017/04/19/java-polymorphism/</id>
+    <published>2017-04-19T14:39:24.000Z</published>
+    <updated>2017-04-19T14:49:17.000Z</updated>
+    
+    <content type="html">&lt;p&gt;“polymorphism(多态）”一词来自希腊语，意为“多种形式”。多数Java程序员把多态看作对象的一种能力，使其能调用正确的方法版本。尽管如此，这种面向实现的观点导致了多态的神奇功能，胜于仅仅把多态看成纯粹的概念。&lt;/p&gt;
+&lt;p&gt;Java中的多态总是子类型的多态。几乎是机械式产生了一些多态的行为，使我们不去考虑其中涉及的类型问题。本文研究了一种面向类型的对象观点，分 析了如何将对象能够 表现的行为和对象即将表现的行为分离开来。抛开Java中的多态都是来自继承的概念，我们仍然可以感到，Java中的接口是一组没有公共代码的对象共享实现。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;多态的好处&quot;&gt;&lt;a href=&quot;#多态的好处&quot; class=&quot;headerlink&quot; title=&quot;多态的好处&quot;&gt;&lt;/a&gt;多态的好处&lt;/h2&gt;&lt;p&gt;消除类型之间的耦合关系。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;可替换性（substitutability）。&lt;/p&gt;
+&lt;p&gt;  多态对已存在代码具有可替换性。例如，多态对圆Circle类工作，对其他任何圆形几何体，如圆环，也同样工作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可扩充性（extensibility）。&lt;/p&gt;
+&lt;p&gt;  多态对代码具有可扩充性。增加新的子类不影响已存在类的多态性、继承性，以及其他特性的运行和操作。实际上新加子类更容易获得多态功能。例如，在实现了圆锥、半圆锥以及半球体的多态基础上，很容易增添球体类的多态性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;接口性（interface-ability）。&lt;/p&gt;
+&lt;p&gt;  多态是超类通过方法签名，向子类提供了一个共同接口，由子类来完善或者覆盖它而实现的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;灵活性（flexibility）。&lt;/p&gt;
+&lt;p&gt;  它在应用中体现了灵活多样的操作，提高了使用效率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;简化性（simplicity）。&lt;/p&gt;
+&lt;p&gt;  多态简化对应用软件的代码编写和修改过程，尤其在处理大量对象的运算和操作时，这个特点尤为突出和重要。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;多态的分类&quot;&gt;&lt;a href=&quot;#多态的分类&quot; class=&quot;headerlink&quot; title=&quot;多态的分类&quot;&gt;&lt;/a&gt;多态的分类&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;广义多态分类&lt;ul&gt;
+&lt;li&gt;强制的 &lt;/li&gt;
+&lt;li&gt;重载的&lt;/li&gt;
+&lt;li&gt;参数的&lt;/li&gt;
+&lt;li&gt;包含的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;狭义多态分类&lt;ul&gt;
+&lt;li&gt;动态绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;强制的多态&quot;&gt;&lt;a href=&quot;#强制的多态&quot; class=&quot;headerlink&quot; title=&quot;强制的多态&quot;&gt;&lt;/a&gt;强制的多态&lt;/h3&gt;&lt;p&gt;强制多态隐式的将参数按某种方法，转换成编译器认为正确的类型以避免错误。在以下的表达式中，编译器必须决定二元运算符‘+’所应做的工作：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.0 + 2.0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.0 + 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.0 + &amp;quot;2&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;第一个表达式将两个double的 操作数相加；Java中特别声明了这种用法。&lt;/p&gt;
+&lt;p&gt;第二个表达式将double型和int相加。Java中没有明确定义这种运算。不过，编 译器隐式的将第二个操作数转换为double型，并作double型的加法。做对程序员来说十分方便，否则将会抛出一个编译错误，或者强制程序员显式的将 int转换为double。&lt;/p&gt;
+&lt;p&gt;第三个表达式将double与一个String相加。Java中同样没有定义这样的操作。所以，编译器将 double转换成String类型，并将他们做串联。&lt;/p&gt;
+&lt;p&gt;强制多态也会发生在方法调用中。&lt;/p&gt;
+&lt;p&gt;假设类A继承了类Base，类B有一个方法，原型为m(Base)，在下面的代码中，编译器隐式的将A类的对象a转化为Base类的对象。这种隐式的转换使 m(Base)方法使用所有能转换成Base类的所有参数。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Base &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class A extends Base &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class B &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public void m(Base base) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		//dosomething&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Client &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	B b = new B(); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	A a = new A();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   b.m(a); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;并且，隐式的强制转换，可以避免类型转换的麻烦，减少编译错误。当然，编译器仍然会优先验证符合定义的对象类型。&lt;/p&gt;
+&lt;h3 id=&quot;重载的多态&quot;&gt;&lt;a href=&quot;#重载的多态&quot; class=&quot;headerlink&quot; title=&quot;重载的多态&quot;&gt;&lt;/a&gt;重载的多态&lt;/h3&gt;&lt;p&gt;重载 允许用相同的运算符或方法，去表示截然不同的意义。‘+’在上面的程序中有两个意思：两个double型的数相加；两个串相连。另外还有整型相加，长整 型，等等。这些运算符的重载，依赖于编译器根据上下文做出的选择。以往的编译器会把操作数隐式转换为完全符合操作符的类型。虽然Java明确支持重载，但 不支持用户定义的操作符重载。&lt;/p&gt;
+&lt;p&gt;Java支持用户定义的函数重载。一个类中可以有相同名字的方法，这些方法可以有不同的意义。这些重载 的方法中，必须满足参数数目不同，相同位置上的参数类型不同。这些不同可以帮助编译器区分不同版本的方法。&lt;/p&gt;
+&lt;p&gt;编译器以这种唯一表示的特 征来表示不同的方法，比用名字表示更为有效。据此，所有的多态行为都能编译通过。&lt;/p&gt;
+&lt;p&gt;强制和重载的多态都被分类为特定的多态，因为这些多 态都是在特定的意义上的。这些被划入多态的特性给程序员带来了很大的方便。强制多态排除了麻烦的类型和编译错误。重载多态像一块糖，允许程序员用相同的名 字表示不同的方法，很方便。&lt;/p&gt;
+&lt;h3 id=&quot;参数的多态&quot;&gt;&lt;a href=&quot;#参数的多态&quot; class=&quot;headerlink&quot; title=&quot;参数的多态&quot;&gt;&lt;/a&gt;参数的多态&lt;/h3&gt;&lt;p&gt;参数多态允许把许多类型抽象成单一的表示。例如，List抽象类中，描述了一组具有同样特征的对象，提供了一个通用的模板。你可以通过指定一种类型以重用这个抽象类。这些参数可以是任何用户定义的类型，大量的用 户可以使用这个抽象类，因此参数多态毫无疑问的成为最强大的多态。&lt;/p&gt;
+&lt;p&gt;乍一看，上面抽象类好像是java.util.List的功能。然 而，Java实际上并不支持真正的安全类型风格的参数多态，这也是java.util.List和java.util的其他集合类是用原始的 java.lang.Object写的原因。Java的单根继承方式解决了部分问题，但没有发挥出参数多态的全部功能。&lt;/p&gt;
+&lt;h3 id=&quot;包含的多态&quot;&gt;&lt;a href=&quot;#包含的多态&quot; class=&quot;headerlink&quot; title=&quot;包含的多态&quot;&gt;&lt;/a&gt;包含的多态&lt;/h3&gt;&lt;p&gt;包含多态通过值的类型和集合的包含关系实现了多态的行为.在包括Java在内的众多面向对象语言中，包含关系是子类型的。所以，Java的包含多态是子类型的多态。&lt;/p&gt;
+&lt;p&gt;在早期，Java开发者们所提及的多态就特指子类型的多态。通过一种面向类型的观点，我们可以看到子类型多态的强大功能。&lt;/p&gt;
+&lt;p&gt;更多关于广义分类多态的解释，请参看&lt;a href=&quot;http://blog.csdn.net/xiaoyu714543065/article/details/8130027&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;java中实现多态的机制是什么?&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;动态绑定&quot;&gt;&lt;a href=&quot;#动态绑定&quot; class=&quot;headerlink&quot; title=&quot;动态绑定&quot;&gt;&lt;/a&gt;动态绑定&lt;/h2&gt;&lt;p&gt;动态绑定（dynamic binding），是指在执行期间判断所引用对象的实际类型，根据其实际的类型调用其相应的方法。&lt;/p&gt;
+&lt;p&gt;JAVA虚拟机调用一个类方法时，它会基于对象引用的类型(通常在编译时可知)来选择所调用的方法。相反，当虚拟机调用一个实例方法时，它会基于对象实际 的类型(只能在运行时得知)来选择所调用的方法，这就是动态绑定，是多态的一种。动态绑定为解决实际的业务问题提供了很大的灵活性，是一种非常优美的机制。&lt;/p&gt;
+&lt;p&gt; JAVA虚拟机规范并没有规定JAVA对象在堆里是如何表示的。对象的内部表示也影响着整个堆以及垃圾收集器的设计，它由虚拟机的实现者决定。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;JAVA对象模型&lt;/p&gt;
+&lt;p&gt;JAVA对象中包含的基本数据由它所属的类及其所有超类声明的实例变量组成。只要有一个对象引用，虚拟机就必须能够快速地定位对象实例的数据。另外，它也 必须能通过该对象引用访问相应的类数据(存储于方法区的类型信息)，因此在对象中通常会有一个指向方法区的指针。当程序在运行时需要转换某个对象引用为另 外一种类型时，虚拟机必须要检查这种转换是否被允许，被转换的对象是否的确是被引用的对象或者它的超类型。当程序在执行instanceof操作时，虚拟 机也进行了同样的检查。所以虚拟机都需要查看被引用的对象的类数据。&lt;/p&gt;
+&lt;p&gt;不管虚拟机的实现使用什么样的对象表示法，很可能每个对象都有一个方法表因为方法表加快了调用实例方法时的效率。但是JAVA虚拟机规范并未要求必须使用方法表，所以并不是所有实现中都会使用它。&lt;/p&gt;
+&lt;p&gt;下面是一种JAVA对象的内存表示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7y1sf21i.bkt.clouddn.com/blog/009/binding1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;方法数据存放在类的方法区中，包含一个方法的具体实现的字节码二进制。方法指针直接指向这个方法在内存中的起始位置，通过方法指针就可以找到这个方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;动态绑定内部机制&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;方法表是一个指向方法区中的方法指针的数组。方法表中不包含static、private等静态绑定的方法，仅仅包含那些需要动态绑定的实例方法。&lt;/p&gt;
+&lt;p&gt;  在方法表中，来自超类的方法出现在来自子类的方法之前，并且排列方法指针的顺序和方法在class文件中出现的顺序相同，这种排列顺序的例外情况是，被子类的方法覆盖的方法出现在超类中该方法第一次出现的地方。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class Base   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public Base()  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public void test()  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println( &amp;quot;int Base&amp;quot; );  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public void print()  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Derive extends Base  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public Derive()  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public void test()  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println( &amp;quot;int Derive&amp;quot; );  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public void sayHello()  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public static void main( String[] args )  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      Base base = new Derive();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      base.test();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 上例中的Base和Derive的方法表如下：&lt;/p&gt;
+&lt;p&gt;  &lt;img src=&quot;http://o7y1sf21i.bkt.clouddn.com/blog/009/binding2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;  在这个例子里，test()方法在Base和Derive的方法表中都是同一个位置-位置1。在Base方法表中，test()指针是Base的test()方法内存地址；而在Derive方法表中，方法表的位置1放置的是Derive的test()方法内存地址。&lt;/p&gt;
+&lt;p&gt;  当JAVA虚拟机执行base.test()时，通过base引用可以找到base所指向的实际对象的内存位置，现在虚拟机不知道base引用的实际对象 是Base还是Derive。但是根据上面的对象内存模型，虚拟机从对象内存中的第一个指针“特殊结构指针”开始，可以找到实际对象的类型数据和 Class实例，这样虚拟机就可以知道base引用的实际对象是Derive对。为了执行test()，虚拟机需要找到test()的字节码，方法的字节 码存放在方法区中。虚拟机从对象内存中的第一个指针“特殊结构指针”开始，搜寻方法表的位置1，位置1指向的test()方法是Derive类的 test()方法，这就是JAVA虚拟机将要执行的test()的字节码。现在，虚拟机知道了调用的实际对象是Derive对象，调用的实际test() 方法是Derive类的test()方法，所以JAVA虚拟机能够正确执行-调用base引用的实际对象的方法而不是base引用本身的方法。&lt;/p&gt;
+&lt;p&gt;  这是动态绑定的一种实现方式，根据不同的JAVA虚拟机平台和不同的实际约束，动态绑定可以有不同的内部实现机制。&lt;/p&gt;
+&lt;h2 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/TalkWithWorld/p/5641169.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;java中实现多态的机制是什么?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“polymorphism(多态）”一词来自希腊语，意为“多种形式”。多数Java程序员把多态看作对象的一种能力，使其能调用正确的方法版本。尽管如此，这种面向实现的观点导致了多态的神奇功能，胜于仅仅把多态看成纯粹的概念。&lt;/p&gt;
+&lt;p&gt;Java中的多态总是子类型的多态。几乎是机械式产生了一些多态的行为，使我们不去考虑其中涉及的类型问题。本文研究了一种面向类型的对象观点，分 析了如何将对象能够 表现的行为和对象即将表现的行为分离开来。抛开Java中的多态都是来自继承的概念，我们仍然可以感到，Java中的接口是一组没有公共代码的对象共享实现。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="http://czhzero.com/categories/Java/"/>
+    
+    
+      <category term="多态" scheme="http://czhzero.com/tags/%E5%A4%9A%E6%80%81/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式学习笔记-观察者模式</title>
@@ -950,78 +1050,6 @@
     
     
       <category term="ssh-key" scheme="http://czhzero.com/tags/ssh-key/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ListView聊天窗口与输入法键盘冲突解决方法(聊天框在viewpager里)</title>
-    <link href="http://czhzero.com/2017/03/10/listview-chat-view/"/>
-    <id>http://czhzero.com/2017/03/10/listview-chat-view/</id>
-    <published>2017-03-10T02:31:18.000Z</published>
-    <updated>2017-03-10T13:27:29.000Z</updated>
-    
-    <content type="html">&lt;p&gt;在使用listView显示聊天窗口时，弹出输入法，我们期待的效果是输入框上移动，listview自动定位到最后的聊天内容。&lt;br&gt;但是项目中遇到了这样的情况，&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160514114854249&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
-&lt;p&gt;聊天框底下有tab,我们就需要解决三件事。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1.输入法弹出时候ListView聊天内容不被遮挡&lt;/p&gt;
-&lt;p&gt;2.输入法弹出的时候，底部tab隐藏&lt;/p&gt;
-&lt;p&gt;3.输入法弹出的时候，聊天内容自动定位到最后一行。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;###1.在manifest的activity中设置输入法属性。&lt;/p&gt;
-&lt;p&gt;android:windowSoftInputMode&lt;/p&gt;
-&lt;p&gt;这个是Android1.5后的一个新特性。activity主窗口与软键盘的交互模式，可以用来避免输入法面板遮挡问题，&lt;br&gt;这个属性能影响两件事情：&lt;br&gt;【一】当有焦点产生时，软键盘是隐藏还是显示&lt;br&gt;【二】是否减少活动主窗口大小以便腾出空间放软键盘&lt;/p&gt;
-&lt;p&gt;各值的含义：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;【A】stateUnspecified：软键盘的状态并没有指定，系统将选择一个合适的状态或依赖于主题的设置&lt;/li&gt;
-&lt;li&gt;【B】stateUnchanged：当这个activity出现时，软键盘将一直保持在上一个activity里的状态，无论是隐藏还是显示&lt;/li&gt;
-&lt;li&gt;【C】stateHidden：用户选择activity时，软键盘总是被隐藏&lt;/li&gt;
-&lt;li&gt;【D】stateAlwaysHidden：当该Activity主窗口获取焦点时，软键盘也总是被隐藏的&lt;/li&gt;
-&lt;li&gt;【E】stateVisible：软键盘通常是可见的&lt;/li&gt;
-&lt;li&gt;【F】stateAlwaysVisible：用户选择activity时，软键盘总是显示的状态&lt;/li&gt;
-&lt;li&gt;【G】adjustUnspecified：默认设置，通常由系统自行决定是隐藏还是显示&lt;/li&gt;
-&lt;li&gt;【H】adjustResize：该Activity总是调整屏幕的大小以便留出软键盘的空间&lt;/li&gt;
-&lt;li&gt;【I】adjustPan：当前窗口的内容将自动移动以便当前焦点从不被键盘覆盖和用户能总是看到输入内容的部分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;分别尝试了下面两种组合，&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;android:windowSoftInputMode=&amp;quot;adjustPan|stateAlwaysHidden&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160514114956946&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;android:windowSoftInputMode=&amp;quot;adjustResize|stateAlwaysHidden&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160514115015384&quot; alt=&quot;这里写图片描述&quot;&gt;&lt;/p&gt;
-&lt;p&gt;第一种情况，底部tab是看不见了，但是顶部的标题栏也被顶掉了，&lt;br&gt;第二种情况是标题栏还在，但是底部tab也可以看见。&lt;br&gt;针对第一情况，可以采取当标题被顶掉时，弹出一个popupwindow代替，但是这种方法需要考虑，弹出位置和tab直接之间切换的影响，比较麻烦。因此本人针对第二钟情况隐藏底部tab。&lt;/p&gt;
-&lt;p&gt;###2.监听键盘弹出事件，隐藏底部tab&lt;/p&gt;
-&lt;p&gt;因为resize模式会改变布局的大小，所以我们可以监听布局尺寸的变化,从而监听键盘是否弹出。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;方法一：重新onSizeChanged&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   protected void onSizeChanged(int w, int h, int oldw, int oldh) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       super.onSizeChanged(w, h, oldw, oldh);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       //计算尺寸，判断变大还是变小。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;方法二：增加addOnGlobalLayoutListener&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vpContent.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    @Override&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    public void onGlobalLayout() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	        if(vpContent.getRootView().getHeight() - vpContent.getHeight() &amp;gt; 500) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	            //隐藏tab&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	        &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	            //显示tab&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;###3.键盘弹出时，listview定位到最后一行&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;方法一：增加listview的transcriptMode属性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;android:transcriptMode=&amp;quot;alwaysScroll&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;方法二：调用setSelection()方法 (这种方法不会有屏幕跳动) &lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;listview.setSelection(mData.size()-1);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;   不过，隐藏底部tab时，listview会重绘，出现了数据抖动效果，这个问题还有待解决。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在使用listView显示聊天窗口时，弹出输入法，我们期待的效果是输入框上移动，listview自动定位到最后的聊天内容。&lt;br&gt;但是项目中遇到了这样的情况，&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://czhzero.com/categories/Android/"/>
-    
-    
-      <category term="ListView" scheme="http://czhzero.com/tags/ListView/"/>
     
   </entry>
   
